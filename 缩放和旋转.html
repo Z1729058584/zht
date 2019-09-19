@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>缩放旋转</title>
+	<style>
+		*{
+		    margin:0;
+		    padding:0;
+		}
+		ul{
+		    list-style:none;
+		}
+		html,body,#app{
+			width:100%;
+			height:100%;
+			overflow: hidden;
+		}
+
+		#app{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.img{
+			width:220px;
+			height:220px;
+			border:solid 1px #eee;
+		}
+		img{
+			width:100%;
+			height: 100%;
+		}
+	</style>
+	<script src="js/transformCSS.js">
+	
+	</script>
+	<script src="https://cdn.bootcss.com/vConsole/3.3.3/vconsole.min.js">
+		
+	</script>
+</head>
+<body>
+	<div id="app">
+		<div class="img">
+			<img src="./imgs/panda.jpg" alt="">
+		</div>
+	</div>
+	<script>
+		var app = document.querySelector('#app');
+		var oimg = document.querySelector('.img');
+        var vs = new VConsole();
+		app.addEventListener('touchstart', function(e){
+			e.preventDefault();
+		});
+		oimg.addEventListener('touchstart',function(e){
+			if(e.targetTouches.length>=2){
+			this.x=juli(e.targetTouches[0],e.targetTouches[1]);
+			this.scale=transformCSS(oimg,'scale');
+			this.a1=suofang(e.targetTouches[0],e.targetTouches[1]);
+			this.jiaodu= transformCSS(oimg,'rotate');
+			}
+		})
+		oimg.addEventListener('touchmove',function(e){
+			if(e.targetTouches.length>=2){
+			this.a2=suofang(e.targetTouches[0],e.targetTouches[1]);
+			this.jiaodu1=this.a2-this.a1;            
+			this._x=juli(e.targetTouches[0],e.targetTouches[1]);
+			this.disx=this._x/this.x;
+			transformCSS(oimg,'scale',this.disx*this.scale);
+			transformCSS(oimg,'rotate',this.jiaodu1+this.jiaodu);
+		}
+		
+		
+		})
+		function juli(p1,p2){
+          var disx= p2.clientX-p1.clientX;
+		  var disy= p2.clientY- p1.clientY;
+		  return Math.sqrt(disx*disx+disy*disy);	  
+		}
+		function suofang(a1,a2){
+			var disa1 = a2.clientY - a1.clientY;
+            var disa2 = a2.clientX - a1.clientX;
+            return Math.atan2(disa1, disa2) * 180 / Math.PI;
+        }
+		
+	</script>
+</body>
+</html>
