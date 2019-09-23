@@ -1,0 +1,25 @@
+@import "../../reset.css";
+*{
+  margin: 0;
+  padding: 0;
+}
+.center(@col:red,@w,@h){
+  width: @w;
+  height: @h;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background-color: @col;
+}
+.outer{
+  .center(@w:600px,@h:600px);
+  .inner{
+    .center(@col:green,@w:300px,@h:300px);
+    .con{
+      .center(@col:yellow,@w:100px,@h:100px);
+    }
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*文本溢出容器后*/
+        /*1）汉字换行显示，数字和字母不会*/
+        /*2）超出容器部分也显示*/
+        /*2.white-space:nowrap;*/
+        /*超出不换行*/
+        /*oveflow:hidden*/
+        /*超出隐藏*/
+        /*超出生成省略号*/
+        /*text-overflow：ellipsis*/
+        /*元素必须是一个块级元素*/
+    p:after{
+    content:"妹妹";
+
+    color: pink;
+
+    }
+    p:before{
+        content: "哥哥";
+        color: blue;
+
+        }
+        p{
+            width: 100px;
+            height: 20px;
+            border: 1px solid #ccc;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+
+        }
+    </style>
+</head>
+<body>
+<p>喜欢你</p>
+</body>
+</html>

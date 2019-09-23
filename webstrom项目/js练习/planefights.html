@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background-color: #f0f3ef;
+            /*margin: 0 auto;*/
+        }
+        #goal{
+
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
+        #bullets>img{
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
+
+    </style>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+<div id="box">
+
+    <div id="goal" class="rest1">
+        <img src="./img/plane.png" alt="我军战机" width="20px" height="20px">
+
+    </div>
+    <div id="bullets">
+        <img src="./img/bullet.png" alt="子弹" width="10px" height="10px" id="bullet1">
+    </div>
+
+</div>
+<script>
+    var Ogoal=document.getElementById("goal");
+    var OBox = document.getElementById("box");
+    var Oimg1=document.getElementById("bullet1");
+    // var newOimg=[Oimg1,Oimg1,Oimg1,Oimg1];
+    // for (var i=0;i<Oimg1.length;i++) {
+    //     Oimg1[i];
+    // }
+    Ogoal.onmouseenter=function Main() {
+
+        OBox.onmousemove = function (ev) {
+            var e = ev || this.event;
+            var scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
+            var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+            var x = e.pageX || e.clientX + scrollX;
+            var y = e.pageY || e.clientY + scrollY;
+            Ogoal.style.left = x + "px";
+            Ogoal.style.top = y + "px";
+
+                Oimg1.style.left=x+"px";
+                Oimg1.style.top=y+"px";
+            }
+
+
+
+    }
+    // function createSnow(l,t,s){
+    //     var newNode=document.createElement("div");
+    //     newNode.style.height=s+"px";
+    //     newNode.style.width=s+"px";
+    //     newNode.style.left=l+"px";
+    //     newNode.style.top=t+"px";
+    //     newNode.style.background="url('img/snow.png')";
+    //     newNode.style.backgroundSize="100% 100%";
+    //     box.appendChild(newNode);
+    //     startMove(newNode);
+    // }
+
+    startMove(Oimg1);
+    function startMove(obj){
+        var ObulletY=obj.offsetTop;//获取对象到顶部边宽的距离
+        var time2=null;
+        function move(){
+            ObulletY--;
+            obj.style.top=ObulletY+"px";
+            if(ObulletY>500){//当雪花超出容器时的处理事件
+                clearInterval(time2);//清除计时器
+                OBox.removeChild(obj);//删除超出容器的节点对象
+            }
+        }
+        time2=setInterval(move,50);
+    }
+
+
+</script>
+</body>
+</html>

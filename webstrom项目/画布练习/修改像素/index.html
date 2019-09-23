@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取像素</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        #myCanvas{
+            background: pink;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="400"></canvas>
+<script>
+    var oMyCanvas = document.getElementById("myCanvas");
+    var ctx = oMyCanvas.getContext("2d");
+    ctx.beginPath();
+
+    var newImg = new Image();
+    newImg.crossOrigin = '';
+    newImg.src = "./img/backiee-9976.jpg";
+    newImg.onload = function () {
+        ctx.drawImage(newImg,0,0,oMyCanvas.width,oMyCanvas.height);
+        //图片加载进来以后，获取图片的像素点
+    //    ctx.fillStyle="black";
+    //    ctx.fillRect(0,0,100,100);
+        var imgData = ctx.getImageData(0,0,200,200);
+        console.log(imgData);
+        
+        imgData.data.forEach(function (item,index) {
+            if (index % 4 ==0){//选中每隔像素点的r值
+                imgData.data[index] = 0;
+            }
+        })
+        console.log(imgData);
+
+        ctx.putImageData(imgData,600,250)
+}
+
+</script>
+</body>
+</html>

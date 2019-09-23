@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width:768px;
+            overflow: hidden;
+            margin: 0 auto;
+            height:192px ;
+            position: relative;
+        }
+        .box #inner{
+            width:1536px ;
+            overflow: hidden;
+
+            position: absolute;
+            left:0px;
+            top:0px;
+        }
+        #inner img{
+            float: left;
+
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div id="inner">
+    <img src="./img/slideshow1.jpg" width="192px" height="192px" alt="">
+    <img src="./img/slideshow2.jpg" width="192px" height="192px" alt="">
+    <img src="./img/slideshow3.jpg" width="192px" height="192px" alt="">
+    <img src="./img/slideshow4.jpg" width="192px" height="192px" alt="">
+    <img src="./img/slideshow1.jpg" width="192px" height="192px" alt="">
+    <img src="./img/slideshow2.jpg" width="192px" height="192px" alt="">
+    <img src="./img/slideshow3.jpg" width="192px" height="192px" alt="">
+    <img src="./img/slideshow4.jpg" width="192px" height="192px" alt="">
+    </div>
+</div>
+<script type="text/javascript">
+    var timer=null;
+    var oInnerleft=0;
+    var oInner=document.getElementById("inner");
+    var oBox=document.getElementsByClassName("box")[0];
+    function cleartimer(){
+        clearInterval(timer);
+    }
+    oBox.onmouseenter=function(){
+        // console.log("132");
+        cleartimer();
+       setTimeout(huadong,1000);
+    }
+    function huadong(){
+
+    timer=setInterval(function () {
+        oInnerleft++;
+        oInner.style.left=-oInnerleft+"px";
+        // console.log(oInnerleft+">>>>>>>>>>");
+        if(oInnerleft==192*4)
+        {
+            oInnerleft=0;
+            oInner.style.left=oInnerleft+"px";
+        }
+    },20);
+    }
+    huadong();
+
+</script>
+</body>
+</html>

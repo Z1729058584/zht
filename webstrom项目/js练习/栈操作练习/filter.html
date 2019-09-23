@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 创建一个新数组，筛选出符合条件的插入新数组。
+    var age=[13,14,35,34,66,87];
+    var person=age.filter(function (item,index,array) {
+        return item>18;
+    });
+    console.log(person);
+</script>
+</body>
+</html>

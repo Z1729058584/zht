@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两块区域互相移动</title>
+    <style>
+        body, h1, h2, h3, h4, h5, h6, div, p, dl, dt, dd, ol, ul, li, form, table, th, td, a, img, span, strong, var, em, input, textarea, select, option {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            font-family: "微软雅黑", "宋体", Arail, Tabhoma;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        img {
+            border: none;
+        }
+
+        /*outline是轮廓，起到突出作用的，和边框一样，但是不占用位置*/
+        input, select, textarea {
+            outline: none;
+        }
+
+        textarea {
+            resize: none;
+            overflow: auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        th, strong, var, em, b, i, u {
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        #box{
+            overflow: hidden;
+        }
+
+        .left, .right {
+            float: left;
+            margin: 100px 100px;
+            background-color: #fff;
+        }
+
+
+        .left > a {
+            width: 100px;
+            height: 30px;
+            margin: 20px 10px;
+            display: block;
+            color: white;
+            background-color: purple;
+            text-align: center;
+        }
+
+        .right > a {
+
+            width: 100px;
+            height: 30px;
+            margin: 20px 10px;
+            display: block;
+            color: white;
+            background-color: blue;
+            text-align: center;
+        }
+        #youyi{
+            margin-left: 150px;
+            width: 50px;
+            height: 30px;
+            background-color:blue ;
+            border: 0px;
+        }
+        #zuoyi{
+            margin-left: 30px;
+            width: 50px;
+            height: 30px;
+            background-color:purple ;
+            border: 0px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+<div class="left">
+    <a href="#" flag="true">左一</a>
+    <a href="#" flag="true">左二</a>
+    <a href="#" flag="true">左三</a>
+    <a href="#" flag="true">左四</a>
+
+</div>
+<div class="right">
+    <a href="#" flag="true">右一</a>
+    <a href="#" flag="true">右二</a>
+    <a href="#" flag="true">右三</a>
+    <a href="#" flag="true">右四</a>
+</div>
+</div>
+<input type="button" id="youyi" value="右移">
+<input type="button" id="zuoyi" value="左移">
+
+<script>
+    var oLeft = document.getElementsByClassName("left")[0];
+    var oLa = oLeft.getElementsByTagName("a");
+    var oRight = document.getElementsByClassName("right")[0];
+    var oRa = oRight.getElementsByTagName("a");
+    var oYouyi=document.getElementById("youyi");
+    var oZuoyi=document.getElementById("zuoyi");
+
+    for (var i = 0; i < oLa.length; i++) {
+        oLa[i].onclick = function () {
+            for (var i = 0; i < oLa.length; i++) {
+                if (oLa[i] == this) {
+                    if (this.getAttribute("flag") == "false") {
+                        this.setAttribute("flag", "true");
+                    } else if (this.getAttribute("flag") === "true") {
+                        this.setAttribute("flag", "false");
+                    }
+                }
+            }
+            for (var i = 0; i < oLa.length; i++) {
+                if (oLa[i].getAttribute("flag") == "false") {
+                    oLa[i].style.border = "4px solid red";
+                } else if (oLa[i].getAttribute("flag") == "true") {
+                    oLa[i].style.border = "";
+                }
+            }
+
+        }
+        oRa[i].onclick = function () {
+            for (var i = 0; i < oLa.length; i++) {
+                if (oRa[i] == this) {
+                    if (this.getAttribute("flag") == "false") {
+                        this.setAttribute("flag", "true");
+                    } else if (this.getAttribute("flag") === "true") {
+                        this.setAttribute("flag", "false");
+                    }
+                }
+            }
+            for (var i = 0; i < oLa.length; i++) {
+                if (oRa[i].getAttribute("flag") == "false") {
+                    oRa[i].style.border = "4px solid red";
+                } else if (oRa[i].getAttribute("flag") == "true") {
+                    oRa[i].style.border = "";
+                }
+            }
+
+        }
+    }
+        // }
+        oYouyi.onclick = function () {
+            // console.log(1);
+            for (var i = 0; i < oLa.length; i++) {
+                if (oLa[i].getAttribute("flag") == "false") {
+                    oLa[i].setAttribute("flag", "true");
+                    // oLa[i].parentNode.removeChild(oLa[i]);
+                    // var a=oLa[i].cloneNode(true);
+                    oRight.appendChild(oLa[i]);
+                    i--;
+                    for (var i = 0; i < oLa.length; i++) {
+                        console.log(3);
+// console.log(1);
+                        if (oLa[i].getAttribute("flag") == "false") {
+                            // console.log(2);
+                            console.log(4);
+                            oLa[i].style.border = "";
+
+                        } else if (oLa[i].getAttribute("flag") == "true") {
+                            // console.log(3);
+                            oLa[i].style.border = "4px solid red";
+
+                        }
+
+                    }
+                    // console.log(oRight.appendChild(oLa[i]));
+
+
+                }
+                else if(oLa[i].getAttribute("flag") == "true") {
+
+                    oLa[i].setAttribute("flag", "false");
+                    // oLa[i].parentNode.removeChild(oLa[i]);
+                    // var a=oLa[i].cloneNode(true);
+
+                    for (var i = 0; i < oLa.length; i++) {
+// console.log(1);
+                        console.log(4);
+                        if (oLa[i].getAttribute("flag") == "false") {
+                            // console.log(2);
+
+                            oLa[i].style.border = "";
+
+                        } else if (oLa[i].getAttribute("flag") == "true") {
+                            // console.log(3);
+                            oLa[i].style.border = "4px solid red";
+
+                        }
+
+                    }
+                    // console.log(oRight.appendChild(oLa[i]));
+
+
+                }
+            }
+
+//             for (var i = 0; i < oLa.length; i++) {
+// // console.log(1);
+//                 if (oLa[i].getAttribute("flag") == "false") {
+//                     // console.log(2);
+//                     i--;
+//                     oRight.appendChild(oLa[i]).style.border = "4px solid red";
+//
+//                 } else if (oLa[i].getAttribute("flag") == "true") {
+//                     // console.log(3);
+//                     i--;
+//                     oRight.appendChild(oLa[i]).style.border = "";
+//                 }
+//
+//             }
+        }
+
+
+
+</script>
+</body>
+</html>

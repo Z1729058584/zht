@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 1000px;
+            height: 800px;
+            margin: 0 auto;
+            background:url("./img/bg2.jpg") no-repeat;
+            background-size: 100% 100%;
+
+        }
+        .box .title{
+            background-color: #7e7c7d;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content:space-between;
+            height: 55px;
+            width: 1000px;
+        }
+        .box .title p{
+            height:55px;
+            line-height: 55px;
+
+        }
+        .box .title p span{
+            display: inline-block;
+            height: 33px;
+            line-height: 33px;
+            width: 100px;
+            border: 1px solid #ccc;
+            font-size: 20px;
+            text-align: center;
+            margin-left:10px;
+            margin-right: 1px;
+        }
+        .inner{
+            height: 600px;
+            width: 1000px;
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+        }
+        .inner div{
+            display: flex;
+            width: 150px;
+            height: 300px;
+            flex-direction: column;
+            align-items: center;
+            justify-content:center;
+        }
+        .inner div:nth-child(1){
+            background-color: mediumpurple;
+        }
+        .inner div:nth-child(2){
+            background-color: #ffa726;
+        }
+        .inner div:nth-child(3){
+            background-color: #4c71ff;
+        }
+        .inner div:nth-child(4){
+            background-color: blue;
+        }
+        .inner div:nth-child(5){
+            background-color: green;
+        }
+        .inner div:nth-child(6){
+            background-color: #4c71ff;
+        }
+    </style>
+    <link rel="stylesheet" href="../css练习/css/reset.css">
+</head>
+<body>
+<div class="box">
+    <div class="title"><img src="./img/atguigu-logo.png" alt=""><p><span>新学科</span><span>学科简介</span><span>深圳学区</span></p></div>
+    <div class="inner">
+    <div><img src="./img/ywfw_1.png" alt=""><p>HTML5学科</p></div>
+    <div><img src="./img/ywfw_2.png" alt=""><p>JAVA学科</p></div>
+    <div><img src="./img/ywfw_3.png" alt=""><p>JAVA大数据</p></div>
+    <div><img src="./img/ywfw_4.png" alt=""><p>安卓学科</p></div>
+    <div><img src="./img/ywfw_5.png" alt=""><p>微信学科</p></div>
+    <div><img src="./img/ywfw_6.png" alt=""><p>PHP学科</p></div>
+    </div>
+</div>
+</body>
+</html>

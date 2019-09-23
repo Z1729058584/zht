@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 400px;
+            margin: 0 auto;
+            position: relative;
+        }
+        #title{
+            width: 100px;
+            height: 50px;
+            font-size: 20px;
+            line-height: 50px;
+            font-weight: bold;
+
+        }
+        #click{
+            background-color: #7e7c7d;
+            height: 50px;
+            line-height: 50px;
+        }
+        #citylist{
+            overflow: hidden;
+            width: 400px;
+            display: none;
+           background-color: red;
+
+        }
+        #citylist li{
+            float: left;
+            margin: 10px;
+            width: 80px;
+            height: 20px;
+            line-height: 20px;
+            font-size: 15px;
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/reset.css">
+</head>
+<body>
+<div id="box">
+    <p id="title">广东</p>
+    <h3 id="click">点击我选择城市</h3>
+    <ul id="citylist">
+        <li>北京</li>
+        <li>深圳</li>
+        <li>湖南</li>
+        <li>安徽</li>
+        <li>山西</li>
+        <li>上海</li>
+        <li>广东</li>
+        <li>广州</li>
+        <li>草围</li>
+        <li>沙家帮</li>
+    </ul>
+</div>
+<script>
+    var oCitylist=document.getElementById("citylist");
+    var oTitle=document.getElementById("title");
+    document.onclick=function (ev) {
+        var ev=ev||window.event;
+        var target=ev.target||window.target.srcElement;
+        if(target.id=="click"){
+            oCitylist.style.display="block";
+            return;
+        }
+        if(target.nodeName=="LI"&& target.parentNode.id=="citylist"){
+           oTitle.innerHTML=target.innerHTML;
+           // target.style.backgroundColor="red";
+            oCitylist.style.display="none";
+           return;
+        }
+        oCitylist.style.display="none";
+
+
+    }
+</script>
+</body>
+</html>

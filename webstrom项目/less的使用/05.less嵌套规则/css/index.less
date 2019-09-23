@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.box{
+  width: 400px;
+  height: 500px;
+  background: #0b85f4;
+  .con{
+    width: 300px;
+    background: rgba(30,30,30,.4);
+    li{
+      background-color: #1eff0a;
+      margin: 10px;
+      //当给某个元素书写伪元素或者伪类的时候，需要使用父级引用  &符号
+      &:nth-child(2){
+        font-size: 30px;
+      }
+      &.show{
+        background-color: red;
+        &:after{
+          content: "heheheheh";
+        }
+      }
+      &:nth-child(4):after{
+        content: "hahhaha";
+      }
+    }
+  }
+}

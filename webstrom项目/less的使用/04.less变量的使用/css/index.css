@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #ea1bcc;
+}
+.con {
+  width: 100px;
+  height: 100px;
+}
+.con {
+  background: url("../../../images/skycat/01.png") 0 0 no-repeat;
+}
+.class {
+  one: 1;
+}
+.class .brass {
+  three: 3;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="###">
+    用户名:<input type="text" name="user" id="user">
+    密码:<input type="text" name="pass" id="pass">
+    <button>提交</button>
+</form>
+<button id="hq">获取用户名</button>
+<script>
+    var oForm=document.querySelector("form");
+    var oUser=document.querySelector("#user");
+    var oPass=document.querySelector("#pass");
+    var oHq=document.querySelector("#hq");
+
+    oHq.onclick=function(){
+        var allcookie=document.cookie;
+        if(allcookie){
+            var coe=allcookie.indexOf("pass=");
+            if(coe!=-1){
+                coe=coe+"pass=".length;
+                var cos=allcookie.indexOf(";",coe);
+                if(cos==-1){
+                    cos=allcookie.length;
+                }
+            }
+        }
+        console.log(allcookie.substring(coe,cos))
+    }
+    oForm.onsubmit=function (e) {
+        var e=e||window.event;
+        e.preventDefault?e.preventDefault():e.returnValue=false;
+        document.cookie=oUser.name+"="+oUser.value; //浏览器application里面的cookie里面保存有user及pass的键值对
+        document.cookie=oPass.name+"="+oPass.value;
+        return false;
+    }
+    // for(var i=0;i<10;i++){
+    //     console.log(i);
+    // }
+    // console.log(i);
+</script>
+</body>
+</html>

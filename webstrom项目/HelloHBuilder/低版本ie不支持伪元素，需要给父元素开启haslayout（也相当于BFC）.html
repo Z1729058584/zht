@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*bug*/
+        .clearFixed:after{
+            display: block;
+            content: "\200B";
+            height: 0;
+            clear: both;
+
+        }
+        .clearFixed{
+            *zoom: 1;
+        }
+        .float{
+            width: 50px; height: 30px; float: right; background-color: red;
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="clearFixed">
+    <div class="float" ></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var goodslist={
+        goods:[
+            {
+                name: "华为",
+                price: 2900
+            },
+            {
+                name: "三星",
+                price: 2500
+            },
+        ],
+        bad:[
+            {
+                name:"gg",
+                price:200
+            },
+            {
+                name:"诺基亚",
+                price:500
+            }
+
+        ]
+    }
+    function message(obg){
+        alert(obg[1].name);
+        alert(obg[1].price);
+    }
+    for(var i in goodslist)
+    {
+        message(goodslist[i]);
+    }
+</script>
+</body>
+</html>

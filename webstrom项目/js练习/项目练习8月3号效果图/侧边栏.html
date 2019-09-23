@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            position: relative;
+            width:1000px;
+            height: 500px;
+            background-color: #7e7c7d;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        #box ul{
+            position: absolute;
+            right: 0;
+            top: 40%;
+        }
+        #box ul li{
+            position: relative;
+            margin-bottom: 20px;
+
+        }
+        #box ul li span{
+            position: relative;
+            background-color: pink;
+            z-index: 2;
+            width: 50px;
+            height: 30px;
+            line-height: 30px;
+            text-align: left;
+            font-size: 20px;
+        }
+        #box ul li p{
+            position: absolute;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 20px;
+            text-align: left;
+            left: 0;
+            top: 0;
+            background-color: green;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/reset.css">
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li><p class="byu">恭喜发财</p><span class="btn">点我</span></li>
+        <li><p class="byu">财源滚滚</p><span class="btn">点我</span></li>
+        <li><p class="byu">万事大吉</p><span class="btn">点我</span></li>
+    </ul>
+    <script>
+        var oLi=document.getElementsByTagName("li");
+        // var oLi2=document.getElementById("btn2");
+        // var oLi3=document.getElementById("btn3");
+        var oByu=document.getElementsByClassName("byu");
+        var timer=null;
+
+     function yiru() {
+         for (var i=0;i<oLi.length;i++) {
+             oLi[i].onmouseenter = function () {
+
+                 var _this=this;
+                 var flag=true;
+                 clearInterval(timer);
+                 var moveleft=0;
+                 timer = setInterval(function () {
+                     console.log(1);
+                     if (flag) {
+                         console.log(2);
+                         moveleft += 5;
+                         if (moveleft >= oByu[0].clientWidth) {
+                             flag = !flag;
+                             console.log(3);
+                         }
+                     }
+
+                     for (var i=0;i<oLi.length;i++) {
+                         if(oLi[i]==_this)
+                         {
+                             oByu[i].style.left = -moveleft + "px";
+                         }
+
+                     }
+
+                 }, 20)
+             }
+         }
+     }  
+     yiru();
+     function yichu() {
+         for (var i=0;i<oLi.length;i++) {
+             oLi[i].onmouseleave = function () {
+
+                 var _this=this;
+                 var flag=true;
+                 clearInterval(timer);
+                 var moveleft=0;
+                 timer = setInterval(function () {
+                     console.log(1);
+                     if (flag) {
+                         console.log(2);
+                         moveleft += 5;
+                         if (moveleft >= oByu[0].clientWidth) {
+                             flag = !flag;
+                             console.log(3);
+                         }
+                     }
+
+                     for (var i=0;i<oLi.length;i++) {
+                         if(oLi[i]==_this)
+                         {
+                             oByu[i].style.left = moveleft + "px";
+                         }
+
+                     }
+
+                 }, 20)
+             }
+         }
+     }
+     yichu();
+
+    </script>
+
+</div>
+</body>
+</html>

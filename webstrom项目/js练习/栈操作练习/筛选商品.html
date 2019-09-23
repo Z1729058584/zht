@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="ipt1">
+"--"
+<input type="text" id="ipt2">
+<input type="button" value="筛选" id="btn">
+<ul id="goods">
+<!--    <li>苹果</li>-->
+<!--    <p>20000</p>-->
+</ul>
+<script>
+var goodslist={
+    goods:[
+        {name:"三星",
+        price:2900},
+    {name:"华为",
+        price:2800},
+        {name:"iphone1",
+            price:2900},
+        {name:"iphone2",
+            price:3900},
+        {name:"iphone3",
+            price:4900},
+        {name:"iphone4",
+            price:5900},
+
+        ]
+}
+var good= document.getElementById("goods");
+for(var i=0;i<goodslist.goods.length;i++){
+    var goodsitem="<li><h2>"+goodslist.goods[i].name+"</h2> <p>$"+goodslist.goods[i].price+"</p> </li>";
+    good.innerHTML +=goodsitem;
+}
+var oBtn=document.getElementById("btn");
+var oIpt1=document.getElementById("ipt1");
+var oIpt2=document.getElementById("ipt2");
+oBtn.onclick=function () {
+    good.innerHTML="";
+    var price1=parseInt(oIpt1.value);
+    var price2=parseInt(oIpt2.value);
+    var newgood=goodslist.goods.filter(function (item,index,array) {
+        return item.price>=price1 && item.price<=price2;
+
+    });
+    for(var i=0;i<newgood.length;i++)
+    {
+        var goodsitem="<li><h2>"+newgood[i].name+"</h2> <p>$"+newgood[i].price+"</p> </li>";
+        good.innerHTML +=goodsitem;
+    }
+}
+</script>
+</body>
+</html>

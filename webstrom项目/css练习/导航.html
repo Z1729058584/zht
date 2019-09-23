@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            position: fixed;
+            border-radius: 50%;
+            right: 0;
+            bottom: 0;
+
+        }
+        .home{
+            position: relative;
+            top: 150px;
+            left: 150px;
+            width: 50px;
+            height: 50px;
+            background: url("./导航图片/nav_home.png") center center no-repeat;
+            background-size: cover;
+            z-index: 1;
+        }
+        .nav {
+            position: relative;
+            left: 150px;
+            top:100px;
+            width: 45px;
+            height: 45px;
+            transform-style: preserve-3d;
+            perspective: 45px;
+        }
+        .nav li{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+
+        }
+        .nav li:nth-child(1){
+            background:url("./导航图片/nav_full.png");
+            background-size: cover;
+        }
+        .nav li:nth-child(2){
+            background:url("./导航图片/nav_open.png");
+            background-size: cover;
+        }
+        .nav li:nth-child(3){
+            background:url("./导航图片/nav_prev.png");
+            background-size: cover;
+        }
+        .nav li:nth-child(4){
+            background:url("./导航图片/nav_refresh.png");
+            background-size: cover;
+        }
+        .nav li:nth-child(5){
+            background:url("./导航图片/nav_clos.png");
+            background-size: cover;
+        }
+    </style>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+<div class="box">
+    <div class="home"></div>
+    <ul class="nav">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<script>
+    var oHome=document.querySelector(".home");
+    var oLis=document.querySelectorAll(".nav li");
+    var r = 200;
+    var flag = true;//默认收起
+    oHome.onclick = function () {
+        if (flag){
+            this.style.transform = "rotate(360deg)";
+
+            oLis.forEach(function (item,index,arr) {
+                item.style.left = - Math.sin(index * (90/(oLis.length - 1)) * 2 * Math.PI /360) * r + "px";
+                item.style.top = - Math.cos(index * (90/(oLis.length - 1)) * 2 * Math.PI /360) * r + "px";
+
+                item.style.transform = "rotate(360deg)";
+
+                item.style.transition = "all .5s linear " + 0.1*index +"s";
+            })
+        }else{
+            this.style.transform = "rotate(0deg)";
+
+            oLis.forEach(function (item,index) {
+                item.style.left = "0px";
+                item.style.top = "0px";
+
+                item.style.transform ="rotate(0deg)";
+                item.style.transition = "all .5s linear " + 0.1 * (oLis.length - 1 - index)+ "s";
+            })
+        }
+        flag = !flag;
+    }
+
+    oLis.forEach(function (item,index) {
+        item.onclick = function () {
+            this.style.transform = "rotate(360deg) scale(1.2)";
+            this.style.transition = "all .5s linear";
+            // 过渡动画执行完成时间  transitionend
+            function fn1() {
+                this.style.transform = "rotate(360deg) scale(1)";
+                this.removeEventListener("transitionend",fn1);
+            }
+            this.addEventListener("transitionend",fn1,false)
+        }
+    })
+
+</script>
+</body>
+</html>

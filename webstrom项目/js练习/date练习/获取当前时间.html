@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p><span id="year"></span><span id="yue"></span><span id="ri"></span><span id="shi"></span><span id="fen"></span><span id="miao"></span></p>
+<script>
+    var oYear=document.getElementById("year");
+    var oYue=document.getElementById("yue");
+    var oRi=document.getElementById("ri");
+    var oShi=document.getElementById("shi");
+    var oFen=document.getElementById("fen");
+    var oMiao=document.getElementById("miao");
+
+
+    // console.log(now);
+    var timer=setInterval(function () {
+        var now=new Date();
+        oYear.innerHTML=now.getFullYear()+"年";
+        oYue.innerHTML=now.getMonth()+1+"月";
+        oRi.innerHTML=now.getDate()+"日";
+        oShi.innerHTML=now.getHours()+"时";
+        oFen.innerHTML=now.getMinutes()+"分";
+        oMiao.innerHTML=now.getSeconds()+"秒";
+    },1000);
+
+
+
+</script>
+</body>
+</html>

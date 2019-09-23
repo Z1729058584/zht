@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .outer{
+            width: 500px;
+            height: 500px;
+            position: relative;
+            margin: 0 auto;
+            background-color: red;
+            border: 5px solid #000;
+        }
+        .box{
+            width: 400px;
+            height: 400px;
+            position: relative;
+            left: 10px;
+            top: 10px;
+            background-color:blue ;
+            margin: 0 auto;
+            border: 5px solid #000;
+
+        }
+        .center{
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: green;
+        }
+        .con{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 0 auto;
+            border: 3px solid #000;
+            /*position: absolute;*/
+            /*left: 20px;*/
+            /*right: 20px;*/
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div class="box">
+        <div class="center">
+            <div class="con"></div>
+        </div>
+    </div>
+</div>
+<script>
+    var oCon=document.getElementsByClassName("con")[0];
+    // var ohtml=document.getElementsByTagName("html")[0];
+    // var obody=document.getElementsByTagName("body")[0];
+    var obj=oCon;
+    var sum1=0;
+    var sum2=0;
+    while(obj.offsetParent!=null) {
+        sum2+=obj.offsetParent.clientLeft;
+        // console.log(sum2);
+        sum1+=obj.offsetLeft;
+        // console.log(sum1);
+        obj=obj.offsetParent;
+    }
+    console.log(sum1);
+    console.log(sum2);
+    console.log(sum1 + sum2);
+
+</script>
+</body>
+</html>

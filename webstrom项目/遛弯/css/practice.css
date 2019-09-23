@@ -1,0 +1,232 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+/*头部区域*/
+.header{
+	width: 100%;
+}
+/*头部上标题区域*/
+.headerup #ss{
+	position: relative;
+}
+
+.headerup #ss #search{
+	position: absolute;
+	right:14px;
+	top: 1px;
+}
+.headerup #ss #ssbtn{
+	width:15px;
+	border:0.5px solid #bfbfbf;
+	height: 16px;
+	border-left: 0px;
+	background-color:#FFFFFF;
+	border-radius:0 5px 5px 0  ;
+	
+}
+ .headerup .headerup1 li{
+	height:17px;
+	font-size: 12px;
+	line-height:17px;
+	padding:0px 10px 0 10px;
+	list-style: none;
+	float:right;
+	
+}
+.headerup .headerup1 .i{
+	padding-top:4px ;
+	margin-top: -3px;
+	font-size: 7px;
+	color:white;
+	background: url(../img/形状-5.png) center center no-repeat;
+	background-size: 16px 17px;
+}
+.headerup .headerup1 .two1,.headerup .headerup1 .three1{
+	border-left:2px solid black ;
+}
+.headerup .headerup1  .three1{
+	border-right: 2px solid black;
+}
+
+.headerup1{
+	padding-top: 5px;
+	width: 632px;
+	margin: 0 auto;
+}
+.headerup .headerup1 .four1 {
+	/*10px ;*/
+	margin: 0px -10px 0px -6px;
+}
+
+/*头部下标题区域*/
+.headerdown ul li{
+	color: #000000;
+	font-size:12px ;
+	float:left;
+	padding-right: 23px;
+	list-style: none;
+	}
+.headerdown ul{
+	margin-right: 85px;
+	float: right;
+	margin-top: -28px;
+}	
+.headerdown{
+	width: 632px;
+	
+	margin:-23px auto -7px auto;
+}
+.headerclear{
+	overflow: hidden;
+}
+.borderbottom{
+	border-bottom:2px solid #176fbb ;
+	
+}
+/*导航区域*/
+.nav p span{
+	display:block;
+	width: 632px;
+	font-size: 12px;
+	height:35px ;
+	line-height: 35px;
+	margin:0px auto 0px auto;
+}
+.nav .one{
+	background: url(../img/伴手礼_33.jpg) center center no-repeat;
+	height: 216px;
+}
+/*主体区域*/
+.centent .cententtitle{
+	/*text-align: ;只针对行内元素*/
+	text-align: center;
+	width: 632px;
+	margin: 0 auto;
+	
+}
+.centent .cententtitle span{
+	display: block;
+	background: url(../img/liwuhe.png) center center no-repeat;
+	padding-left:100px ;
+	font-weight: bold;
+	font-size: 20px;
+	height: 38px;
+	line-height:38px;
+	margin-left: -50px;
+	
+
+}
+.centent .cententtitle img{
+	margin: 0 5px 0 45%;
+	float: left;
+	
+}
+.centent .cententtitle{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.centent .cententtitle:before,.centent .cententtitle:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.cententone .cententone1{
+	margin-right:-17px ;
+	margin-bottom: -17px;
+}
+.cententone  .cententone1 li{
+	float: left;
+	list-style: none;
+	margin-right: 17px;
+	margin-bottom: 15px;
+	position: relative;
+}
+.cententone .cententone1 li p{
+	font-size: 12px;
+	color: white;
+	position: absolute;
+    top:124px;
+    width:198px ;
+    text-align: center;
+    background: url(../img/1xiangsu.png) ;
+	
+}
+.cententone{
+	width: 632px;	
+	margin: 0 auto;
+}
+.cententone1:before,.cententone1:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.page{
+	width: 250px;
+	margin: 0 auto;
+	padding: 20px 0 20px 0;
+}
+.page>a:nth-child(5){
+	background-color:#6e6e6e ;
+}
+.page a{
+	height:15px ;
+	line-height: 15px;
+	text-decoration: none;
+	font-size: 12px;
+	color: black;
+	
+	
+}
+/*底部区域*/
+.footer{
+	background-color: #023c4d;
+	width: 100%;
+	
+}
+.footers{
+	width:622px;
+	margin: 0 auto;
+	
+}
+.footers div{
+	/*margin的四个值,上右下左*/
+	margin: 7px 0 7px 45px;
+	float: left;
+	
+	
+}
+.footer div ul li{
+	list-style: none;
+	margin-bottom: 3px;
+}
+.footers:before,.footers:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.footers ul li{
+	font-size:8px ;
+	color: white;
+}
+.footers ul .one{
+	font-size: 15px;
+}
+.footers ul .impt{
+	font-size: 20px;
+}
+.footers ul .server{
+	text-align: center;
+	color: #023c4d;
+	background-image: url(../img/圆角矩形-4.png) ;
+	background-repeat: no-repeat;
+}
+/*页眉区域*/
+.yemei p{
+	font-size:7px;
+	text-align: center;
+	color: white;
+}
+
+

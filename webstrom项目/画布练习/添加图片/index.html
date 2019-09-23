@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取像素</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        #myCanvas{
+            background: pink;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="400"></canvas>
+<script>
+    var oMyCanvas = document.getElementById("myCanvas");
+    var ctx = oMyCanvas.getContext("2d");
+    ctx.beginPath();
+
+    var newImg = new Image();
+    newImg.src = "./img/banner2.jpg";
+    newImg.onload = function () {
+        ctx.drawImage(newImg,0,0,100,100);
+    }
+    var imgData = ctx.getImageData(100,100,100,100);
+        console.log(imgData);
+
+</script>
+</body>
+</html>

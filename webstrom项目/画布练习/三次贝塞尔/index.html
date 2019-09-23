@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #sa{
+        background-color: red;
+    }
+    </style>
+</head>
+<body>
+    <canvas width="500" height="500" id="sa"></canvas>
+    <script>
+    var oSa=document.querySelector("#sa");
+    var cxt=oSa.getContext("2d");
+    cxt.moveTo(20,20);
+    cxt.bezierCurveTo(20,100,200,100,200,100);
+    cxt.stroke();
+    </script>
+</body>
+</html>

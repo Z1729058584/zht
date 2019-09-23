@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--multiple可以传入多个文件-->
+<input type="file" id="iup" name="sky" multiple>
+<div id="dd">
+
+</div>
+</body>
+<script>
+    // 检测当前网络是否连接，返回布尔值，是用户主动去检测，然后根据返回值去书写不同的功能
+    // window.navigator.onLine;
+    // 2.监测网络事件 online offline 事件 使用addeventLister绑定，对window对象绑定
+    //
+    // 3.textContent改变内容
+    //
+    // 4.监测用户上传时间当file改变的时候触发上传
+    // oinp.onchange=function(){};
+
+    // console.log(window.navigator.onLine);//当前在线打印为true
+    var oinp=document.querySelector("#dd");
+    if( window.navigator.onLine){
+        oinp.textContent="哈哈";
+        oinp.style.backgroundColor="red";
+    }
+    //打印不出
+    // window.addEventListener("online",function () {
+    //     oinp.textContent="哈哈";
+    //
+    //    console.log(1);
+    // });
+    oinp.onchange=function(){ //当内容改变并失去焦点时触发
+        console.log(4);
+    };
+</script>
+</html>

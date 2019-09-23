@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="###">
+    用户名:<input type="text" name="user" id="user">
+    密码:<input type="text" name="pass" id="pass">
+    <button>提交</button>
+</form>
+<button id="hq">获取键对应的值</button>
+<button id="del">删除</button>
+<script>
+    // escape对值进行编码（汉字会被编码）
+    var oForm=document.querySelector("form");
+    var oDel=document.querySelector("#del");
+    var oUser=document.querySelector("#user");
+    var oPass=document.querySelector("#pass");
+    var oHq=document.querySelector("#hq");
+    oForm.onsubmit=function (e) {
+        var e=e||window.event;
+        e.preventDefault?e.preventDefault():e.returnValue=false;
+        localStorage.setItem(oUser.name,oUser.value);
+        localStorage.setItem(oPass.name,oPass.value);
+        console.log(oPass.name + "=" + escape(oPass.value));//escape汉字会被编码
+        return false;
+    }
+    oHq.onclick=function () {
+        console.log(localStorage.getItem("pass"));//localStorage.getItem("键")
+    }
+    oDel.onclick=function () {
+        localStorage.removeItem("pass");//移除localStorage里面的pass
+    }
+</script>
+</body>
+</html>

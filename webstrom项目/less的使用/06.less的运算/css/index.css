@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.box {
+  width: 500px;
+  height: 500px;
+  background-color: red;
+}
+.box .con {
+  width: 50%;
+  height: 250px;
+  margin: 100px;
+  padding: 210px;
+  padding: 3.33333333px;
+  padding: 0.06666667px;
+}

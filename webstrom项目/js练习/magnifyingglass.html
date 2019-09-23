@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 600px;
+            height: 300px;
+            /*margin: 0 auto;*/
+            /*line-height: 300px;*/
+            /*position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;*/
+        }
+
+        .small,
+        .big {
+            width: 290px;
+            height: 298px;
+            float: left;
+            border: 1px solid #CCCCCC;
+        }
+
+        .big {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .small img {
+            width: 290px;
+            height: 298px;
+            /*vertical-align: middle;*/
+            display: block;
+            /*宽度比例为17*/
+            /*高度比例为10*/
+        }
+
+        .big img {
+            position: absolute;
+            /*vertical-align: middle;*/
+            display: none;
+            top: 0;
+            left: 0;
+        }
+    </style>
+    <script src="js/myjs.js"></script>
+</head>
+
+<body>
+<div class="box" id="idbox">
+    <div class="small" id="idsmall"><img src="../css练习/img/fdjpicturexiao.jpg" alt="" id="smallp"/></div>
+    <div class="big" id="idbig"><img src="./img/fdjpictureda.jpg" alt="" id="bigp" width="5120px" height="2880px"/>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var Obigp = document.getElementById("bigp");
+    var Oidbox = document.getElementById("idbox");
+    var Oidsmall = document.getElementById("idsmall");
+    var Oidbig = document.getElementById("idbig");
+    var Osmallp = document.getElementById("smallp");
+    Oidsmall.onmouseenter = function () {
+        Obigp.style.display = "block";
+    }
+    Oidsmall.onmouseleave = function () {
+        Obigp.style.display = "none";
+    }
+    //获取小图片的鼠标位置
+    Osmallp.onmousemove = function (ev) {
+        var e = ev || this.event;
+        var scrollX =window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft;
+        var scrollY =window.pageYOffset|| document.documentElement.scrollTop || document.body.scrollTop;
+
+        var x =e.offsetX||e.clientX-e.offsetLeft;
+        var y =e.offsetY||e.clientX-e.offsetLeft;
+        // var x = e.pageX || e.clientX + scrollX;
+        // var y = e.pageY || e.clientY + scrollY;
+        var byX = (Obigp.offsetWidth / Osmallp.offsetWidth) * x;
+        var byY = (Obigp.offsetHeight / Osmallp.offsetHeight) * y;
+        Obigp.style.left = -byX + "px";
+        Obigp.style.top = -byY + "px";
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    使用基础方法less的时候，需要引入less.js用来解析less，然后把style的type类型改为less-->
+    <style type="text/less">
+        @zero:0;
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: auto;
+            position: absolute;
+            top: @zero;
+            bottom: @zero;
+            right: @zero;
+            left: @zero;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    <script src="./less.min.js"></script>
+</body>
+</html>

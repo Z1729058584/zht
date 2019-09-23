@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 只要数组有一个值返回true，则函数返回true。
+    var age=[18,35,46,23,13,34];
+    var person=age.some(function (item,index,array) {
+        return item<18;
+
+    });
+    if(person)
+    {
+        alert("进入儿童模式");
+    }
+    else{
+        alert("进入成人模式");
+    }
+</script>
+</body>
+</html>

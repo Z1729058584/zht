@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*所以absolute和fixed会覆盖掉浮动的。*/
+        ul li{
+            float: left;
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+        /*ul li:nth-child(1){*/
+        /*    position: absolute;*/
+        /*    left: 20px;*/
+        /*    top: 20px;*/
+        /*}*/
+
+    </style>
+    <link rel="stylesheet" href="css练习/css/reset.css">
+</head>
+<body>
+<div>
+    <ul>
+        <li>11111</li>
+        <li>2222</li>
+        <li>33333</li>
+        <li>44444</li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // foreach遍历数组每一项，直接改变原数组
+    var age=[16,17,18,23,24];
+    var person=age.forEach(function (item,index,array) {
+        age[index]=item+1;
+    });
+    console.log(person);
+    console.log(age);
+
+</script>
+</body>
+</html>

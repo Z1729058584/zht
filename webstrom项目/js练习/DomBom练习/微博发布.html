@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>微博发文</title>
+    <style>
+        body, h1, h2, h3, h4, h5, h6, div, p, dl, dt, dd, ol, ul, li, form, table, th, td, a, img, span, strong, var, em, input, textarea, select, option {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            font-family: "微软雅黑", "宋体", Arail, Tabhoma;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        img {
+            border: none;
+        }
+
+        /*outline是轮廓，起到突出作用的，和边框一样，但是不占用位置*/
+        input, select, textarea {
+            outline: none;
+        }
+
+        textarea {
+            resize: none;
+            overflow: auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        th, strong, var, em, b, i, u {
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #box {
+            width: 500px;
+            /*height: 300px;*/
+            background-color: #f0f3ef;
+            margin: 0 auto;
+            padding: 20px 10px;
+        }
+
+        #top {
+            width: 480px;
+            /*height: 40px;*/
+            margin: 0 auto;
+        }
+
+        #top > h2 {
+            text-align: left;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        #top > p {
+            text-align: right;
+            font-size: 12px;
+        }
+
+        #center {
+            width: 480px;
+            /*height: 40px;*/
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #center > h2 {
+            text-align: left;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        #center > p {
+            text-align: right;
+            font-size: 12px;
+        }
+
+        #center > #fb {
+            margin-top: 10px;
+            float: right;
+            font-weight: bold;
+            margin-bottom: 20px;
+            /*font-size: 16px;*/
+        }
+
+        #bottom {
+            width: 480px;
+            margin: 0 auto;
+        }
+
+        #bottom {
+            background-color: #fff;
+            /*display: block;*/
+            width: 480px;
+            /*height: 30px;*/
+            /*line-height: 30px;*/
+            padding-left: 5px;
+
+        }
+
+        #zts {
+            display: block;
+            width: 480px;
+            padding-left: 5px;
+            background-color: #fff;
+            margin: 0 auto;
+        }
+
+        #bottom li {
+            word-wrap: break-word;
+        }
+
+    </style>
+    <!--    <link rel="stylesheet" href="css/reset.css">-->
+</head>
+<body>
+<div id="box">
+    <div id="top">
+        <h2>标题</h2>
+        <input type="text" style="width: 480px; height:30px" id="btk" maxlength="10">
+        <p>标题字数不能超过10个字</p>
+    </div>
+    <div id="center">
+        <h2>内容</h2>
+        <textarea cols="30" rows="10" style="width: 480px;" id="nrk" ></textarea>
+        <p id="txtcan">最多输入字数120字，还剩：<span id="syleg">120</span>字</p>
+        <input type="button" value="发布" id="fb">
+    </div>
+    <ul id="bottom">
+
+
+    </ul>
+    <label id="zts">您还没有微博内容发布！！！请发布!!!</label>
+
+</div>
+<script>
+    var oBtk = document.getElementById("btk");
+    var oNrk = document.getElementById("nrk");
+    var oZts = document.getElementById("zts");
+    var oSyleg = document.getElementById("syleg");
+    var oTxtcan = document.getElementById("txtcan");
+    var oFb = document.getElementById("fb");
+    var oBottom = document.getElementById("bottom");
+
+
+    oNrk.oninput = function () {
+        var txtleg = oNrk.value.length;
+        // console.log(typeof (txtleg));
+        var syleg = 120 - txtleg;
+        // console.log(typeof (syleg));
+        oSyleg.innerHTML = syleg;
+        if(syleg<=0)
+        {
+            oSyleg.innerHTML=0;
+
+        }
+        if (txtleg ==120) {
+            oTxtcan.style.color = "red";
+        }
+        if (txtleg >120) {
+            oNrk.value.slice(0,120);
+            alert("字数超出限制");
+        }
+    };
+
+    oFb.onclick = function () {
+        var oDeletes = document.getElementsByClassName("delete");
+
+        if(oNrk.value.length <=0){
+            alert("内容不能为空");
+            return;
+        }
+        oBottom.innerHTML = "<li class='contents'><h2>" + oBtk.value + "<br></h2>" + oNrk.value.slice(0,120) + "<a href='###'class='delete'>删除</a></li>" + oBottom.innerHTML;
+        if (oBottom.children.length > 0) {
+            oZts.style.display = "none";
+        }
+        for (var i = 0; i < oDeletes.length; i++) {
+            oDeletes[i].onclick = function () {
+                for (var i = 0; i < oDeletes.length; i++) {
+                    if (oDeletes[i] == this) {
+                        this.parentNode.parentNode.removeChild(oDeletes[i].parentNode);
+                    }
+                }
+                if (oBottom.children.length <= 0) {
+                    oZts.style.display = "block";
+                    // console.log(oZts.style.display);
+                }
+            }
+        }
+
+        oNrk.value = "";
+        oBtk.value="";
+        oSyleg.innerHTML="120";
+        oTxtcan.style.color = "";
+    }
+
+</script>
+</body>
+</html>

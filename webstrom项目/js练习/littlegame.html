@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!--<audio src="" autoplay="auto"></audio>-->
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<input type="text" id="ipt1" style="height: 50px;width: 200px;" />
+		<input type="button" name="btn1" id="btn1" value="Yes" />
+		<input type="button" name="btn1" id="btn2" value="No" />
+		
+		<div id="box1" style="width: 150px; background-color:pink; height: 100px;border: 1px solid #CCCCCC; visibility: hidden; text-align: center;line-height: 100px;">
+			<a href="littlegametiaozhuan.html" style="font-family: 'arial, helvetica, sans-serif'; font-weight: bold;font-size: 20px; display: none;" id="tiaozhuan">come!come!</a>
+			
+		</div>
+		<script type="text/javascript">
+			var OIpt1 = document.getElementById("ipt1");
+			var OBtn1 = document.getElementById("btn1");
+			var OBtn2 = document.getElementById("btn2");
+			var OBox1 = document.getElementById("box1");
+			var OYiny = document.getElementById("yiny")
+			var OTiaozhuan = document.getElementById("tiaozhuan")
+			OIpt1.value = "Do you want happy with me?";
+			OIpt1.onfocus = function() {
+				OIpt1.value = "";
+
+			}
+
+			var flag = 1;
+			OBtn1.onclick = function() {
+				console.log(OIpt1.value);
+				if(OIpt1.value == "Do you want happy with me?") {
+					OBox1.style.visibility = "visible";
+					OBox1.onclick = function() {
+						if(flag == 1) {
+							OBox1.style.backgroundColor = "purple";
+							flag = 2;
+						} else if(flag == 2) {
+							OBox1.style.backgroundColor = "pink";
+							flag=3;
+						} else if(flag==3){
+							OTiaozhuan.style.display="block";
+							
+//
+						}
+						
+					}
+				} else {
+					alert("你是猪");
+				}
+			}
+
+			OBtn2.onclick = function() {
+				alert("sorry,您的权限不够");
+			}
+			
+		</script>
+	</body>
+
+</html>

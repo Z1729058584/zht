@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jquery.js"></script>
+    <script src="./js/index.js"></script>
+</head>
+<body>
+<div class="app">
+    <header class="header">
+        <div class="header_1">
+            <h1 class="logo"><img src="./img/logo.png" alt=""></h1>
+            <div class="channel">
+            </div>
+            <div class="log">
+                <a class="search">搜索</a>
+                <a>登录</a>
+                <a>注册</a>
+            </div>
+        </div>
+        <div class="header_2">
+            <input type="text" placeholder="请输入搜索的内容..." id="inp">
+            <button>搜索</button>
+        </div>
+    </header>
+    <nav class="nav">
+        <a href="###">首页</a>
+        <a href="###">MV</a>
+        <a href="###">悦单</a>
+        <a href="###">V榜</a>
+        <a href="###">音悦</a>
+        <a href="###">商城</a>
+        <a href="###">节目</a>
+        <a href="###">饭团</a>
+        <a href="###">资讯</a>
+        <a href="###">我的家</a>
+        <a href="###">APP下载</a>
+        <a href="###">热门应用</a>
+    </nav>
+    <div class="content">
+
+    </div>
+</div>
+<script>
+    var oChannel = document.querySelector(".header_1 .channel");
+    var Picrem = 1080;
+    var Scale = 16;
+    var flage = true;
+    var oInp=document.querySelector("#inp");
+    console.log(oChannel);
+    oChannel.addEventListener("touchstart", function (e) {
+        if (flage) {
+            this.style.backgroundPositionY = -120 / Picrem * Scale + "rem";
+        } else if (!flage) {
+            this.style.backgroundPositionY = 0 + "rem";
+        }
+        flage = !flage;
+    });
+    $(".header_2 #inp").focus(function () {
+        $(".header_2 #inp").css("backgroundColor","white");
+        console.log(2);
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #sa{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="sa" width="500" height="300"></canvas>
+    <script>
+        var oSa=document.querySelector("#sa");
+        var cxt=oSa.getContext("2d");
+        var R=100;
+        var r=40;
+        cxt.beginPath();
+        cxt.translate(200,200);
+        cxt.moveTo(R*Math.cos(18*Math.PI/180),-R*Math.sin(18*Math.PI/180));
+        for(var i=0;i<5;i++){
+            cxt.lineTo(R*Math.cos((18+72*i)*Math.PI/180),-R*Math.sin((18+72*i)*Math.PI/180));
+            cxt.lineTo(r*Math.cos((54+72*i)*Math.PI/180),-r*Math.sin((54+72*i)*Math.PI/180));
+        }
+        cxt.closePath();
+        cxt.lineWidth=4;
+        cxt.strokeStyle="blue";
+        cxt.stroke();
+    </script>
+</body>
+</html>

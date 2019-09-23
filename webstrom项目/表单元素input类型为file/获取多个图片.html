@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="file" id="img" name="cc" multiple>
+<div id="icon"></div>
+
+<script>
+    var oCon = document.querySelector("#icon");
+    var oImg = document.querySelector("#img");
+    oImg.onchange = function () {
+        for (var i = 0; i < this.files.length; i++) {
+            fl(i);
+            // 闭包
+        }
+    }
+
+    function fl(i) {
+        // render拥有一个redAsText 方法读取文本文件。
+        // render.readAsText(osky.files[0]);
+        var reader = new FileReader();//js提供了一个FileReader()对象，专门用来读取filelist的数据。
+        reader.readAsDataURL(oImg.files[i]);//通过file表单的files对象，来获取到上传的内容
+        reader.onload = function () {  //onload用来检测是否读完
+            console.log(reader);
+            var newImg = new Image();
+            // 把文件保存在一个路径中，所以可以直接把reader.result放到img的src中
+            newImg.src = reader.result;
+            newImg.onload = function () {
+                newImg.width = 100;
+                oCon.appendChild(newImg);
+            }
+
+        }
+    }
+
+</script>
+</body>
+</html>

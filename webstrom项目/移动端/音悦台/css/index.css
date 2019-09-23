@@ -1,0 +1,69 @@
+@import "reset.css";
+.app {
+  background-color: #eee;
+}
+.app .header {
+  background-color: #232323;
+}
+.app .header .header_1 {
+  height: 2rem;
+  overflow: hidden;
+}
+.app .header .header_1 .logo {
+  padding: 0.38518519rem 0.25185185rem 0.31111111rem 0.25185185rem;
+  float: left;
+}
+.app .header .header_1 .logo img {
+  width: 3.55555556rem;
+  height: 1.3037037rem;
+}
+.app .header .header_1 .channel {
+  float: left;
+  width: 1.91111111rem;
+  height: 2rem;
+  background: url("../img/menuBtn.png") 0.23703704rem 0 no-repeat;
+  background-size: 1.21481481rem, 3.45185185rem;
+  margin-top: 0.31111111rem;
+}
+.app .header .header_1 .log {
+  float: right;
+  padding-top: 0.31111111rem;
+}
+.app .header .header_1 .log a {
+  display: inline-block;
+  width: 1.64444444rem;
+  height: 1.15555556rem;
+  line-height: 1.15555556rem;
+  background-color: #690;
+  color: #CCC;
+  margin-right: 0.22222222rem;
+  font-size: 0.62222222rem;
+  text-align: center;
+  border-radius: 8%;
+}
+.app .header .header_1 .log .search {
+  width: 1.92592593rem;
+  height: 1.3037037rem;
+  line-height: 1.3037037rem;
+  color: #fff;
+  margin-right: 0.44444444rem;
+  margin-top: 3px;
+  font-weight: bold;
+  border-radius: 10%;
+}
+.app .header .header_2 {
+  height: 1.52592593rem;
+  padding: 0.23703704rem;
+}
+.app .header .header_2 input {
+  box-sizing: border-box;
+  width: 12.28148148rem;
+  height: 1.52592593rem;
+  background-color: #999;
+  padding: 0.07407407rem 0.14814815rem 0.07407407rem 0.14814815rem;
+  border: 0.01481481rem solid #5a5a5a;
+  font-size: 0.60740741rem;
+  color: #333;
+  border-radius: 15px;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 数组全部的项返回true，则函数返回true
+    var age=[18,19,20,25,26];
+    var person=age.every(function (item,index,array) {
+        return item >= 18;
+    });
+        if(person)
+        {
+            alert("进入成人模式");
+        }
+        else{
+            alert("进入儿童模式");
+        }
+
+</script>
+</body>
+</html>

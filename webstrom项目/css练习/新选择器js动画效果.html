@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+        .red{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+
+</div>
+
+<script>
+    var oBox = document.querySelector(".box");
+    oBox.onclick=function(){
+        oBox.style.width="400px";
+        oBox.className="box red";
+        oBox.style.transition="all 2s linear";
+
+    }
+
+</script>
+</body>
+</html>

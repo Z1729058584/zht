@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //数组不排序去重1
+    // var arr=[1,2,3,4,1,5,3];
+    // var newArry=[];
+    // arr.forEach(function (item,index,array) {
+    //     if(newArry.indexOf(item)==-1)
+    //     {
+    //         newArry.push(item);
+    //     }
+    // })
+    // console.log(newArry);
+    //数组不排序去重2
+    // var arr=[1,2,4,5,7,2,1];
+    // var newArry=[];
+    // arr.forEach(function (item,index,array){
+    //     if(arr.indexOf(item)==index){
+    //         newArry.push(item);
+    //     }
+    // })
+    // console.log(newArry);
+    //数组不排序去重3
+    // var arr=[1,3,5,8,9,3,2,4,5];
+    // var newArry=[];
+    // arr.forEach(function (item,index,array) {
+    //     if(arr.indexOf(item,index)==arr.lastIndexOf(item)){
+    //         newArry.push(item);
+    //     }
+    // })
+    // console.log(newArry);
+// 数组不排序去重4
+    var arr=[1,3,5,8,9,3,2,4,5];
+    var newArry=arr.filter(function (item,index,array) {
+      return arr.indexOf(item)==index;
+    });
+    console.log(newArry);
+</script>
+</body>
+</html>

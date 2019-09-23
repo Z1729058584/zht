@@ -1,0 +1,38 @@
+@import "../../reset.css";
+* {
+  margin: 0;
+  padding: 0;
+}
+.outer {
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background-color: #ff0000;
+}
+.outer .inner {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background-color: #008000;
+}
+.outer .inner .con {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background-color: #ffff00;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            width: 500px;
+            height: 500px;
+            margin-right: 20px;
+            overflow: hidden;
+        }
+        ul li{
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+
+            transform-style: preserve-3d;
+            perspective: 300px;
+            margin-right: 20px;
+        }
+        ul li:hover div{
+            transform: rotateY(90deg);
+
+        }
+        ul li div{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            transform-origin:left center;
+        }
+    </style>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+<ul>
+    <li><div></div></li>
+    <li><div></div></li>
+    <li><div></div></li>
+    <li><div></div></li>
+    <li><div></div></li>
+    <li><div></div></li>
+    <li><div></div></li>
+    <li><div></div></li>
+    <li><div></div></li>
+    <li><div></div></li>
+
+</ul>
+</body>
+</html>

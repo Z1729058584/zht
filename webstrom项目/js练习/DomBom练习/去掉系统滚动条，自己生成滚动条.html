@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,html{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        #outer{
+            width: 20px;
+            border: 1px solid #ccc;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+
+        }
+        #inner{
+            width: 20px;
+            height: 40px;
+            background-color: green;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+        }
+        #content{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+    <script src="../js/myjs.js"></script>
+</head>
+<body>
+<div id="content"></div>
+<div id="outer">
+    <div id="inner"></div>
+</div>
+<script>
+    var oInner=document.getElementById("inner");
+    var Outer=document.getElementById("outer");
+    var oContent=document.getElementById("content");
+
+    for(var i=0;i<999;i++)
+    {
+        oContent.innerHTML+=i+"<br/>";
+    }
+    // var scale=my.getScreen().height/oContent.offsetHeight;
+    oInner.onmousedown=function (ev) {
+        var ev=ev||window.event;
+        ev.preventDefault?ev.preventDefault():ev.returnValue=false;
+        var downtop=ev.clientY;
+        var innertop=my.getEleToDoc(oInner).top;
+        document.onmousemove=function (ev) {
+            var ev=ev||window.event;
+            var movetop=ev.clientY-downtop+innertop;
+
+            if(movetop<=0)
+            {
+                movetop=0;
+            }
+            else if(movetop>=Outer.clientHeight-oInner.offsetHeight)
+            {
+               movetop=Outer.clientHeight-oInner.offsetHeight;
+            }
+            oInner.style.top=movetop+"px";
+            var a=movetop/(Outer.clientHeight - oInner.offsetHeight);
+            var b=(oContent.offsetHeight - my.getScreen().height)*a ;
+            oContent.style.top=-b+"px";
+
+        }
+        document.onmouseup=function () {
+            document.onmousemove=document.onmouseup=null;
+
+
+        }
+    }
+    document.onmousewheel=mouseScroll;
+    document.addEventListener("DOMMouseScroll",mouseScroll);
+    function mouseScroll(ev) {
+        var ev=ev||window.event;
+        // var scroll=ev.wheelDelta||ev.detail;
+        var x=oInner.offsetTop;
+        // console.log();
+        if(ev.wheelDelta)
+        {
+            if(ev.wheelDelta>0)
+            {
+                console.log(2);
+                x+=-5;
+            }
+            else{
+                console.log(1);
+                x+=5;
+            }
+        }
+        else{
+            if(ev.detail<0)
+            {
+                console.log(3);
+                x-=5;
+            }
+            else{
+                console.log(4);
+                x+=5;
+            }
+        }
+        if(x<=0){
+            x=0;
+        }
+        else if(x>=Outer.clientHeight-oInner.offsetHeight)
+        {
+            x=Outer.clientHeight-oInner.offsetHeight;
+        }
+        oInner.style.top=x+"px";
+        var a=x/(Outer.clientHeight - oInner.offsetHeight);
+        var b=(oContent.offsetHeight - my.getScreen().height)*a
+        // console.log(oInner.style.top);
+        var scela=my.getScreen().height/Outer.offsetHeight;
+        oContent.style.top=-b+"px";
+    }
+
+</script>
+</body>
+</html>

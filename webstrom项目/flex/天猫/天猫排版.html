@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .outer{
+            width: 800px;
+            height: 500px;
+            background-color: #ccc;
+            margin: 0 auto;
+            padding-top: 10px;
+        }
+        .inner {
+            width: 780px;
+            height: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+
+        }
+        .inner .top{
+            display: flex;
+            /*flex-wrap: wrap;*/
+            align-content: flex-start;
+            justify-content: space-around;
+
+        }
+        .inner .bottom{
+            display: flex;
+            /*flex-wrap: wrap;*/
+            align-content: flex-start;
+            justify-content: space-around;
+
+        }
+        .inner li{
+            width: 86px;
+            height:120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+    <link rel="stylesheet" href="../../css练习/css/reset.css">
+</head>
+<body>
+<div class="outer">
+    <ul class="inner">
+        <div class="top">
+        <li><img src="./img/01.png" alt=""><p>天猫</p></li>
+        <li><img src="./img/02.png" alt=""><p>天猫</p></li>
+        <li><img src="./img/03.png" alt=""><p>天猫</p></li>
+        <li><img src="./img/04.png" alt=""><p>天猫</p></li>
+        <li><img src="./img/05.png" alt=""><p>天猫</p></li>
+       </div>
+        <div class="bottom">
+        <li><img src="./img/06.png" alt=""><p>天猫</p></li>
+        <li><img src="./img/07.png" alt=""><p>天猫</p></li>
+        <li><img src="./img/08.png" alt=""><p>天猫</p></li>
+        <li><img src="./img/09.png" alt=""><p>天猫</p></li>
+        <li><img src="./img/10.png" alt=""><p>天猫</p></li>
+       </div>
+    </ul>
+</div>
+</body>
+</html>

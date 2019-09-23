@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            margin: 50px auto 0 auto;
+            transform-style: preserve-3d;
+            transform: perspective(300px);
+            /*background-color: pink;*/
+
+        }
+
+        .side {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            text-align: center;
+            line-height: 300px;
+            transition: all 2s;
+        }
+        .box:hover .side:nth-child(1){
+            background-color: rgba(235,22,197,0.5);
+            transform:translateZ(150px);
+        }
+        .box:hover .side:nth-child(2){
+            transform: rotateX(180deg) translateZ(150px);
+            background-color: rgba(223,11,36,0.5);
+        }
+        .box:hover .side:nth-child(3){
+              transform: rotateY(-90deg) translateZ(150px);
+              background-color: rgba(32,22,235,0.5);
+          }
+        .box:hover .side:nth-child(4) {
+            transform: rotateY(90deg) translateZ(150px);
+            background-color: rgba(22,197,235,0.5);
+        }
+        .box:hover .side:nth-child(5){
+            transform: rotateX(90deg) translateZ(150px);
+               background-color: rgba(96,223,11,0.5);
+        }
+        .box:hover .side:nth-child(6) {
+            transform: rotateX(-90deg) translateZ(150px);
+            background-color: rgba(223,116,11,0.5);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="side">正面</div>
+    <div class="side">后面</div>
+    <div class="side">左面</div>
+    <div class="side">右面</div>
+    <div class="side">上面</div>
+    <div class="side">下面</div>
+</div>
+</body>
+</html>

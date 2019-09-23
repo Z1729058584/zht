@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>通讯录</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body,
+        #app {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        ul {
+            list-style: none;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #header {
+            height: 10vh;
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            line-height: 10vh;
+            color: white;
+            font-size: 20px;
+        }
+
+        ul li {
+            box-sizing: border-box;
+            height: 10vh;
+            line-height: 10vh;
+            font-size: 16px;
+            padding-left: 20px;
+            border-top: solid 1px #ddd;
+            border-bottom: solid 1px #ddd;
+        }
+    </style>
+    <script src="js/myjs.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <main id="main">
+            <div id="header">通讯录</div>
+            <ul id="content">
+            </ul>
+        </main>
+    </div>
+
+    <script>
+        var app = document.querySelector('#app');
+        var index = 0;
+        var main = document.querySelector('main');
+        var content = document.querySelector('#content');
+        var Header = document.querySelector("#header");
+        var names = ['勾诗桃', '连盼山', '咸从筠', '许雅容', '徐云霞', '晏新苗', '文星星', '许忆雪', '禄芷秀', '须苇然', '晃觅风', '万雅晗', '贡合瑞', '廖珺琪',
+            '沈安蕾', '杨安波', '朱天悦', '卓梓美', '车妍妍', '潘晓彤', '幸平乐', '须惜香', '邵令美', '逢千束', '通怜珊', '苍语雪', '堵鸣晨', '汤红叶', '彭荏苒',
+            '龙秋芸', '沃香巧', '从列琴', '潘平安', '禄秋芸'
+        ];
+        var oLi = document.getElementsByTagName("li");
+        names.forEach(function (name) {
+            var li = document.createElement('li');
+            li.innerHTML = name;
+            content.appendChild(li);
+        })
+        // document.addEventListener("touchstart", function (e) {
+        //     e.preventDefault();
+        // }, {
+        //     passize: false
+        // })
+        content.addEventListener("touchstart", function (e) {
+            this.y = e.changedTouches[0].clientY;
+            this.top = transformCSS(content, "translateY");
+            if(index<=0){
+                index=0;
+              return;
+            }
+            if(index>=oLi.length-1){
+                index=oLi.length-1;
+               return;
+            }
+        })
+        content.addEventListener("touchmove", function (e) {
+            this._y = e.changedTouches[0].clientY;
+            var newTop = this._y - this.y + this.top;
+            var translateY = newTop;
+            transformCSS(content, "translateY", translateY);
+           
+        })
+        content.addEventListener("touchend", function (e) {
+            this._y = e.changedTouches[0].clientY;
+            if (this._y > this.y) {
+                index++;
+                var translateY = oLi.offsetHeight * index + "px";
+            }
+            if (this._y > this.y) {
+                index--;
+                var translateY = -oLi.offsetHeight * index + "px";
+            }
+            // if (oLi)
+                transformCSS(content, "translateY", translateY);
+        })
+    </script>
+</body>
+
+</html>

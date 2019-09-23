@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="ipt" />
+		<input type="button" id="btn" value="添加"/>
+		<div id="con" style="height: 200px;width: 200px;"></div>
+		<script>
+			var oIpt=document.getElementById("ipt");
+			var oBtn=document.getElementById("btn");
+			var oCon=document.getElementById("con");
+			oBtn.onclick=function (){
+				oCon.innerHTML="张海涛";
+				var oConon=oCon.innerHTML;
+				oConon+="<br/>"+oIpt.value;
+				oCon.innerHTML=oConon;
+				
+			
+			}
+		</script>
+	</body>
+</html>

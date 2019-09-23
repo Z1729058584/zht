@@ -1,0 +1,41 @@
+@import "../../reset.css";
+.clearFix(){
+  *zoom:1;
+  &:after{
+    content: '\200B';
+    height: 0;
+    display: block;
+    clear: both;
+  }
+}
+.outer{
+  width: 606px;
+  border: 1px solid #000;
+  margin: 0 auto;
+  .title{
+    .clearFix();
+    h3{
+      width: 200px;
+      border: 1px solid #000;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      float: left;
+      &.active{
+        background-color: red;
+      }
+    }
+  }
+  .con{
+    li{
+      height: 300px;
+      text-align: center;
+      line-height: 300px;
+      display: none;
+      &.show{
+        display: block;
+      }
+    }
+  }
+
+}

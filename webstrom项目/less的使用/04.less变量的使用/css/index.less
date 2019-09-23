@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+//当作一个普通变量来使用
+@mainColor:#ea1bcc;
+.box{
+  width: 100px;
+  height: 100px;
+  background-color: @mainColor;
+}
+
+//变量当作选择器和属性名使用 使用花括号把变量名包起来
+@select:con;
+@propName:width;
+.@{select}{
+  @{propName}: 100px;
+  height: 100px;
+}
+
+//变量当作url地址使用
+@url1:url("../../../images/skycat/01.png");
+@url2:"../../../images/skycat/01.png";
+.con{
+  //background:@url1  0 0 no-repeat;
+  background: url(@url2) 0 0 no-repeat;
+}
+
+//变量的延迟加载 等当前作用域的代码都执行完 才气解析加载变量 只能用当前作用域的或者祖级作用域的变量
+@var: 0;
+.class {
+  @var: 1;
+  .brass {
+    @var: 2;
+    three: @var;
+    @var: 3;
+  }
+  one: @var;
+}
+

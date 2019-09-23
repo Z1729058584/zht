@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery.js"></script>
+</head>
+<body>
+<script>
+    // 获取事件间隔时间，两种方法
+    $(function () {
+    var oBody = document.getElementsByTagName("body")[0];
+    console.time("name");
+    // var start=new Date();
+    for (var i = 0; i < 9; i++) {
+        for (var j = 0; j < i; j++) {
+            oBody.innerHTML+="#";
+        }
+        oBody.innerHTML+="<br>";
+    }
+    console.timeEnd("name");
+    // var end=new Date();
+    // console.log(end-start);
+    })
+
+
+
+
+
+</script>
+</body>
+</html>

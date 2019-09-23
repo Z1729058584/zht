@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=lRl0dB7WVBGT2P0CQd89tNqhQIXWPqcx"></script>
+    <title>可视区域内的搜素</title>
+</head>
+<body>
+<div id="allmap"></div>
+<script type="text/javascript">
+    // 假设获取的经纬度分别是
+    var longi = 113.83289585422585;//径度
+    var lati = 22.629560947640467;//纬度
+    var userSearch = "网吧";
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+    map.centerAndZoom(new BMap.Point(longi, lati), 14);
+    var local = new BMap.LocalSearch(map, {
+        renderOptions:{map: map}
+    });
+    local.searchInBounds(userSearch, map.getBounds());
+    map.enableScrollWheelZoom(true);
+    map.addEventListener("dragend",function(){
+        map.clearOverlays();
+        local.searchInBounds(userSearch, map.getBounds());
+    });
+</script>
+</body>
+</html>

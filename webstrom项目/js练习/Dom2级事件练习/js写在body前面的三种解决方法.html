@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript">
+        // 1.只能使用一次，多次使用会覆盖需要等待资源加载
+        //        window.onload=function () {
+        //             var oBox=my.getID("box");
+        //             oBox.onclick=function(){
+        //                 alert(1);
+        //             }
+        //
+        //         }
+        // 2.可以多次绑定事件，但是也需要等待页面加载
+        // window.addEventListener("load",function (){
+        // var oBox = my.getID("box");
+        // oBox.onclick = function () {
+        //     alert(1);
+        // }
+        //
+        // },false);
+        // 3.当所有节点加载完毕后，就可以执行，DOMContentLoaded是DOm2级事件，需要addEventListener绑定
+        window.addEventListener("DOMContentLoaded",function () {
+            var oBox = my.getID("box");
+            oBox.onclick = function () {
+                alert(1);
+            }
+        },false);
+
+    </script>
+    <script src="../js/myjs.js"></script>
+</head>
+<body>
+<div id="box">1111</div>
+</body>
+</html>

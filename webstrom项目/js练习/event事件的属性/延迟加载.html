@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/myjs.js"></script>
+</head>
+<body>
+<div id="box">
+
+    <img src=".././img/slideshow1.jpg" orc=".././img/slideshow1.jpg" height="1080" width="1000"/>
+    <img src=".././img/loading.gif" orc="../img/slideshow2.jpg" height="1080" width="1000"/>
+    <img src=".././img/loading.gif" orc="../img/slideshow3.jpg" height="1080" width="1000"/>
+    <img src=".././img/loading.gif" orc="../img/slideshow4.jpg" height="1080" width="1000"/>
+    <img src=".././img/loading.gif" orc="../../全盛金融/img/i-new01.png" height="1000" width="1000"/>
+    <img src=".././img/loading.gif" orc="../../全盛金融/img/i-new02.png" height="1000" width="1000"/>
+    <img src=".././img/loading.gif" orc="../../全盛金融/img/i-new03.png" height="1000" width="1000"/>
+    <img src=".././img/loading.gif" orc="../../全盛金融/img/i-new04.png" height="1000" width="1000"/>
+    <img src=".././img/loading.gif" orc="../../全盛金融/img/i-new05.png" height="1000" width="1000"/>
+    <img src=".././img/loading.gif" orc="../../全盛金融/img/i-new06.png" height="1000" width="1000"/>
+    <img src=".././img/loading.gif" orc="../../全盛金融/img/i-new07.png" height="1000" width="1000"/>
+</div>
+<script>
+    var oBox=document.getElementById("box");
+    var oImg=oBox.getElementsByTagName("img");
+    var flag=true;
+    var timer=null;
+    var n=0;
+    window.onscroll=function () {
+        if (!flag) {
+            return;
+        }
+        // console.log(2);
+        active();
+        timer = setInterval(function () {
+            flag = !flag;
+        }, 200)
+    }
+    function active() {
+
+        for (var i=n;i<oImg.length;i++)
+        {
+            if( my.getEleToDoc(oImg[i]).top<=my.getScreen().height+my.getWinScroll().top)
+           {
+               oImg[i].src=oImg[i].getAttribute("orc");
+                n++;
+            }
+
+        }
+
+    }
+</script>
+</body>
+</html>

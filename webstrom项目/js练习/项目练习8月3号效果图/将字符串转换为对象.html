@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var url="http://www.baidu.com?username=xiaoming&password=123&age=18&sex=女";
+    var arry=url.split("?");
+    var arry2=arry[1].split("&");
+    var obj ={};
+    for (var i=0;i<arry2.length;i++)
+    {
+        obj[arry2[i].split("=")[0]]=arry2[i].split("=")[1];
+    }
+    console.log(obj);
+    // 对象可以通过去遍历（for in）得到对象的属性和值
+    // for (var i in obj) {
+    // console.log(i+":"+obj[i]);}
+    // 数组一般用 for i遍历数组
+
+</script>
+</body>
+</html>

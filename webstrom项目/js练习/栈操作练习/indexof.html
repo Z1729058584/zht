@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // prompt弹窗输入，parseint字符串转换为数字。
+    //indexof判断数组中是否有重复元素,原数组没有返回-1
+    var con=parseInt(prompt("请输入一个数字"));
+    var age=[12,15,4,7,19];
+    if(age.indexOf(con)==-1)
+    {
+        age.push(con);
+        // console.log(age.indexOf);
+    }
+    else{
+        alert("重复");
+    }
+    console.log(age);
+</script>
+</body>
+</html>

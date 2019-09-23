@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11.封装</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        #outer{
+            width: 700px;
+            border: 1px solid #000;
+            margin: 40px auto;
+            position: relative;
+        }
+        #inner{
+            overflow: scroll;
+        }
+        #con{
+            width: 4500px;
+            overflow: hidden;
+        }
+        #con img{
+            float: left;
+            width: 700px;
+            height: 400px;
+        }
+
+        #left{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,.5);
+            font-size: 30px;
+            line-height: 50px;
+            text-align: center;
+            color: #fff;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -25px;
+        }
+        #right{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,.5);
+            font-size: 30px;
+            line-height: 50px;
+            text-align: center;
+            color: #fff;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -25px;
+        }
+
+        #list{
+            overflow: hidden;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            margin-left: -100px;
+        }
+        #list li{
+            width: 20px;
+            height: 20px;
+            background-color: #4c71ff;
+            color: #fff;
+            text-align: center;
+            line-height: 20px;
+            margin: 0 10px;
+            float: left;
+        }
+        #list .show{
+            background-color: mediumvioletred;
+        }
+    </style>
+    <link rel="stylesheet" href="../../js练习/css/reset.css">
+</head>
+<body>
+<div id="outer">
+    <div id="inner">
+        <div id="con">
+            <img src="../../css练习/img/01.jpg" alt="">
+            <img src="img/02.jpg" alt="">
+            <img src="img/03.jpg" alt="">
+            <img src="img/04.jpg" alt="">
+            <img src="img/05.jpg" alt="">
+            <img src="../../css练习/img/01.jpg" alt="">
+        </div>
+        <p id="left">&lt;</p>
+        <p id="right">&gt;</p>
+        <ul id="list">
+            <li class="show">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+</div>
+<script>
+    var oInner = document.getElementById("inner");
+    var oLeft = document.getElementById("left");
+    var oRight= document.getElementById("right");
+    var oCon = document.getElementById("con");
+    var oList = document.getElementById("list");
+    var oImgs = oCon.getElementsByTagName("img");
+    var oLis = oList.getElementsByTagName("li");
+    var timer1 = null;//每隔两秒换张图的 计时器
+    var timer2 = null;//每次换图的时候，计时器动画
+    var v = 0;//定义一个变量 代表当前显示的图片下标
+    // var page = 0;
+    // 图片切换动画代码
+    console.log(oInner.scrollLeft);
+
+    function move(){
+
+        // oInner.scrollLeft = v * oImgs[0].offsetWidth;//这个是最后的结束位置  我们以动画形式呈现
+        //起始位置：当前所在位置
+        var start = oInner.scrollLeft;
+        //结束位置：v * oImgs[0].offsetWidth
+        var end = v * oImgs[0].offsetWidth;
+        //起始步数： 从0开始  方便计算当起始等于结束 动画结束
+        var startStep = 0;
+        //结束步数：我们自己定义  步数越多 走的越慢
+        var endStep = 55;
+        //每一步所走的距离
+        var everyStep = (end - start)/(endStep - startStep);
+
+        //每次换图动画
+        timer2 = setInterval(function () {
+            // 让起始步数加一，然后用来判断动画是否结束
+            startStep ++;
+            if (startStep >= endStep){
+                clearInterval(timer2);
+            }
+            //如果说scrollLeft直接参加计算，那么会忽略小数点，所以我们尽量避免scrollLeft直接参加计算
+            //而是让变量计算 然后赋值给scrollLeft
+            /*console.log(oInner.scrollLeft,everyStep)
+            oInner.scrollLeft +=  everyStep;*/
+
+            start += everyStep;
+            oInner.scrollLeft = start;
+        },10)
+    }
+    //页码切换函数
+    function pageChange(){
+        //让小标跟着动
+        //因为v可以是5  但是i最大是4
+        /*但是 v为5的时候 其实代表的是第一张图 也就是 i = 0
+        但是我们不能随意修改v  因为v代表的是图片  只有图片滚动的时候才能改变v
+        所以定义一个变量page 保存v  和i相关
+        判断当page 等于5的时候  让page = 0*/
+        var page = v;
+        for (var i = 0; i < oLis.length; i++) {
+            if (page == 5){
+                page = 0;
+            }
+            if (i == page){
+                oLis[i].className = "show";
+            } else {
+                oLis[i].className = "";
+            }
+        }
+    }
+    //自动走函数
+    function autoMove(){
+        // timer1 只是控制每隔两秒换一张图
+        timer1 = setInterval(function () {
+            /*为了防止页面失去焦点后，里边的计时器等待或者紊乱进行叠加
+            所以每次开始新的动画时，把上一次的计时器清除掉*/
+            clearInterval(timer2);
+            v ++;
+            //当 v走到第六张（新添加的1）  再加的时候 应该走第二个图  所以v应该等于1
+            //当最后一张 图1 要走图二的时候  应该瞬间让滚动条变成最前的图1  也就是滚动条为0
+            if (v >= oImgs.length) {
+                oInner.scrollLeft = 0;
+                v = 1;
+            }
+            move();
+            pageChange()
+        },2000)
+    }
+
+    // 1、刚进入页面调用自动走函数
+    autoMove();
+
+
+    //2、点击右边按钮
+    oRight.onclick = function () {
+        clearInterval(timer1);
+        clearInterval(timer2);
+        v ++;
+        if (v >= oImgs.length) {
+            oInner.scrollLeft = 0;
+            v = 1;
+        }
+        move();
+        pageChange();
+        autoMove();
+    }
+
+    //3、点击左边按钮
+    oLeft.onclick = function () {
+        clearInterval(timer1);
+        clearInterval(timer2);
+        v --;
+        if(v < 0){
+            v = oImgs.length - 2;
+            oInner.scrollLeft = (oImgs.length - 1) * oImgs[i].offsetWidth;
+        }
+        move();
+        pageChange();
+        autoMove();
+    }
+
+
+    ///4、给下标绑定点击事件
+    for (var i = 0; i < oLis.length; i++) {
+        oLis[i].onclick = function () {
+            clearInterval(timer1);
+            clearInterval(timer2);
+            for (var j = 0; j < oLis.length; j++) {
+                if (oLis[j] == this){
+                    oLis[j].className = "show";
+                    // j代表当前点击的下标，当点击按钮以后，让v等于当前下标  v代表要走到的图片
+                    v = j;
+                    move();
+                    autoMove();
+                } else{
+                    oLis[j].className = "";
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

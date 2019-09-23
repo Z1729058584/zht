@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<input type="button" id="btn" value="点我呀"/>
+		<input type="" name="" id="ipt1" value="" />
+		<input type="" name="" id="ipt2" value="" />
+		<div id="box" style="background-color: red; width: 100px; height: 100px;"></div>
+		<script> 
+			var oBox=document.getElementById("box");
+			var oBtn=document.getElementById("btn");
+			var oIpt1=document.getElementById("ipt1");
+			var oIpt2=document.getElementById("ipt2");
+			
+			
+            oBtn.onclick=function(){
+		        var ipADD1=Number(oIpt1.value);
+		        var ipADD2=Number(oIpt2.value)
+			    oBox.style.width=ipADD1+"px"; 
+			    oBox.style.height=ipADD2+"px";
+            }
+        </script>
+	</body>
+</html>

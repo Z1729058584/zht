@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/myjs.js"></script>
+</head>
+<body>
+<div id="box">
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</div>
+<script>
+    // call可以改变指针指向。a.call(b,c,d);a必须为一个函数，把a的this指向了b，并调用了a,
+    //     c,d都是a函数的参数。
+    var oLis=my.getID("box").getElementsByTagName("li");
+    [].forEach.call(oLis,function (item,index,array) {
+        console.log(item);
+    })
+</script>
+</body>
+</html>

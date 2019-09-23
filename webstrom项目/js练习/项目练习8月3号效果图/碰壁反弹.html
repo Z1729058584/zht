@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #box{
+        width: 800px;
+        height: 500px;
+        background-color: #7e7c7d;
+        margin: 0 auto;
+        border: 1px solid #000;
+        position: relative;
+    }
+    #block{
+        width: 50px;
+        height: 50px;
+        background-color: pink;
+        position: absolute;
+        left: 30px;
+        top: 40px;
+    }
+</style>
+<body>
+<div id="box">
+    <div id="block">
+
+    </div>
+    <script>
+        var oBlock=document.getElementById("block");
+        var oBox=document.getElementById("box");
+        var leftmove=30;
+        var topmove=40;
+        var timer=null;
+        var flagx=true;
+        var flagy=true;
+        var
+        timer=setInterval(function () {
+            if(flagx) {
+                leftmove += 1;
+                if (leftmove >= (oBox.clientWidth - oBlock.offsetWidth)) {
+                    flagx = !flagx;
+                }
+            }
+            else {
+                leftmove--;
+                if (leftmove <= 0) {
+                    flagx = !flagx;
+                }
+            }
+            if(flagy) {
+                topmove += 1;
+                if (topmove >= (oBox.clientHeight - oBlock.offsetHeight)) {
+                    flagy = !flagy;
+                }
+            }
+            else {
+                topmove--;
+                if (topmove <= 0) {
+                    flagy = !flagy;
+                }
+            }
+            oBlock.style.left = leftmove + "px";
+            oBlock.style.top = topmove + "px";
+
+        },2)
+
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*5.margin*/
+        /*1）.不能显示背景颜色，也不能显示任何内容*/
+        /*2).如果第一个子元素和最后一个字元素分别拥有上Margin和下margin，那么会出现父级塌陷*/
+        /*3).上边元素的下margin和下边元素的上Margin会进行重合，然后取最大的值作为两个之间的距离。*/
+        /*4).margin可以设置负值，左为负，元素向左走，上为负，元素向上走，右为负，元素实际宽度变小。*/
+        .a{
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+        }
+        .b{
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="box" style="border: 1px solid #ccc;">
+    <div class="a">aaaaaaaaaaaaaaaaaa</div>
+    <div class="b">bbbbbbbbbbbbbbbbbb</div>
+</div>
+</body>
+</html>

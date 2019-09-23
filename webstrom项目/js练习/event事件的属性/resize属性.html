@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/myjs.js"></script>
+</head>
+<style>
+    body{
+        background-color: red;
+    }
+    #box{
+        width: 100px;
+        height: 100px;
+        background-color: green;
+    }
+</style>
+<body>
+<div id="box">
+
+</div>
+<script>
+    var oBox=document.getElementById("box");
+    var oBody=document.getElementsByTagName("body")[0];
+    window.onresize=function () {
+        if (oBody.clientWidth <= 1000) {
+            oBody.style.backgroundColor = "blue";
+        }
+        // console.log(typeof (my.getScreen().width));
+        if (oBody.clientWidth<= 800) {
+            oBody.style.backgroundColor = "pink";
+        } if (my.getScreen().width <= 600) {
+            oBody.style.backgroundColor = "purple";
+        }
+    }
+</script>
+</body>
+</html>

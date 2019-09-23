@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+
+        /*=========================Reset_start==========================*/
+        body,h1,h2,h3,h4,h5,h6,div,p,dl,dt,dd,ol,ul,li,form,table,th,td,a,img,span,strong,var,em,input,textarea,select,option{margin: 0; padding: 0;}
+        html,body{font-family:"微软雅黑","宋体",Arail,Tabhoma; font-size: 16px; text-align: left;}
+        ul,ol{list-style: none;}
+        img{border: none;}
+        /*outline是轮廓，起到突出作用的，和边框一样，但是不占用位置*/
+        input,select,textarea{outline:none;}
+        textarea{resize:none; overflow: auto;}
+        table{border-collapse: collapse; border-spacing: 0;}
+        th,strong,var,em,b,i,u{font-weight: normal; font-style: normal;}
+        a{text-decoration: none;}
+        #box {
+            background-color: #e7e1cd;
+            width: 350px;
+            height: 600px;
+            margin: 0 auto;
+        }
+
+        #box #box1 {
+            width: 280px;
+            overflow: hidden;
+            margin: 0 auto;
+            padding-top: 40px;
+        }
+
+        #box ul {
+            width: 300px;
+            overflow: hidden;
+
+        }
+
+        #box ul li {
+            text-align: center;
+            float: left;
+            color: #fff;
+            background-color: #000;
+            width: 80px;
+            height: 80px;
+            font-weight: bold;
+            line-height: 40px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        #box ul .active {
+            background-color: #fff;
+            color: #a71d5d;
+        }
+        #base1 h3{
+            margin-bottom: 15px;
+        }
+        #base1{
+            background-color: #fefefe;
+            height: 80px;
+            padding-left: 5px;
+            padding-top: 5px;
+        }
+    </style>
+
+</head>
+<body>
+<div id="box">
+    <div id="box1">
+        <ul>
+            <li class="active">1<br>JAN</li>
+            <li>2<br>FER</li>
+            <li>3<br>MAR</li>
+            <li>4<br>APR</li>
+            <li>5<br>MAY</li>
+            <li>6<br>JUN</li>
+            <li>7<br>JUL</li>
+            <li>8<br>AUG</li>
+            <li>9<br>SEP</li>
+            <li>10<br>OCT</li>
+            <li>11<br>NOV</li>
+            <li>12<br>DEC</li>
+        </ul>
+        <div id="base1">
+            <h3>1月活动</h3>
+            <p>春游踏青活动</p>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript">
+    var Oli = document.getElementsByTagName("li");
+    var Obase1=document.getElementById("base1");
+    var array1=["春游踏青","赏花","赏月","划船","拔河","唱歌","游泳","旅游","看电影","串亲戚","滑冰","滑雪"];
+    var array2=[1,2,3,4,5,6,7,8,9,10,11,12];
+    var array3=[{con:"春游",month:1},{con:"赏花",month:2}];
+    for(var i=0;i<12;i++) {
+        Oli[i].onclick = function (){
+            for (var i = 0; i < Oli.length; i++) {
+                if (Oli[i] == this) {
+                    Oli[i].className = "active";
+                    Obase1.innerHTML = "<h3>"+array2[i]+"月活动</h3><p>" + array1[i]+ "活动</p>"
+                } else {
+                    Oli[i].className = "none";
+                }
+
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

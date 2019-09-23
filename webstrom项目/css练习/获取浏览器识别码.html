@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a=navigator.userAgent;
+    if(a.indexOf("Firefox")>=0)
+    {
+        alert("Firefox");
+        console.log(a);
+
+    }
+    else if(a.indexOf("Edge")>=0)
+    {
+        alert("IE");
+        console.log(a);
+    }
+    else if(a.indexOf("Chrome")>=0)
+    {
+        alert("Chrome");
+        console.log(a);
+    }
+    else{
+        alert(false);
+    }
+</script>
+</body>
+</html>

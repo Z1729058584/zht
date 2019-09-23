@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+        text-align: center;
+    }
+    #myCanvas{
+        background-color: red;
+        margin-top: 30px;
+    }
+    </style>
+</head>
+<body>
+    <canvas width="500" height="600" id="myCanvas"></canvas>
+    <script>
+    var oMyCanvas=document.querySelector("#myCanvas");
+    var ctx=oMyCanvas.getContext("2d");
+    ctx.beginPath();
+   
+    var LinearG=ctx.createRadialGradient(100,200,100,200,400,100);//渐变开始x,y,渐变结束x,y
+    LinearG.addColorStop(0,"black");
+    LinearG.addColorStop(0.2,"white");
+    LinearG.addColorStop(0.4,"blue");
+    LinearG.addColorStop(0.5,"black");
+    LinearG.addColorStop(0.7,"white");
+    LinearG.addColorStop(0.8,"blue");
+    LinearG.addColorStop(1,"red");
+
+    ctx.fillStyle=LinearG;
+    ctx.fillRect(0,0,400,400);
+    ctx.beginPath();
+   
+    ctx.rect(0,100,300,300);
+    ctx.strokeStyle="pink";
+    ctx.lineWidth=4;
+    ctx.stroke();
+
+//     ctx.beginPath();
+//     var LinearG=ctx.createLinearGradient(100,100,400,400);//渐变开始x,y,渐变结束x,y
+//     LinearG.addColorStop(0,"black");
+//     LinearG.addColorStop(1,"white");
+//    ctx.fillStyle=LinearG;
+//    ctx.fillRect(100,100,400,400);
+    </script>
+</body>
+</html>

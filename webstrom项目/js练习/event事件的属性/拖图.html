@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+    <script src="../js/myjs.js"></script>
+
+</head>
+<body>
+    <div id="box"></div>
+<script>
+    var oBox = my.getID("box");
+    // var Outer=my.getID("outer");
+    document.onmousedown = function (ev) {
+        var ev = ev || window.event;
+        var moseleft = ev.clientX - my.getEleToDoc(oBox).left;
+        var mosetop = ev.clientY - my.getEleToDoc(oBox).top;
+
+        document.onmousemove = function (e) {
+            var e = e || window.event;
+            // console.log(my.getOffset(e, oBox).left);
+            var afterleft = e.clientX - moseleft;
+            var aftertop = e.clientY - mosetop;
+
+            if(afterleft<=0){
+                afterleft=0;
+            }
+            else if(afterleft>=document.documentElement.clientWidth-oBox.offsetWidth)
+            {
+
+                afterleft=document.documentElement.clientWidth-oBox.offsetWidth;
+            }
+            if(aftertop<=0){
+                aftertop=0;
+            }
+            else if(aftertop>=document.documentElement.clientHeight-oBox.offsetHeight)
+            {
+                aftertop=document.documentElement.clientHeight-oBox.offsetHeight;
+            }
+            oBox.style.left = afterleft + "px";
+            oBox.style.top = aftertop + "px";
+        }
+        document.onmouseup = function () {
+            document.onmousemove = null;
+            document.onmouseup = null;
+        }
+
+    }
+
+
+</script>
+</body>
+</html>

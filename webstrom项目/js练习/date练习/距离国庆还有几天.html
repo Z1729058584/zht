@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #box{
+        width: 500px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0 auto;
+        padding:0 0 0 20px;
+        background-color: pink;
+        color:white;
+        font-size: 20px;
+        font-weight: bold;
+    }
+</style>
+<body>
+<div id="box">
+
+</div>
+<script>
+    var timer=setInterval(function () {
+        var oBox=document.getElementById("box");
+        var xtime=document.createElement("div");
+        var now =new Date();
+        // console.log(now);
+        var wl=new Date(2019,9,1);
+        // console.log(wl);
+        var sy=wl-now;
+        function guifan(n) {
+          return  n>10 ? n : "0"+ n;
+        }
+
+        // var y =parseInt(sy/(1000*60*60*24*30));
+        // y=guifan(y);
+        var r=parseInt(sy/(1000*60*60*24));
+        r=guifan(r);
+        var h=parseInt((sy%(1000*60*60*24))/(1000*60*60));
+        h=guifan(h);
+        var f=parseInt(((sy%(1000*60*60*24))%(1000*60*60))/(1000*60));
+        f=guifan(f);
+        var s=parseInt((((sy%(1000*60*60*24))%(1000*60*60))%(1000*60))/1000);
+        s=guifan(s);
+        var mili=parseInt((((sy%(1000*60*60*24))%(1000*60*60))%(1000*60))%1000);
+        if(mili<10){
+                mili="00"+mili;
+            }
+            else if(mili<100)
+            {
+                mili="0"+mili;
+            }
+        xtime.innerHTML="距离国庆还有"+r+"日"+h+"时"+f+"分"+s+"秒"+mili+"毫秒";
+        oBox.innerHTML=xtime.innerHTML;
+    },20);
+
+    // // var sytime=now-n;
+    // // console.log(sytime);
+    // // console.log(y);
+    // var y=now.setMonth(10)+1;
+    // guifan(y);
+    //
+    // console.log(y);
+    // var r=now.setDate();
+    // guifan(r);
+    // var h=now.getHours();
+    // guifan(h);
+    // var f=now.setMinutes();
+    // guifan(f);
+    // var s=now.setSeconds();
+    // guifan(s);
+    // var mili=now.setMilliseconds();
+    // // console.log(mili);
+    // if(mili<10){
+    //     mili="00"+mill;
+    // }
+    // else if(mili<100)
+    // {
+    //     mili="0"+mili;
+    // }
+
+
+</script>
+</body>
+</html>

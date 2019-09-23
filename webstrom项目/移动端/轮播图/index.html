@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 1000px;
+            width: 100%;
+            /* overflow: hidden; */
+        }
+
+        .wrap_content {
+            width: 100%;
+            height: 1000px;
+            position: relative;
+        }
+
+        .wrap_pics {
+            position: absolute;
+            overflow: hidden;
+        }
+
+        .wrap_pics .pic {
+            float: left;
+        }
+
+        .pic img {
+            font-size: 0;
+            width: 100%;
+        }
+
+        .wrap_list {
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+        }
+
+        .wrap_list span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 2px;
+            background-color: white;
+        }
+
+        .wrap_list .active {
+            background-color: black;
+        }
+    </style>
+    <script src="./js/myjs.js"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+</head>
+
+<body>
+    <div class="wrap_content">
+        <div class="wrap_pics">
+            <div class="pic"><img src="./img/1.jpg" alt=""></div>
+            <div class="pic"><img src="./img/2.jpg" alt=""></div>
+            <div class="pic"><img src="./img/3.jpg" alt=""></div>
+            <div class="pic"><img src="./img/4.jpg" alt=""></div>
+            <div class="pic"><img src="./img/5.jpg" alt=""></div>
+            <div class="pic"><img src="./img/1.jpg" alt=""></div>
+            <div class="pic"><img src="./img/2.jpg" alt=""></div>
+            <div class="pic"><img src="./img/3.jpg" alt=""></div>
+            <div class="pic"><img src="./img/4.jpg" alt=""></div>
+            <div class="pic"><img src="./img/5.jpg" alt=""></div>
+        </div>
+        <div class="wrap_list">
+        </div>
+    </div>
+    <script>
+        var oWrap_content = document.querySelector('.wrap_content');
+        var oWrap_pics = oWrap_content.querySelector('.wrap_pics');
+        var oWrap_list = oWrap_content.querySelector('.wrap_list');
+        var len = oWrap_pics.querySelectorAll('.pic').length / 2;
+        var length = oWrap_pics.querySelectorAll('.pic').length;
+        var oPic = oWrap_pics.querySelectorAll('.pic');
+        var oSpans = oWrap_list.getElementsByTagName('span');
+        var index = 0;
+        var isfirst = true;
+        var isHori = null;
+        oWrap_content.timer = null;
+        // oWrap_pics.innerHTML += oWrap_pics.innerHTML;
+        //阻止默认事件
+        // document.addEventListener('touchstart',function(e){
+        //    e.preventDefault();
+        // },{passive:false})
+        oWrap_content.addEventListener("touchstart", function (e) {
+            this.x = e.changedTouches[0].clientX;
+            this.y = e.changedTouches[0].clientY;
+            this.startTime = Date.now();
+            if (index == 0) {
+                index = len;
+                var translateX = -oWrap_content.offsetWidth * index;
+                transformCSS(oWrap_pics, 'translateX', translateX);
+            }
+            if (index == length - 1) {
+                index = len - 1;
+                oWrap_pics.style.transition = 'none';
+                var translateX = -oWrap_content.offsetWidth * index;
+                transformCSS(oWrap_pics, 'translateX', translateX);
+            }
+            this.left = transformCSS(oWrap_pics, 'translateX');
+            oWrap_pics.style.transition = 'none';
+            // 停止计时器
+            clearInterval(this.timer);
+            // console.log(oWrap_pics.offsetLeft);//可以为负值
+        });
+        oWrap_content.addEventListener('touchmove', function (e) {
+            this._x = e.changedTouches[0].clientX;
+            this._y = e.changedTouches[0].clientY;
+            var disx =Math.abs( this._x - this.x);
+            var disy = Math.abs(this._y - this.y);
+            if (isfirst) {
+                isfirst=false;
+                if (disx < disy) {
+                    isHori = false;
+                }
+                if (disx > disy) {
+                    isHori = true;
+                }
+            }
+        //     isHori=true;
+        //    console.log(!isHori==true?true:false);
+            if (!isHori) {
+                return;
+            }
+            e.preventDefault();
+            var newleft = this._x - this.x + this.left;
+            // 设置样式
+            transformCSS(oWrap_pics, 'translateX', newleft);
+
+        });
+        oWrap_content.addEventListener('touchend', function (e) {
+            this._x = e.changedTouches[0].clientX;
+            //判断滑动距离是否超过容器宽度的一半
+            var disX = Math.abs(this._x - this.x);
+            //获取手指离开的事件
+            this.endTime = Date.now();
+            var disTime = this.endTime - this.startTime;
+            if (disX > oWrap_content.offsetWidth / 2 || disTime <= 300) {
+                if (this._x > this.x) {
+                    index--;
+                } else if (this._x < this.x) {
+                    index++;
+                }
+            }
+            //切换幻灯片
+            this.switchSlide(index);
+            //启动定时器
+            this.autoRun();
+        })
+        // 过度结束后的事件
+        oWrap_pics.addEventListener('transitionend', function () {
+            // 检测是否到了最右侧
+            if (index >= length - 1) {
+                //如果到了最右侧，设置index为中间值，并改变wrapper的位置
+                index = len - 1;
+                oWrap_pics.style.transition = 'none';
+                var translateX = -oWrap_content.offsetWidth * index;
+                transformCSS(oWrap_pics, 'translateX', translateX);
+            }
+        })
+        // 判断个数, 进行样式的设置 初始化
+        oWrap_content.inti = function () {
+            oWrap_pics.style.width = length + "00%";
+            for (var i = 0; i < length; i++) {
+                oPic[i].style.width = 100 / length + "%";
+            }
+            window.addEventListener('load', function () {
+                //设置高度
+                //   oWrap_content.style.height=oPic[0].offsetHeight+"px";
+                //点的设置
+                for (var i = 0; i < len; i++) {
+                    var span = document.createElement("span");
+                    //   //增加激活状态
+                    if (i == 0) {
+                        span.className = 'active';
+                    }
+                    oWrap_list.appendChild(span);
+                }
+            })
+        }
+        oWrap_content.inti();
+        oWrap_content.autoRun = function () {
+            clearInterval(this.timer);
+            //定时器
+            oWrap_content.timer = setInterval(function () {
+                //索引自增
+                index++;
+                // 切换幻灯片
+                oWrap_content.switchSlide(index);
+
+            }, 1000);
+        }
+        oWrap_content.autoRun();
+        //切换幻灯片
+        oWrap_content.switchSlide = function (indexes) {
+            oWrap_pics.style.transition = "all 0.5s";
+            // 计算当前索引对应的left的值
+            var newleft = -oWrap_content.offsetWidth * indexes;
+            transformCSS(oWrap_pics, 'translateX', newleft);
+            //改变小圆点的状态
+            //清除所有小圆点的active
+            for (var i = 0; i < oSpans.length; i++) {
+                oSpans[i].className = '';
+            }
+            oSpans[indexes % len].className = 'active';
+            //赋值给全局变量的indx 索引
+            index = indexes;
+        }
+    </script>
+
+</body>
+
+</html>

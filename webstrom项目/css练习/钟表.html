@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+/*表盘*/
+        .out{
+            width: 400px;
+            height: 400px;
+            position: relative;
+            border-radius: 50%;
+            margin: 100px auto 0 auto;
+            background: url("./img/fdjpicturexiao.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+/*分钟刻度线*/
+        .inner li{
+            position: absolute;
+            left: 198px;
+            top: 0;
+            width: 4px;
+            height: 10px;
+            background-color: white;
+            transform-origin:2px 200px ;
+        }
+        /*时针刻度线*/
+.out li:nth-child(5n+1){
+    width: 4px;
+    height:15px;
+    background-color:yellow;
+}
+/*圆心*/
+        .out .arc{
+              position: absolute;
+              width: 10px;
+              height: 10px;
+              background-color: black;
+              left:195px ;
+              top: 195px;
+              border-radius: 50%;
+          }
+/*时针*/
+        .out .hour{
+            width: 16px;
+            height: 100px;
+            display: inline-block;
+            background-color: red;
+            position: absolute;
+            left: 192px;
+            top: 100px;
+            transform-origin: bottom center;
+        }
+        /*分针*/
+        .out .minters{
+            width:12px;
+            height: 130px;
+            display: inline-block;
+            background-color: blue;
+            position: absolute;
+            left: 194px;
+            top: 70px;
+            transform-origin: bottom center;
+        }
+        /*秒针*/
+        .out .seconds{
+            width: 8px;
+            height: 160px;
+            display: inline-block;
+            background-color: yellow;
+            position: absolute;
+            left: 196px;
+            top: 40px;
+            transform-origin: bottom center;
+        }
+    </style>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+<div class="out">
+        <div class="hour"></div>
+        <div class="minters"></div>
+        <div class="seconds"></div>
+        <ul class="inner">
+        </ul>
+        <div class="arc"></div>
+</div>
+<script>
+    var oHour=document.querySelector(".hour");
+    var oMinters=document.querySelector(".minters");
+    var oSeconds=document.querySelector(".seconds");
+    var oInner=document.querySelector(".inner");
+    var newLi=[];
+    for(var i=0 ;i<60;i++){
+        newLi[i]=document.createElement("li");
+        oInner.appendChild(newLi[i]);
+        newLi[i].style.transform=" rotate("+i*6+"deg)";
+    }
+// 获取当前时针、分针、秒针的时间
+     function time() {
+         var now = new Date();
+         var Seconds = now.getSeconds();
+         var Minters = now.getMinutes();
+         Minters=Minters+Seconds/60;
+         var Hour = now.getHours();
+         Hour=Hour+Minters/60;
+         oHour.style.transform = "rotate(" + Hour * 30 + "deg)";
+         oMinters.style.transform = "rotate(" + Minters * 6 + "deg)";
+         oSeconds.style.transform = "rotate(" + Seconds * 6 + "deg)";
+     }
+    // 先自调用一次
+         time();
+    // 每隔一秒调用一次
+         var timer=setInterval(time,1000);
+
+
+
+
+</script>
+</body>
+</html>

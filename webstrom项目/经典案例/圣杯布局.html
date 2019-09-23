@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .outer{
+            /*width: 100%;*/
+            overflow: hidden;
+            /*float: left;*/
+            padding: 0 100px;
+            /*margin: 0 100px;*/
+        }
+        .content{
+            /*margin: 0 100px;*/
+            height: 100px;
+            /*margin: 0 -100px;*/
+            width: 100%;
+            float: left;
+            background-color: red;
+
+        }
+        .left{
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color:green;
+            margin-left: -100%;
+            position: relative;
+            left: -100px;
+        }
+        .right{
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin-left: -100px;
+            position: relative;
+            right:-100px ;
+        }
+    </style>
+    <link rel="stylesheet" href="../js练习/css/reset.css">
+
+</head>
+<body>
+<div class="outer">
+    <div class="content"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+</body>
+</html>

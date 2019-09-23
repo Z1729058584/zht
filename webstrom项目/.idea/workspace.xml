@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="635b11a8-0df6-45ec-9439-3df96eab6ac7" name="默认更改列表" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js练习/Dom2级事件练习/removeeventlistener.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js练习/Dom2级事件练习/伪数组调用数组的方法.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js练习/Dom2级事件练习/阻止传播.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="900">
+              <caret line="25" selection-start-line="25" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/画布练习/外切圆/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1008">
+              <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flex/练习.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js练习/event事件的属性/拖图.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="936">
+              <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js练习/studentinformation.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js练习/magnifyingglass.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/画布练习/矩形旋转并缩放/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1224">
+              <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css练习/八卦.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="73" column="22" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="Less File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>morestrategy</find>
+      <find>br</find>
+      <find>oContent5_1</find>
+      <find>rightmove</find>
+      <find>v</find>
+      <find>content5_1_01</find>
+      <find>#content5_1 &gt; .p2</find>
+      <find>move</find>
+      <find>#content5_1 #content5_1_01</find>
+      <find>clientleft</find>
+      <find>content5_1content_leftselected</find>
+      <find>four</find>
+      <find>content5_1</find>
+      <find>leftmove</find>
+      <find>content5contentRtop</find>
+      <find>#content2 .content2content .top_01 .bigimg_03_2</find>
+      <find>getWinscroll</find>
+      <find>setWinYScroll</find>
+      <find>border</find>
+      <find>click</find>
+      <find>nth-child(3)</find>
+      <find>contentInner</find>
+      <find>active</find>
+      <find>right_</find>
+      <find>contentList</find>
+      <find>canvas</find>
+      <find>oMyCanvas</find>
+      <find>oBottom</find>
+      <find>fl0 main-color</find>
+      <find>maskLine</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>oLi</replace>
+      <replace>orc</replace>
+      <replace>li</replace>
+      <replace>content4</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/js练习/遛弯作业/遛弯.html" />
+        <option value="$PROJECT_DIR$/经典案例/图片无缝滚动教程版.html" />
+        <option value="$PROJECT_DIR$/经典案例/图片无缝滚动教程版/index.html" />
+        <option value="$PROJECT_DIR$/h5视频播放设置/index.html" />
+        <option value="$PROJECT_DIR$/h5应用/h5表单元素/index.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js练习/event事件的属性/拖图.html" />
+        <option value="$PROJECT_DIR$/h5应用/h5视频播放设置/index.html" />
+        <option value="$PROJECT_DIR$/css练习/钟表.html" />
+        <option value="$PROJECT_DIR$/修改像素/index.html" />
+        <option value="$PROJECT_DIR$/less.less" />
+        <option value="$PROJECT_DIR$/index2.html" />
+        <option value="$PROJECT_DIR$/头部布局/css/index.css" />
+        <option value="$PROJECT_DIR$/经典案例/slideshow.html" />
+        <option value="$PROJECT_DIR$/画布练习/写字/index.html" />
+        <option value="$PROJECT_DIR$/file上传多个图片事件.html" />
+        <option value="$PROJECT_DIR$/index3.html file事件.html" />
+        <option value="$PROJECT_DIR$/头部布局/index.html" />
+        <option value="$PROJECT_DIR$/头部布局/css/index.less" />
+        <option value="$PROJECT_DIR$/百度地图搜索2.html" />
+        <option value="$PROJECT_DIR$/获取当前位置.html" />
+        <option value="$PROJECT_DIR$/表单元素input类型为file/index3.html file事件.html" />
+        <option value="$PROJECT_DIR$/百度地图.html" />
+        <option value="$PROJECT_DIR$/本地存储cookie、localstorage、sessionstrage/cookie.html" />
+        <option value="$PROJECT_DIR$/本地存储cookie、localstorage、sessionstrage/cookie截取字符串.html" />
+        <option value="$PROJECT_DIR$/本地存储cookie、localstorage、sessionstrage/localstorage.html" />
+        <option value="$PROJECT_DIR$/本地存储cookie、localstorage、sessionstrage/sessionsstorage.html" />
+        <option value="$PROJECT_DIR$/classList对象的练习.html" />
+        <option value="$PROJECT_DIR$/表单元素input类型为file/QQ登录.html" />
+        <option value="$PROJECT_DIR$/表单元素input类型为file/诊断网络.html" />
+        <option value="$PROJECT_DIR$/尚硅谷网站多页练习/iconfavicon练习.html" />
+        <option value="$PROJECT_DIR$/js练习/js/myjs.js" />
+        <option value="$PROJECT_DIR$/js练习/遛弯作业/js/myjs.js" />
+        <option value="$PROJECT_DIR$/jd/index.html" />
+        <option value="$PROJECT_DIR$/jd/css/base.css" />
+        <option value="$PROJECT_DIR$/尚硅谷网站多页练习/css/index.less" />
+        <option value="$PROJECT_DIR$/尚硅谷网站多页练习/index.html" />
+        <option value="$PROJECT_DIR$/js练习/DomBom练习/键盘按下事件.html" />
+        <option value="$PROJECT_DIR$/js练习/DomBom练习/去掉默认事件，添加提交事件.html" />
+        <option value="$PROJECT_DIR$/07.开机动画/index.html" />
+        <option value="$PROJECT_DIR$/移动端/音悦台/笔记.md" />
+        <option value="$PROJECT_DIR$/移动端/音悦台/css/1.less" />
+        <option value="$PROJECT_DIR$/移动端/音悦台/css/1.css" />
+        <option value="$PROJECT_DIR$/移动端/轮播图/css/index.less" />
+        <option value="$PROJECT_DIR$/移动端/音悦台/1-音悦台准备.md" />
+        <option value="$PROJECT_DIR$/移动端/音悦台/2-音悦台头部.md" />
+        <option value="$PROJECT_DIR$/移动端/音悦台/js/index.js" />
+        <option value="$PROJECT_DIR$/移动端/音悦台/css/index.less" />
+        <option value="$PROJECT_DIR$/移动端/音悦台/index.html" />
+        <option value="$PROJECT_DIR$/移动端/轮播图/js/myjs.js" />
+        <option value="$PROJECT_DIR$/移动端/轮播图/index.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="168" />
+    <option name="y" value="38" />
+    <option name="width" value="1405" />
+    <option name="height" value="1030" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope">
+        <subPane subId="Scope '项目文件'; set:项目文件; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="webstrom项目" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="F:\webstrom项目" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="webstrom项目" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="F:\webstrom项目" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="js练习" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/test" />
+    <property name="list.type.of.created.stylesheet" value="Less" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\webstrom项目\百度地图" />
+      <recent name="F:\webstrom项目\表单元素input类型为file" />
+      <recent name="F:\webstrom项目\h5应用" />
+      <recent name="F:\webstrom项目\经典案例\图片无缝滚动教程版" />
+      <recent name="F:\webstrom项目\经典案例\img" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\webstrom项目\移动端\音悦台\js" />
+      <recent name="F:\webstrom项目\js" />
+      <recent name="F:\webstrom项目\移动端\音悦台" />
+      <recent name="F:\webstrom项目\移动端\音悦台\img" />
+      <recent name="F:\webstrom项目\移动端\音悦台\css" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/webstrom项目/h5应用/h5表单元素/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="635b11a8-0df6-45ec-9439-3df96eab6ac7" name="默认更改列表" comment="" />
+      <created>1564147295551</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564147295551</updated>
+      <workItem from="1564147296779" duration="250000" />
+      <workItem from="1564147578827" duration="29000" />
+      <workItem from="1564147701741" duration="105000" />
+      <workItem from="1564147841720" duration="89000" />
+      <workItem from="1564197493641" duration="2859000" />
+      <workItem from="1564282174632" duration="19090000" />
+      <workItem from="1564365079730" duration="438000" />
+      <workItem from="1564377372813" duration="1670000" />
+      <workItem from="1564391623453" duration="13574000" />
+      <workItem from="1564460720738" duration="4280000" />
+      <workItem from="1564470409243" duration="10980000" />
+      <workItem from="1564488401493" duration="3031000" />
+      <workItem from="1564491455220" duration="5037000" />
+      <workItem from="1564534630957" duration="7928000" />
+      <workItem from="1564557186128" duration="4503000" />
+      <workItem from="1564572960989" duration="9901000" />
+      <workItem from="1564622745197" duration="23652000" />
+      <workItem from="1564666344668" duration="10820000" />
+      <workItem from="1564707813493" duration="2215000" />
+      <workItem from="1564710714772" duration="1483000" />
+      <workItem from="1564712917457" duration="4475000" />
+      <workItem from="1564728541819" duration="3036000" />
+      <workItem from="1564739461606" duration="7613000" />
+      <workItem from="1564747676806" duration="5175000" />
+      <workItem from="1564791138502" duration="12645000" />
+      <workItem from="1564840236153" duration="6300000" />
+      <workItem from="1564885093108" duration="15486000" />
+      <workItem from="1564989797778" duration="15259000" />
+      <workItem from="1565013905323" duration="6443000" />
+      <workItem from="1565050457372" duration="5926000" />
+      <workItem from="1565076947910" duration="16720000" />
+      <workItem from="1565141156235" duration="2611000" />
+      <workItem from="1565151532920" duration="22229000" />
+      <workItem from="1565187115637" duration="5043000" />
+      <workItem from="1565226582367" duration="35164000" />
+      <workItem from="1565273522321" duration="2964000" />
+      <workItem from="1565310485751" duration="34143000" />
+      <workItem from="1565396336393" duration="58193000" />
+      <workItem from="1565569961766" duration="22413000" />
+      <workItem from="1565655386521" duration="23375000" />
+      <workItem from="1565709275520" duration="765000" />
+      <workItem from="1565747604717" duration="2577000" />
+      <workItem from="1565756750687" duration="8286000" />
+      <workItem from="1565776608341" duration="8084000" />
+      <workItem from="1565832366380" duration="36717000" />
+      <workItem from="1565922136373" duration="5468000" />
+      <workItem from="1565939270648" duration="19097000" />
+      <workItem from="1566002048509" duration="20301000" />
+      <workItem from="1566094340388" duration="9399000" />
+      <workItem from="1566129071315" duration="1062000" />
+      <workItem from="1566177102545" duration="33346000" />
+      <workItem from="1566264277944" duration="8483000" />
+      <workItem from="1566284860959" duration="12151000" />
+      <workItem from="1566299811815" duration="4821000" />
+      <workItem from="1566305267792" duration="2465000" />
+      <workItem from="1566352012938" duration="1989000" />
+      <workItem from="1566359048279" duration="415000" />
+      <workItem from="1566384077331" duration="1422000" />
+      <workItem from="1566443102737" duration="2991000" />
+      <workItem from="1566464267548" duration="1440000" />
+      <workItem from="1566469143843" duration="9168000" />
+      <workItem from="1566520612143" duration="311000" />
+      <workItem from="1566521227041" duration="295000" />
+      <workItem from="1566526195481" duration="646000" />
+      <workItem from="1566543377967" duration="624000" />
+      <workItem from="1566544501670" duration="1515000" />
+      <workItem from="1566559818409" duration="697000" />
+      <workItem from="1566562010020" duration="359000" />
+      <workItem from="1566614046562" duration="639000" />
+      <workItem from="1566620842756" duration="4069000" />
+      <workItem from="1566625720364" duration="6799000" />
+      <workItem from="1566637786688" duration="283000" />
+      <workItem from="1566702199149" duration="37822000" />
+      <workItem from="1566787023440" duration="599000" />
+      <workItem from="1566788682469" duration="14863000" />
+      <workItem from="1566870379601" duration="1070000" />
+      <workItem from="1566886629777" duration="283000" />
+      <workItem from="1566915271948" duration="780000" />
+      <workItem from="1566954887499" duration="35942000" />
+      <workItem from="1567041088360" duration="23552000" />
+      <workItem from="1567086207088" duration="195000" />
+      <workItem from="1567125672482" duration="24883000" />
+      <workItem from="1567211556474" duration="2047000" />
+      <workItem from="1567215649896" duration="32193000" />
+      <workItem from="1567345257352" duration="7748000" />
+      <workItem from="1567383927672" duration="415000" />
+      <workItem from="1567384365268" duration="31578000" />
+      <workItem from="1567493650477" duration="5225000" />
+      <workItem from="1567507657974" duration="2961000" />
+      <workItem from="1567510924858" duration="341000" />
+      <workItem from="1567511372007" duration="2228000" />
+      <workItem from="1567515378745" duration="4950000" />
+      <workItem from="1567570774879" duration="5154000" />
+      <workItem from="1567653302129" duration="95000" />
+      <workItem from="1567669469897" duration="1204000" />
+      <workItem from="1567733611209" duration="1918000" />
+      <workItem from="1567998520321" duration="8653000" />
+      <workItem from="1568022281890" duration="95000" />
+      <workItem from="1568096311861" duration="2466000" />
+      <workItem from="1568099323593" duration="220000" />
+      <workItem from="1568099933507" duration="474000" />
+      <workItem from="1568100445771" duration="15852000" />
+      <workItem from="1568120181604" duration="272000" />
+      <workItem from="1568127876552" duration="915000" />
+      <workItem from="1568163642539" duration="3110000" />
+      <workItem from="1568525146598" duration="1453000" />
+      <workItem from="1568698009007" duration="1096000" />
+      <workItem from="1568700842700" duration="84000" />
+      <workItem from="1568724238864" duration="601000" />
+      <workItem from="1568771645235" duration="1597000" />
+      <workItem from="1568870070104" duration="665000" />
+      <workItem from="1569048671565" duration="1087000" />
+      <workItem from="1569050664111" duration="46000" />
+      <workItem from="1569050742093" duration="288000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="910851000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="135" y="31" width="1124" height="824" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4990177" visible="true" weight="0.33915442" />
+      <window_info id="Structure" order="1" sideWeight="0.50098234" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3293944" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32956153" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32956153" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32900432" />
+      <window_info anchor="bottom" id="调试" order="11" />
+      <window_info anchor="bottom" id="File Transfer" order="12" weight="0.32956153" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4990177" visible="true" weight="0.164465" />
+      <window_info id="Structure" order="1" sideWeight="0.50098234" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3296" />
+      <window_info anchor="bottom" id="调试" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/移动端/轮播图/css/reset.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/移动端/轮播图/笔记.md" />
+    <entry file="file://$PROJECT_DIR$/移动端/音悦台/css/reset.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/移动端/音悦台/css/1.less" />
+    <entry file="file://$PROJECT_DIR$/移动端/音悦台/css/1.css" />
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/common.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/移动端/轮播图/css/index.less" />
+    <entry file="file://$PROJECT_DIR$/移动端/音悦台/笔记.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-150">
+            <caret line="47" column="16" lean-forward="true" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/移动端/轮播图/css/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/移动端/音悦台/css/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/移动端/音悦台/07.rem适配/css/index.less" />
+    <entry file="file://$PROJECT_DIR$/移动端/音悦台/07.rem适配/css/index.css" />
+    <entry file="file://$PROJECT_DIR$/经典案例/js/myjs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5243">
+          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/全盛金融/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3960" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/移动端/音悦台/js/jquery.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/移动端/音悦台/css/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="65" column="20" lean-forward="true" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/移动端/音悦台/1-音悦台准备.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="288">
+            <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/移动端/音悦台/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/移动端/音悦台/2-音悦台头部.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="-36">
+            <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/移动端/音悦台/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="51" column="26" lean-forward="true" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/经典案例/slideshow.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="190" column="20" lean-forward="true" selection-start-line="190" selection-start-column="20" selection-end-line="190" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/全盛金融/img/daohang.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/全盛金融/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-756" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinshanyun/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-72">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jinshanyun/css/jinshanyun.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/移动端/轮播图/js/myjs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-828">
+          <caret line="123" column="61" selection-start-line="123" selection-start-column="61" selection-end-line="123" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JQ练习/微博发布.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3132">
+          <caret line="87" column="33" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/移动端/轮播图/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="167" column="53" lean-forward="true" selection-start-line="167" selection-start-column="53" selection-end-line="167" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js练习/event事件的属性/延迟加载.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1224" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js练习/event事件的属性/resize属性.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js练习/event事件的属性/节流函数.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js练习/event事件的属性/选择城市target练习.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2088" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js练习/DomBom练习/去掉系统滚动条，自己生成滚动条.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1719">
+          <caret line="54" selection-start-line="54" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js练习/DomBom练习/去掉默认事件，添加提交事件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js练习/DomBom练习/微博发布.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js练习/DomBom练习/键盘按下事件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js练习/DomBom练习/两块区域互相移动错误版.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js练习/DomBom练习/arguments.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js练习/Dom2级事件练习/Dom2级绑定事件兼容封装.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js练习/Dom2级事件练习/js写在body前面的三种解决方法.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js练习/Dom2级事件练习/removeeventlistener.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js练习/Dom2级事件练习/伪数组调用数组的方法.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js练习/Dom2级事件练习/阻止传播.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="25" selection-start-line="25" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/画布练习/外切圆/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flex/练习.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js练习/event事件的属性/拖图.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js练习/studentinformation.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js练习/magnifyingglass.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/画布练习/矩形旋转并缩放/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css练习/八卦.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="73" column="22" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

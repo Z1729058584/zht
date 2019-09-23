@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*article, aside, footer, header, nav, section {
+    display: block;
+}*/
+ol, ul {
+    list-style: none;
+}
+img {
+    border: 0;
+    vertical-align: middle;
+}
+em, i, u {
+    font-style: normal;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    *zoom: 1
+}
+body {
+    font: 12px/1.5 'microsoft yahei',Arial, Verdana, "\5b8b\4f53";
+    color: #666;
+    background: #f0f3ef;
+}
+a {
+    color: #666;
+    text-decoration: none;
+    font-family: 'microsoft yahei';
+}
+a:hover {
+    color: #C81623;
+}
+.left-arrow img,.right-arrow img{
+ width:25px ;
+ height:40px;
+ line-height:40px;
+}
+.icon1 img{
+	width:20px;
+	height:30px;
+	line-height:30px ;
+}

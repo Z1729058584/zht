@@ -1,0 +1,7 @@
+.box {
+  width: 100px;
+  /*这样的注释是可以被编译到css中的*/
+  /*设置高度*/
+  height: 100px;
+  background: red;
+}

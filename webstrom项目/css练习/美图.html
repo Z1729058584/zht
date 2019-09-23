@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box {
+            position: relative;
+        }
+
+        #sliding_strip {
+            background-color: black;
+            width: 800px;
+            height: 10px;
+            margin: 100px auto 100px auto;
+            position: relative;
+        }
+
+        #sliding_shoe {
+            width: 10px;
+            height: 20px;
+            background-color: red;
+            position: absolute;
+            left: 50%;
+            margin-left: -5px;
+            top: -5px;
+        }
+
+        #proportions {
+            position: absolute;
+            left: 20px;
+            top: 120px;
+        }
+    </style>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+<div id="box">
+    <input type="text" id="inp"><input type="button" value="添加图片" id="btn">
+
+    <div id="sliding_strip">
+        <div id="sliding_shoe"></div>
+    </div>
+    <span id="proportions">100%</span>
+
+</div>
+<script>
+    var oBtn = document.getElementById("btn");
+    var oInp = document.getElementById("inp");
+    var oBox = document.getElementById("box");
+    var oSlidShone = document.getElementById("sliding_shoe");
+    var oSlidStrip = document.getElementById("sliding_strip");
+    var oProportions = document.getElementById("proportions");
+    var oImg = new Image();
+    var flag = true;
+    var timer=null;
+    oBtn.onclick = function () {
+        var img = "./img/" + oInp.value + ".jpg";
+        oImg.src = img;
+        oBox.appendChild(oImg);
+    }
+    oSlidShone.onmousedown = function (e) {
+        var e = e || window.event;
+        e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true;
+        e.preventDefault ? e.preventDefault() : e.returnValue = false;
+        var oleft = e.offsetX;
+        document.onmousemove = function (e) {
+            if (!flag) {
+                return;
+            }
+            flag=!flag;
+            var e = e || window.event;
+            e.preventDefault ? e.preventDefault() : e.returnValue = false;
+            // var Docwidth=document.documentElement.clientWidth||document.body.clientWidth;
+            var dleft = e.clientX - oleft - oSlidStrip.offsetLeft;
+            if (dleft <= 0) {
+                dleft = 0;
+            } else if (dleft >= oSlidStrip.offsetWidth) {
+                dleft = oSlidStrip.offsetWidth;
+            }
+            oSlidShone.style.left = dleft + "px";
+            // console.log(oSlidShone.style.left);
+            var proportion = parseInt(dleft / (oSlidStrip.offsetWidth / 2) * 100);
+            oImg.style.filter = "opacity(" + proportion + "%) brightness(" + proportion + "%)";
+            oProportions.innerHTML = proportion + "%";
+           timer = setTimeout(function () {
+                flag = !flag;
+           }, 20);
+        }
+        document.onmouseup = function () {
+            document.onmouseup = document.onmousemove = null;
+        }
+    }
+
+
+</script>
+</body>
+</html>

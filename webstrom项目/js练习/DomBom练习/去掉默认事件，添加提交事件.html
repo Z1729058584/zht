@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<form action="http://www.baidu.com">
+请输入手机号:
+<input type="text" id="iup">
+</form>
+<script>
+    var oBtn=document.getElementById("btn");
+    var oInput=document.getElementById("iup");
+    oInput.onkeydown=function (ev) {
+        var ev = ev || window.event;
+        console.log(ev.keyCode);
+        if (ev.keyCode == 13) {
+            if (this.value.length == 11&&!isNaN(this.value)) {
+                Form.submit();
+            } else {
+                alert
+                ("重新输入");
+                return false;
+            }
+        }
+        // if (ev.keyCode==81 || ev.keyCode ==87){
+        //     return false;
+        // }
+
+    }
+</script>
+</body>
+</html>

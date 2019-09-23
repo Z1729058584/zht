@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #small {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            float: left;
+        }
+        #small img{
+            width: 300px;
+            height: 300px;
+        }
+
+        #move {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.5);
+            display: none;
+            cursor:move ;
+
+        }
+
+        #big {
+            width: 500px;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+            float: left;
+            display: none;
+        }
+        #big #bigimg{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+    <script src="../js练习/js/myjs.js"></script>
+</head>
+<body>
+<div id="small">
+    <div id="move"></div>
+    <img src="../css练习/img/fdjpicturexiao.jpg" alt="">
+</div>
+<div id="big">
+    <img src="../js练习/img/fdjpictureda.jpg" alt="" id="bigimg">
+</div>
+<script>
+    var oSmall = document.getElementById("small");
+    var oMove = document.getElementById("move");
+    var oBig = document.getElementById("big");
+    var oBigimg=document.getElementById("bigimg");
+    oSmall.onmousemove = function (ev) {
+        var ev = ev || window.event;
+        oMove.style.display = "block";
+        oBig.style.display = "block";
+        var move = {
+
+            left :ev.clientX - my.getEleToDoc(oSmall).left - (oMove.offsetWidth / 2),
+            top :ev.clientY - my.getEleToDoc(oSmall).top - (oMove.offsetHeight / 2)
+        };
+        if(move.left<=0)
+        {
+            move.left=0;
+        }
+        else if(move.left>=oSmall.clientWidth-oMove.offsetWidth)
+        {
+            move.left=oSmall.clientWidth-oMove.offsetWidth;
+        }
+        if(move.top<=0){
+            move.top=0;
+        }
+        else if(move.top>=oSmall.clientHeight-oMove.offsetHeight)
+        {
+                move.top=oSmall.clientHeight-oMove.offsetHeight;
+        }
+        oMove.style.left =move.left + "px";
+        oMove.style.top=move.top+"px";
+        var x=move.left/(oSmall.clientWidth-oMove.offsetWidth);
+        var y=move.top/(oSmall.clientHeight-oMove.offsetHeight);
+        oBigimg.style.left=-x*(oBigimg.offsetWidth-oBig.clientWidth)+"px";
+        oBigimg.style.top=-y*(oBigimg.offsetHeight-oBig.clientHeight)+"px";
+    }
+    oSmall.onmouseleave=function () {
+        oMove.style.display = "none";
+        oBig.style.display = "none";
+    }
+
+</script>
+</body>
+</html>

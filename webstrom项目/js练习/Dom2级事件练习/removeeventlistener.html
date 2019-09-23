@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box">隐藏</div>
+<script>
+    var oBox=document.getElementById("box");
+    function f1() {
+
+        alert("出来");
+    }
+    oBox.addEventListener("click",f1,false);
+    oBox.removeEventListener("click",f1);
+</script>
+</body>
+</html>

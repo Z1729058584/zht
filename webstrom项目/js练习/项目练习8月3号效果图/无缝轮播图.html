@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+       #outer{
+           position: relative;
+           width: 300px;
+           /*height: 200px;*/
+           overflow: scroll;
+           margin: 0 auto;
+       }
+       #inner{
+           width:1300px ;
+
+           /*height: 150px;*/
+       }
+       #center{
+           font-size: 0;
+       }
+        #center img{
+
+            vertical-align: bottom;
+        }
+       #inner ul{
+           position: absolute;
+           left: 50%;
+           margin-left: -40px;
+           top: 90%;
+           /*width: 70px;*/
+           /*overflow: hidden;*/
+       }
+        #inner ul li{
+            float:left;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            background-color: white;
+           margin-left: 10px;
+
+        }
+    </style>
+    <link rel="stylesheet" href="../css/reset.css">
+</head>
+<body>
+<div id="outer">
+    <div id="inner">
+        <div id="center">
+            <img src="../img/slideshow1.jpg" height="150" width="300"/>
+            <img src="../img/slideshow2.jpg" height="150" width="300"/>
+            <img src="../img/slideshow3.jpg" height="150" width="300"/>
+            <img src="../img/slideshow4.jpg" height="150" width="300"/>
+        </div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+<script>
+    var oImg=document.getElementsByTagName("img");
+    var oInner=
+    var timer=null;
+
+
+
+
+
+
+</script>
+</body>
+</html>

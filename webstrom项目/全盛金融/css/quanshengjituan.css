@@ -1,0 +1,79 @@
+/*通配符*/
+*{
+	margin: 0;
+	padding: 0;
+}
+/*.header .content{
+	margin: 0 auto;
+}*/
+/*头部区域*/
+.header{
+    /*background:-webkit-linear-gradient(left,#cbcdce,#fafafa); 渐变色*/
+    background: url(../img/bagt.png) no-repeat;
+    width: 1280px;
+    height: 131px;
+    
+	position: relative;
+}
+
+.header .headerlogo{ 
+	position: absolute;
+	left:200px;
+	top: 35px;
+	
+}
+
+.header .headerr li{
+	list-style: none;
+	padding-left: 11px;
+	padding-right: 11px;
+	float: left;
+	border-bottom: 2px solid #746a69;
+}
+
+
+.headerr:before,.headerr:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.header .headerr{
+	/*浮动的影响*/
+	display: inline-block;
+	/*width: 577px;*/
+	margin-top: 51px;
+	margin-left: 639px;
+}
+.header p{
+	position: absolute;
+	background-color: #d1d1d1;
+	bottom:0 ;
+	width: 1280px;
+	height: 36px;
+	
+
+}
+.header p #xiaobiao{
+	display: block;
+	margin-left: 210px;
+	font-size: 10px;
+	padding-top: 12px;
+	/*清除默认的vertical-align:baseline;*/
+	vertical-align:bottom;
+}
+.content{
+	
+}
+.content .xys{
+	position: relative;
+}
+.content .xys img{
+	position: absolute;
+	right: 0;
+}
+.content .xys i{
+	font-style: normal;
+	display: block;
+	height:60px;
+	background: url(../img/xxys.png) 976px 42px no-repeat;
+}

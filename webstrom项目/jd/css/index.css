@@ -1,0 +1,491 @@
+/*
+* @Author: Administrator
+* @Date:   2017-11-15 09:44:58
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-11-16 16:27:26
+*/
+/* 版心公共类 */
+.w1190 {
+	width: 1190px;
+	margin: 0 auto;
+	position: relative;
+}
+.main-color {
+	color: #f10215;
+}
+.color-gray {
+	color: #b5a3ac;
+}
+.relative {
+	position: relative;
+	top: 2px;
+}
+.tc {
+	text-align: center;
+}
+/* 头部区域开始 */
+.jd-header {
+	background-color: #fe343d;
+	position: relative;
+	z-index: 2;
+}
+.jd-header a {
+	display: block;
+	height: 80px;
+	background: url(../images/img/header.jpg) center no-repeat;
+}
+.jd-header del {
+	position: absolute;
+	right: 10px;
+	top: 0px;
+	font-size: 20px;
+	text-decoration: none;
+}
+/* 头部区域结束 */
+/* 直通车开始 */
+.shortcut {
+	height: 30px;
+	border-bottom: 1px solid #ddd;
+}
+.address {
+	height: 29px;
+	margin-left: 202px;
+	color: #fff;
+	line-height: 30px;
+	padding:0 5px;
+	border: 1px solid #f0f3ef;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+}
+.address:hover {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-bottom: 1px solid #fff;
+}
+.address:hover .hover-box {
+	display: block;
+}
+.hover-box {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	background-color: #fff;
+	top: 30px;
+	left: -1px;
+	display: none;
+	border: 1px solid #ddd;
+	border-top: 1px solid #fff;
+}
+
+.shortcut-r > li {
+	float: left;
+	line-height: 30px;
+	position: relative;
+}
+.line {
+	height: 12px;
+	width: 1px;
+	background-color: #ccc;
+	margin: 10px 12px 0;
+}
+.erweima {
+	position: absolute;
+	top: 31px;
+	left: 0;
+	border: 1px solid #ccc;
+	border-top: none;
+	line-height: 1;
+	padding:2px;
+}
+.erweima:before {
+	content: '';/* 伪元素content一定不能省  即使里面没有内容 也需要些个空*/
+	position: absolute;
+	width: 0; /* 箭头的代码写法 */
+	height: 0;
+	border-width: 6px;
+	border-color: transparent transparent #fff transparent;
+	border-style: solid;
+	left: 50%;
+	margin-left: -4px;
+	top: -12px;
+}
+/* 直通车结束 */
+
+/* 中间主体区域开始 */
+.middle-main {
+	height: 140px;
+}
+.logo {
+	width: 190px;
+	height: 170px;
+	position: absolute;
+	left: 0;
+	top: -31px;
+	text-indent: -99999px;
+	background:  url(../images/icons/sprite.head.png) 0 0 no-repeat;
+	box-shadow: 0 -5px 10px rgba(0,0,0,.3);
+}
+.logo a{
+	display: block;
+	height: 170px;
+}
+.search {
+	width: 550px;
+	height: 35px;
+	background-color: red;
+	position: absolute;
+	left: 320px;
+	top: 25px;
+}
+.search input {
+	width: 500px;
+	height: 35px;
+	background-color: #fff;
+	border:none;
+	outline: none;
+	text-indent: 10px;
+}
+.search .photo {
+	width: 19px;
+	height: 16px;
+	position: absolute;
+	right: 65px;
+	top: 10px;
+	cursor: pointer;
+	background:  url(../images/icons/sprite-photo-search.png) 0 0 no-repeat;
+}
+.search .photo:hover {
+	background-position: -30px 0;
+}
+.search .search-btn {
+	width: 50px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	background-color: #f10215;
+	border: none;
+	color: #fff;
+	outline: none;
+}
+.search .search-btn [class="iconfont"] {
+	font-size: 20px;
+}
+.middle-main .car {
+	width: 188px;
+	height: 33px;
+	border: 1px solid #e3e4e5;
+	position: absolute;
+	top: 25px;
+	right: 100px;
+	background-color: #fff;
+	line-height: 33px;
+	text-align: center;
+	color: #f10215;
+}
+.middle-main .car .num {
+	position: absolute;
+	background-color: #f10215;
+	/* 最小宽 */
+	min-width: 14px;
+	border-radius: 100px;
+	padding:2px;
+	text-align: center;
+	line-height: 14px;
+	color: #fff;
+	top: 5px;
+	left: 140px;
+}
+.search-key {
+	position: absolute;
+	left: 320px;
+	top: 70px;
+}
+.search-key a {
+	margin-right: 5px;
+}
+.middle-nav {
+	width: 790px;
+	height: 40px;
+	position: absolute;
+	left: 200px;
+	bottom: 0;
+}
+.middle-nav li {
+	float: left;
+	margin-left: 28px;
+	line-height: 40px;
+	position: relative;
+}
+.middle-nav li a {
+	font-size: 14px;
+	color: #333;
+}
+.middle-nav li .new-icon{
+	position: absolute;
+	width: 42px;
+	height: 15px;
+	top: -5px;
+	left: 50%;
+	margin-left: -20px;
+	background:  url(../images/icons/news.png) 0 0 no-repeat;
+}
+.middle-nav .middle-line {
+	margin-left: 20px;
+	/* 让右边的盒子往左边靠 */
+	margin-right: -8px;
+}
+.cheap {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+/* 中间主体区域结束 */
+
+/* 焦点区域开始 */
+.main-container {
+	height: 480px;
+}
+.aside-nav,
+.site-banner,
+.user-core {
+	height: 480px;
+	width: 190px;
+	margin-right: 10px;
+}
+.aside-nav {
+	background-color: #fff;
+}
+.aside-nav > ul {
+	padding: 16px 0;
+}
+.aside-nav > ul > li {
+	height: 28px;
+	line-height: 28px;
+	text-indent: 20px;
+	font-size: 14px;
+}
+.aside-nav > ul > li:hover {
+	background-color: #e83632;
+	color: #fff;
+}
+.aside-nav > ul > li:hover a {
+	color: #fff;
+}
+.aside-nav > ul > li > span {
+	padding:0 2px;
+}
+.banner {
+	width: 590px;
+	height: 480px;
+	margin-right: 10px;
+	overflow: hidden;
+	position: relative;
+}
+.banner .arrow {
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	width: 25px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: rgba(0,0,0,.5);
+	color: rgba(255,255,255,.5);
+	opacity: 0;
+	transition: all 1s;
+}
+.banner:hover .arrow {
+	opacity: 1;
+}
+.banner .left-arrow {
+	left: 0;
+}
+.banner .right-arrow {
+	right: 0;
+}
+.carousel {
+	padding-top: 10px;
+	width: 2950px;
+	position: absolute;
+}
+.carousel li {
+	float: left;
+}
+.pointer {
+	position: absolute;
+	bottom: 20px;
+	left: 50px;
+	/* 去掉行内块默认的边距 */
+	font-size: 0;
+	text-align: center;
+}
+.pointer li {
+	display: inline-block;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	border: 2px solid rgba(255,255,255,.5);
+	margin: 0 4px;
+}
+.pointer li.current {
+	background-color: #fff;
+	box-shadow: 0 0 0 3px rgba(255,255,255,.3);
+}
+.site-banner {
+	padding-top: 10px;
+}
+.site-banner .img-wrap {
+	margin-bottom: 10px;
+}
+.site-banner .img-wrap:last-child {
+	margin-bottom: 0;
+}
+.user-core {
+	margin-top: 10px;
+	height: 470px;
+	margin-right: 0;
+	background-color: #fff;
+}
+.user-login,
+.notice,
+.shortcut-icon {
+	height: 150px;
+}
+.user-login {
+	position: relative;
+}
+.user-pic {
+	height: 80px;
+}
+.user-photo {
+	position: absolute;
+	left: 50%;
+	margin-left: -32.5px;
+	border-radius: 50%;
+	width: 65px;
+}
+.user-photo-hat {
+	position: absolute;
+	left: 50%;
+	width: 90px;
+	height: 90px;
+	top: -10px;
+	margin-left: -45px;
+	background:  url(../images/icons/sprite.user.png) -6px -6px no-repeat;
+}
+.btn-wrap {
+	padding:0 20px;
+	margin-top: 5px;
+}
+.user-new,
+.user-vip {
+	width: 70px;
+	height: 25px;
+	text-align: center;
+	line-height: 25px;
+	border-radius: 20px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+	transition:all 1s;
+}
+.user-new:hover,
+.user-vip:hover {
+	background-color: #e83632;
+	color: #fff;
+}
+.user-new {
+	background-color: #fff;
+}
+.user-vip {
+	background-color: #363634;
+	color: #e5d790;
+}
+/* 焦点区域结束 */
+/* 尾部开始 */
+.jd-f-t {
+	background-color: #f0f3ef;
+	border-bottom: 1px solid #dedede;
+	height: 70px;
+	padding-top: 25px;
+}
+.jd-f-t .list > li:last-child{
+	margin-right: 0;
+}
+.jd-f-t .list > li{
+	float: left;
+	height: 42px;
+	line-height: 42px;
+	padding:0 38px;
+	position: relative;
+	text-indent: 45px;
+	font-size: 18px;
+	font-weight: 700;
+	color: #444;
+	margin-right: 15px;
+}
+.jd-f-t .list > li:nth-child(2) h5{
+	background-position: 0 -42px;
+}
+.jd-f-t .list > li:nth-child(3) h5{
+	background-position: 0 -86px;
+}
+.jd-f-t .list > li:nth-child(4) h5{
+	background-position: 0 bottom;
+}
+.jd-f-t .list > li h5 {
+	position: absolute;
+	width: 36px;
+	height: 42px;
+	background:  url(../images/icons/sprites.png) 0 0 no-repeat;
+	left: 38px;
+	top: 0;
+}
+.jd-f-b {
+	border-bottom: 1px solid #dedede;
+	padding:20px 0;
+}
+.jd-f-b dl {
+	float: left;
+	width: 197px;
+}
+.jd-f-b dl dt {
+	font-size: 14px;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+.jd-f-b dl dd {
+	line-height: 22px;
+}
+.map {
+	width: 205px;
+	height: 145px;
+	background: #f0f3ef url(../images/icons/ico_footer.png) 0 0 no-repeat;
+}
+.map > h5 {
+	text-align: center;
+	margin-bottom: 18px;
+}
+.map > p {
+	padding:0 10px;
+}
+.map > a {
+	display: block;
+	text-align: right;
+}
+.jd-f-f-nav {
+	line-height: 48px;
+}
+.f-line {
+	margin: 0 10px;
+}
+.mt-10 {
+	margin-top: 10px;
+}
+.mt-5 {
+	margin-top: 5px;
+}
+.beian a{
+	width: 104px;
+	height: 32px;
+	display: inline-block;
+	background:  url(../images/icons/ico_footer.png) 0 -151px no-repeat;
+}

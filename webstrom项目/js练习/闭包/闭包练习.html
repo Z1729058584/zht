@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="outer">
+    <div id="inner"></div>
+</div>
+<script>
+    var Outer=document.getElementById("outer");
+    var Inner=document.getElementById("inner");
+    function out() {
+        num=999;
+        function inner() {
+            console.log(num);
+        }
+     return inner;
+
+    }
+    //
+    // console.log(out());
+    var last=out();
+    last();
+</script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.head1{
+		background-color:red;
+}
+.head1 ul{
+	/*height: 10px;*/
+	margin-right: 151px;
+
+}
+body{
+	width:1347px;
+}
+
+.head1 ul li{
+	list-style: none;
+	float: right;
+	padding-right: 16px;
+	line-height:38px ;
+}
+.head1 ul:before,.head1 ul:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.nav1{
+	margin-left: 182px;
+	
+}
+.nav{
+	background-color: #d8ddf1;
+	
+}
+
+.nav ul{
+	margin-right: 120px;
+}
+.navr ul li{
+	
+	list-style: none;
+	float: right;
+	padding-right: 47px;
+	line-height: 38px;
+	
+}
+.navr:before{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
+a{
+	text-decoration: none;
+}
+h1,p{
+	text-align: center;
+}
+.banner{
+	background: #fff  url(../img/003_02.jpg)  0 0 no-repeat;
+	background-size: 1347px 649px;
+	height:649px;
+	position: relative;
+	
+
+}
+.bannercc{
+	width:93px;
+	position: absolute;
+	margin-top: 50%;
+	top:-100px;
+	margin-left: 50%;
+	left:-46px;
+}
+.bannercc li{
+	list-style: none;
+	float: left;
+	width:18px;
+	height: 20px;
+	
+	padding-right: 2px;
+	border: 1px solid #000;
+	border-radius:10px;
+	background-color: #adaca8;
+	
+}
+.bannercc .one{
+	
+	background-color: #fefefe;
+}
+
+.content0 div {
+	float: left;
+	width: 165px;
+	height: 177px;
+	background-color:#7e7c7d;
+	margin-right: 1px;
+	position: relative;
+}
+.content0 div:before,.content0 div:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.content0 div img{
+	position: absolute;
+	width:74px;
+	height: 74px;
+	margin-top: 50%;
+	top:-32.5px;
+	margin-left: 50%;
+	left:-32.5px;;
+	border: 1px solid #fff;
+	border-radius: 40px;
+}
+.content0 div span{
+	position: absolute;
+	display: block;
+	width:74px ;
+    margin-top: 90%;
+    
+    margin-left: 55%;
+    left:-38px;
+
+}
+.content0:after,.content0:before{
+	content: "";
+	display: block;
+	clear: both;
+	
+}
+.content0{
+
+	
+	width:999px ;
+	margin:0 auto;
+}
+.contentL{
+	float:left;
+	margin-right:81px ;
+	
+}
+.contentR{
+	
+	margin-left: 81px;
+}
+.content1:after{
+	content: "";
+	display: block;
+	clear: both;
+	
+	
+}
+.footer div{
+	list-style: none;
+	float:left;
+	margin-right: 109px;
+}
+
+.footer00 {
+	float: left;
+	width: 421px;
+	position: relative;
+	margin-right:155px;
+}
+.footer00 ul{
+	position: absolute;
+	right:155px ;
+}
+

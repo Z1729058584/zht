@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			p,
+			dl,
+			dt,
+			dd,
+			ol,
+			ul,
+			li,
+			form,
+			table,
+			th,
+			td,
+			a,
+			img,
+			span,
+			strong,
+			var,
+			em,
+			input,
+			textarea,
+			select,
+			option {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html,
+			body {
+				font-family: "微软雅黑", "宋体", Arail, Tabhoma;
+				font-size: 16px;
+				text-align: left;
+			}
+			
+			ul,
+			ol {
+				list-style: none;
+			}
+			
+			img {
+				border: none;
+			}
+			/*outline是轮廓，起到突出作用的，和边框一样，但是不占用位置*/
+			
+			input,
+			select,
+			textarea {
+				outline: none;
+			}
+			
+			textarea {
+				resize: none;
+				overflow: auto;
+			}
+			
+			table {
+				border-collapse: collapse;
+				border-spacing: 0;
+			}
+			
+			th,
+			strong,
+			var,
+			em,
+			b,
+			i,
+			u {
+				font-weight: normal;
+				font-style: normal;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			#box1 {
+				margin: 0 auto;
+				position: relative;
+			}
+			
+			#box {
+				width: 400px;
+				height: 250px;
+				position: relative;
+			}
+			
+			#box img {
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: none;
+			}
+			
+			#box .xianshi {
+				display: block;
+			}
+			
+			.choice {
+				overflow: hidden;
+				position: absolute;
+				top: 80%;
+				left: 50%;
+				margin-left: -14px;
+			}
+			
+			.choice li {
+				list-style: none;
+				float: left;
+				width: 10px;
+				height: 10px;
+				background-color: #fff;
+				/*border: 1px solid #FFFFFF;*/
+				border-radius: 5px;
+				margin-left: 2px;
+				/*position: relative;
+				left: 0;*/
+			}
+			.choice .active{
+				background-color: blue;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div style="width: 400px; height: 250px;overflow: hidden;" id="box1">
+			<div id="box" class="classbox">
+				<img src="../js练习/img/slideshow1.jpg" alt="帅猫" title="帅猫" width="400px" id="slide1" class="xianshi"/>
+				<img src="../js练习/img/slideshow2.jpg" alt="深思" title="深思" width="400px" id="slide2" />
+				<img src="../js练习/img/slideshow3.jpg" alt="浩瀚" title="浩瀚" width="400px" id="slide3" />
+				<img src="../js练习/img/slideshow4.jpg" alt="悟空" title="悟空" width="400px" id="slide4" />
+			</div>
+			<ul class="choice">
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var Oclassboximg = document.getElementsByTagName("img");
+			var OIdbox1 = document.getElementById("box1");
+			var Oclasschoiceli = document.getElementsByTagName("li");
+		    var j = 0;
+			var time = setInterval(function(){
+				j++;
+				if(j == Oclassboximg.length ) {
+					j = 0;
+				}
+				lunbo();
+			},5000);
+			function lunbo() {
+				for(var i = 0; i < Oclassboximg.length; i++) {
+					if(i != j) {
+						Oclassboximg[i].className = "";
+						Oclasschoiceli[i].className="";
+					} else {
+						Oclassboximg[i].className = "xianshi";
+						Oclasschoiceli[i].className="active";
+					}
+				}
+			}
+				
+            OIdbox1.onmouseenter=function(){
+            	clearInterval(time);
+            }
+            OIdbox1.onmouseleave=function(){
+            	time = setInterval(function(){
+				j++;
+				if(j == Oclassboximg.length ) {
+					j = 0;
+				}
+				lunbo();
+			},5000)
+            }
+			//高级版一
+			for(var i = 0; i < Oclasschoiceli.length; i++) {
+				Oclasschoiceli[i].onmouseenter = function() {
+					
+					for(var i = 0; i < Oclasschoiceli.length; i++) {
+						if(Oclasschoiceli[i] == this)
+
+						{
+							Oclassboximg[i].className = "xianshi";
+							Oclasschoiceli[i].className="active";
+						} else {
+							Oclassboximg[i].className = "";
+							Oclasschoiceli[i].className="";
+						}
+
+					}
+				}
+			}
+			//<div> 基础
+			//						Oclasschoiceli[1].onmouseenter = function() {
+			//							Oclassboximg[1].style.display = "block";
+			//							for(var i = 0; i < 4; i++) {
+			//								if(i == 1) {
+			//									continue;
+			//								}
+			//								Oclassboximg[i].style.display = "none";
+			//							}
+			//			
+			//						}
+			//						Oclasschoiceli[2].onmouseenter = function() {
+			//							Oclassboximg[2].style.display = "block";
+			//							for(var i = 0; i < 4; i++) {
+			//								if(i == 2) {
+			//									continue;
+			//								} else {
+			//									Oclassboximg[i].style.display = "none";
+			//								}
+			//							}
+			//						}
+			//						Oclasschoiceli[3].onmouseenter = function() {
+			//							Oclassboximg[3].style.display = "block";
+			//							for(var i = 0; i < 4; i++) {
+			//								if(i == 3) {
+			//									continue;
+			//								}
+			//								Oclassboximg[i].style.display = "none";
+			//							}
+			//						}
+			//</div>
+		</script>
+	</body>
+
+</html>

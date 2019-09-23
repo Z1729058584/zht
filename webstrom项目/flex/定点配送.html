@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 1000px;
+            height: 100px;
+            margin: 100px auto 0 auto;
+            padding: 0 20px 0 20px;
+            display: flex;
+            border: 1px solid #ccc;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .box div{
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background:radial-gradient(red 40%,#fff 40%,#fff 60%,red 60%);
+            position: relative;
+        }
+        .box:after{
+            content: "\200B";
+            height: 1px;
+            width: 960px;
+            margin-left: 20px;
+            background-color: black;
+            position: absolute;
+            z-index: -1;
+        }
+        .box div:nth-child(1):after{
+            content: "买家确认";
+            text-align: center;
+            width: 70px;
+            height: 50px;
+            margin-top: -15px;
+            margin-left: -15px;
+            position: absolute;
+        }
+        .box div:nth-child(2):after{
+            content: "确认付款";
+            text-align: center;
+            width: 70px;
+            height: 50px;
+            margin-left: -15px;
+            margin-top: -15px;
+            position: absolute;
+        }
+        .box div:nth-child(3):after{
+            content: "商家确认";
+            text-align: center;
+            width: 70px;
+            height: 50px;
+            margin-left: -15px;
+            margin-top: -15px;
+            position: absolute;
+        }
+        .box div:nth-child(4):after{
+            content: "商家发货";
+            text-align: center;
+            width: 70px;
+            height: 50px;
+            margin-left: -15px;
+            margin-top: -15px;
+            position: absolute;
+        }
+
+    </style>
+    <link rel="stylesheet" href="../css练习/css/reset.css">
+</head>
+<body>
+<div class="box">
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="four"></div>
+</div>
+</body>
+</html>

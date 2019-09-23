@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(successed,eError);
+
+        function successed(position) {
+            console.log(position);
+            // 打印得到当前位置为
+            // var latitude=22.629560947640467;纬度
+            // var longitude=113.83289585422585;经度
+        }
+        function eError() {
+            alert(2);
+        }
+    }
+    else{
+        alert("垃圾");
+    }
+</script>
+</body>
+</html>

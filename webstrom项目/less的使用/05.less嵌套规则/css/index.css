@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.box {
+  width: 400px;
+  height: 500px;
+  background: #0b85f4;
+}
+.box .con {
+  width: 300px;
+  background: rgba(30, 30, 30, 0.4);
+}
+.box .con li {
+  background-color: #1eff0a;
+  margin: 10px;
+}
+.box .con li:nth-child(2) {
+  font-size: 30px;
+}
+.box .con li.show {
+  background-color: red;
+}
+.box .con li.show:after {
+  content: "heheheheh";
+}
+.box .con li:nth-child(4):after {
+  content: "hahhaha";
+}

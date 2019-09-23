@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #sa{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <canvas id="sa" width="500" height="400"></canvas>
+    </div>
+    <script>
+        var oSa=document.querySelector("#sa");
+        var ctx=oSa.getContext("2d");
+        ctx.beginPath();
+        oSa.onmousedown=function(ev){
+         var e=ev||window.event;
+         // ctx.moveTo(e.offsetX,e.offsetY);
+         oSa.onmousemove=function(ev){
+         var e=ev||window.event;
+         ctx.lineTo(e.offsetX,e.offsetY);
+         ctx.strokeStyle="green";
+         ctx.lineWidth=4;
+         ctx.stroke();
+         }
+         document.onmouseup=function(){
+            document.onmouseup=oSa.onmousemove=null;
+         }
+         
+        }
+    </script>
+</body>
+</html>

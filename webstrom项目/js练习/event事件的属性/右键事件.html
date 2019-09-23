@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 800px;
+            height: 800px;
+            background-color: #ccc;
+            position: relative;
+            margin: 0 auto;
+            border: 100px solid red;
+        }
+        #box #menu{
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: red;
+            width: 100px;
+            height: 150px;
+        }
+    </style>
+    <script src="../js/myjs.js"></script>
+</head>
+
+<body>
+<div id="box">
+    <div id="menu"></div>
+</div>
+<script>
+    var oBox=document.getElementById("box");
+    var oMenu=document.getElementById("menu");
+    oBox.oncontextmenu=function (ev) {
+        var ev=ev||window.event;
+        oMenu.style.display="block";
+        // console.log(my.getOffset(oMenu,ev).left,ev.offsetX);
+        // console.log(my.getOffset(oMenu,ev).top,ev.offsetY);
+        oMenu.style.left=my.getOffset(oBox,ev).left+"px";
+        oMenu.style.top=my.getOffset(oBox,ev).top+"px";
+        // if(my.getOffset(oBox,ev).left<=0)
+        // {
+        //     my.getOffset(oBox,ev).left=0;
+        // }
+      if(my.getOffset(oBox,ev).left>=oBox.clientWidth-oMenu.offsetWidth){
+          oMenu.style.left=(oBox.clientWidth-oMenu.offsetWidth)+"px";
+          // console.log(oMenu.style.left);
+          // console.log(oBox.offsetWidth - oMenu.offsetWidth);
+      }
+        if(my.getOffset(oBox,ev).top>=oBox.clientHeight-oMenu.clientHeight){
+            oMenu.style.left=(oBox.clientWidth-oMenu.clientWidth)+"px";
+            // console.log(oMenu.style.left);
+            // console.log(oBox.offsetWidth - oMenu.offsetWidth);
+        }
+        return false;
+    }
+</script>
+</body>
+</html>

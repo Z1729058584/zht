@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str1="http://www.baidu.com";
+    var obj={name:"xiaoming",age:18,sex:"男",password:123};
+    var arry=[];
+    for(var i in obj)
+    {
+        var str2=i+"="+obj[i];
+        arry.push(str2);
+    }
+    var string=arry.join("&");
+    var url=str1+"?"+string;
+    console.log(url);
+</script>
+</body>
+</html>

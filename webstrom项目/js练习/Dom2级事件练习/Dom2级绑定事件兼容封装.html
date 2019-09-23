@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/myjs.js"></script>
+</head>
+<body>
+<div id="box">
+点我
+</div>
+<script>
+    var oBox = my.getID("box");
+    function  f1() {
+        alert("兼容吗");
+    }
+    function addevent(ele,type,fn,boo){
+        if(ele.addEventListener)
+        {
+            ele.addEventListener(type,fn,boo||false);
+        }
+        else if(ele.attachEvent)
+        {
+            ele.attachEvent("on"+type,fn);
+        }
+        else{
+            ele["on"+type]=fn;
+        }
+    }
+    addevent(oBox,"click",f1,false);
+</script>
+</body>
+</html>

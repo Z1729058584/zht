@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body, h1, h2, h3, h4, h5, h6, div, p, dl, dt, dd, ol, ul, li, form, table, th, td, a, img, span, strong, var, em, input, textarea, select, option {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            font-family: "微软雅黑", "宋体", Arail, Tabhoma;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        img {
+            border: none;
+        }
+
+        /*outline是轮廓，起到突出作用的，和边框一样，但是不占用位置*/
+        input, select, textarea {
+            outline: none;
+        }
+
+        textarea {
+            resize: none;
+            overflow: auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        th, strong, var, em, b, i, u {
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        #box{
+            overflow: hidden;
+        }
+
+        .left, .right {
+            float: left;
+            margin: 100px 100px;
+            background-color: #fff;
+        }
+
+
+        .left > a {
+            width: 100px;
+            height: 30px;
+            margin: 20px 10px;
+            display: block;
+            color: white;
+            background-color: purple;
+            text-align: center;
+        }
+
+        .right > a {
+
+            width: 100px;
+            height: 30px;
+            margin: 20px 10px;
+            display: block;
+            color: white;
+            background-color: blue;
+            text-align: center;
+        }
+        #youyi{
+            margin-left: 150px;
+            width: 50px;
+            height: 30px;
+            background-color:blue ;
+            border: 0px;
+        }
+        #zuoyi{
+            margin-left: 30px;
+            width: 50px;
+            height: 30px;
+            background-color:purple ;
+            border: 0px;
+        }
+        .left .active,.right .active{
+            border: 4px solid red;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <div class="left">
+        <a href="#" class="normal">左一</a>
+        <a href="#" class="normal">左二</a>
+        <a href="#" class="normal">左三</a>
+        <a href="#" class="normal">左四</a>
+
+    </div>
+    <div class="right">
+        <a href="#" class="normal">右一</a>
+        <a href="#" class="normal">右二</a>
+        <a href="#" class="normal">右三</a>
+        <a href="#" class="normal">右四</a>
+    </div>
+</div>
+<input type="button" id="youyi" value="右移">
+<input type="button" id="zuoyi" value="左移">
+
+<script>
+    var oLeft = document.getElementsByClassName("left")[0];
+    var oLa = oLeft.getElementsByTagName("a");
+    var oRight = document.getElementsByClassName("right")[0];
+    var oRa = oRight.getElementsByTagName("a");
+    var oYouyi=document.getElementById("youyi");
+    var oZuoyi=document.getElementById("zuoyi");
+    function setLength(){
+        for (var i = 0; i < oLa.length; i++) {
+            oLa[i].onclick = function () {
+                for (var i = 0; i < oLa.length; i++) {
+                    if (oLa[i] == this) {
+                        if (oLa[i].className == "normal") {
+                            // this.className="active";
+                            this.setAttribute("class", "active");
+                        } else if (oLa[i].className == "active")
+                        {
+                            this.setAttribute("class", "normal");
+                        }
+                    }
+                }
+            }
+        }
+        for (var i = 0; i < oRa.length; i++) {
+            oRa[i].onclick = function () {
+                console.log(3);
+                for (var i = 0; i < oRa.length; i++) {
+                    if (oRa[i] == this) {
+                        if (oRa[i].className == "normal") {
+                            // this.className="active";
+                            this.setAttribute("class", "active");
+                        }
+                        else if (oRa[i].className=="active")
+                        {
+                            this.setAttribute("class" , "normal");
+                        }
+                    }
+                }
+            }
+        }
+    }
+    setLength();
+    oYouyi.onclick = function () {
+        for (var i = 0; i < oLa.length; i++) {
+            if (oLa[i].getAttribute("class") == "active") {
+                oLa[i].setAttribute("class", "normal");
+                oRight.appendChild(oLa[i]);
+                i--;
+            }
+        }
+        setLength();
+    }
+    oZuoyi.onclick = function () {
+        for (var i = 0; i < oRa.length; i++) {
+            if (oRa[i].getAttribute("class") == "active") {
+                oRa[i].setAttribute("class", "normal");
+                oLeft.appendChild(oRa[i]);
+                i--;
+            }
+        }
+        setLength();
+    }
+    </script>
+</body>
+</html>

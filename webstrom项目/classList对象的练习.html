@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            /*background-color: red;*/
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .pink{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+
+</div>
+<button id="btn">添加颜色</button>
+<button id="del">删除颜色</button>
+<script>
+    var oBox=document.querySelector("#box");
+    var oBtn=document.querySelector("#btn");
+    var oDel=document.querySelector("#del");
+    oBtn.onclick=function(){
+
+        oBox.classList.add("pink","yellow","blue"); //添加一个或多个类名(class类)
+    };
+    // oDel.onclick=function () {
+    //     oBox.classList.remove("pink","yellow");//删除一个或多个类名
+    // };
+    // oDel.onclick=function () {
+    //     oBox.classList.toggle("pink");//删除或添加一个类名
+    // };
+    oDel.onclick=function () {
+        console.log(oBox.classList.contains("pink"));//判断是否有这个class类名
+    };
+</script>
+</body>
+</html>

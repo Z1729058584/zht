@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        /*图片居中*/
+        .middlealign {
+            vertical-align: middle;
+        }
+        /*图片底部对齐*/
+        .bottomalign {
+            vertical-align: bottom;
+        }
+        /*清除浮动*/
+        .clearfloat:after, .clearfloat:before {
+            display: block;
+            content: "";
+            clear: both;
+        }
+        #header {
+            width: 759px;
+            margin: 0 auto;
+            position: relative;
+            height: 80px;
+        }
+        #headerup > ul {
+            float: right;
+        }
+        #headerup > ul > li {
+            float: left;
+            height: 16px;
+            line-height: 16px;
+            font-size: 12px;
+            margin-top: 10px;
+            padding-top: 3px;
+            padding-bottom: 2px;
+        }
+        #headerup > ul > #search, #headerup > ul > #inp {
+            height: 18px;
+            line-height: 18px;
+            border: 3px solid #999999;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+        #headerup > ul > #search {
+            width: 17px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            border-left: 0;
+            padding-left: 2px;
+        }
+        #headerup > ul > .one {
+            margin-right: 10px;
+        }
+        #headerup > ul > .two, #headerup > ul > .three {
+            border-left: 2px solid #464646;
+            border-right: 2px solid #464646;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        #headerup > ul > .two {
+            border-right: 0;
+        }
+        #headerup > ul > .four {
+            padding-right: 10px;
+            padding-left: 10px;
+            padding-top: 0;
+            height: 20px;
+        }
+        #headerup > ul > .four > i {
+            text-align: center;
+            color: white;
+            font-style: normal;
+            display: inline-block;
+            background: url("./img/smallbox_03.png") center center no-repeat;
+            background-size: 100% 100%;
+            margin-right: 5px;
+            width: 20px;
+            height: 15px;
+            line-height: 15px;
+            padding-top: 5px;
+        }
+        #headerup > ul > .four > span {
+            display: inline-block;
+        }
+        #headerdown {
+            position: absolute;
+            top: 10px;
+        }
+        #headerdown > ul {
+            float: left;
+        }
+        #headerdown > ul > li {
+            float: left;
+            height: 15px;
+            line-height: 15px;
+            font-size: 15px;
+            margin: 55px 28px 0 0;
+        }
+        #headerdown > h2 {
+            float: left;
+        }
+        #headerdown > h2 > img {
+            width: 102px;
+            height: 70px;
+            margin-right: 20px;
+            vertical-align: bottom;
+        }
+        #partline {
+            border-bottom: 4px solid #2271bc;
+            margin-top: 5px;
+        }
+        #content1 {
+            width: 759px;
+            margin: 0 auto 20px auto;
+        }
+        #content1 .content1center {
+            position: relative;
+        }
+        #content1 .content1title {
+            height: 41px;
+            line-height: 41px;
+            font-size: 11px;
+            text-align: left;
+        }
+        .content1center > img {
+            float: left;
+        }
+        .content1center .content1centerright {
+            width: 366px;
+            margin-left: 24px;
+            float: right;
+            border-bottom: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+        }
+        .content1center .content1centerright .ccrtop h3 {
+            text-align: left;
+            padding-left: 11px;
+            border-left: 3px solid #51b23e;
+            font-size: 14px;
+            width: 200px;
+            display: inline-block;
+        }
+        .content1center .content1centerright .ccrtop > img {
+            margin-right: 8px;
+        }
+        .content1center .content1centerright .ccrtop > span {
+            font-size: 9px;
+            margin-right: 14px;
+        }
+        .content1center .content1centerright .ccrtop .p2 {
+            font-size: 12px;
+            margin-top: 15px;
+        }
+        .content1center .content1centerright .ccrbottom h3 {
+            text-align: left;
+            padding-left: 11px;
+            border-left: 3px solid #51b23e;
+            font-size: 14px;
+        }
+        .content1center .content1centerright .ccrbottom {
+            margin-top: 25px;
+            padding-bottom: 9px;
+        }
+        .content1center .content1centerright .ccrbottom .select span {
+            display: inline-block;
+            height: 11px;
+            line-height: 11px;
+            color: #51b23e;
+            border: 1px solid #51b23e;
+            padding: 3px 5px;
+            margin-left: 8px;
+            margin-bottom: 7px;
+            border-radius: 5px;
+        }
+        .content1center .content1centerright .ccrbottom .select span:hover {
+            background-color: #51b23e;
+            color: #fff;
+        }
+        .content1center .content1centerright .ccrbottom .select {
+            margin-bottom: 11px;
+            margin-top: 13px;
+        }
+        .content1center .content1centerright .ccrbottom p {
+            float: right;
+            width: 53px;
+            heigth: 18px;
+            font-size: 9px;
+            border: 1px solid #ccc;
+            padding: 4px 0 2px 7px;
+            border-radius: 5px;
+        }
+        .content1center .content1centerright .ccrbottom .p1 {
+            margin-right: 11px;
+        }
+        #content2 #content2_1 > .p1 {
+            font-size: 17px;
+            height: 55px;
+            line-height: 55px;
+        }
+        #content2 #content2_1 > .p1 span {
+            margin-left: 17px;
+        }
+        #content2 {
+            width: 100%;
+            background-color: #f5f5f5;
+            padding-bottom: 14px;
+        }
+        #content2_1 {
+            width: 759px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #content2_1 .more {
+            width: 68px;
+            text-align: center;
+            height: 17px;
+            line-height: 17px;
+            border: 1px solid #51b23e;
+            color: #51b23e;
+            float: right;
+            margin-top: 17px;
+            border-radius: 5px;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        #content2 .content2content {
+            width: 762px;
+            padding-left: 7px;
+        }
+        #content2 .content2content .content2content_div {
+            float: left;
+            margin-right: 8px;
+        }
+        #content2 .content2content .top_01 {
+            position: relative;
+        }
+        #content2 .content2content .top_01 .bigimg_03_2 {
+            border: 1px solid #fff;
+        }
+        #content2 .content2content .top_01 .bigimg_03_2:hover {
+            border: 1px solid #51b23e;
+        }
+        #content2 .content2content .top_01 .remindfont {
+            width: 180px;
+            height: 23px;
+            line-height: 23px;
+            text-align: center;
+            background: url("./img/reminde_01_img_86.png") center center no-repeat;
+            position: absolute;
+            top: 80%;
+            left: -7px;
+            color: white;
+        }
+        #content2 .content2content .top_01 .remind2 {
+            position: absolute;
+            top: 80%;
+            margin-top: -7px;
+            left: -7px;
+        }
+        #content2 .content2content .content2content_div .bottom_01 {
+            width: 214px;
+            margin: 0 auto;
+
+        }
+        .content2content_div .bottom_01 .p1 {
+            color: #7b7b7b;
+            font-size: 11px;
+            margin-bottom: 10px;
+        }
+        .content2content_div .bottom_01 .p2 {
+            margin-bottom: 7px;
+        }
+        .content2content_div .bottom_01 .p3 {
+            margin-bottom: 13px;
+        }
+        .content2content_div .bottom_01 .p2, .content2content_div .bottom_01 .p3 {
+            font-size: 12px;
+        }
+        .content2content_div .bag_01 {
+            width: 238px;
+            height: 10px;
+            background: url("./img/bag_01_img.png");
+            margin-bottom: 8px;
+        }
+        .content2content_div .dotravel h3 {
+            font-size: 13px;
+            color: #51b23e;
+            margin-bottom: 4px;
+            width: 208px;
+            padding: 0 15px;
+        }
+        .content2content_div .dotravel .smalldotravel {
+            border-top: 1px solid #51b23e;
+            padding-bottom: 13px;
+
+        }
+        .content2content_div .dotravel .smalldotravel li {
+            margin-top: 7px;
+            width: 208px;
+            padding: 0 15px;
+        }
+        .content2content_div .dotravel .smalldotravel li:hover {
+            background-color: #e6e6e6;
+        }
+        .content2content_div .dotravel .smalldotravel h4 {
+            display: inline-block;
+
+        }
+        .content2content_div .dotravel .smalldotravel {
+            font-size: 11px;
+        }
+        .content2content_div .dotravel .smalldotravel span > a {
+            color: #cc0000;
+        }
+        #content3 {
+            width: 100%;
+            padding-bottom: 15px;
+        }
+        #content3_1 {
+            width: 759px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #content3_1 .more {
+            font-size: 11px;
+            height: 15px;
+            line-height: 15px;
+            border: 2px solid #2eb9d2;
+            border-radius: 5px;
+            width: 67px;
+            text-align: center;
+            float: right;
+            color: #2eb9d2;
+            margin-top: 15px;
+        }
+        #content3 .content3content {
+            width: 774px;
+        }
+        #content3 #content3_1 > h3 {
+            font-size: 17px;
+            height: 55px;
+            line-height: 55px;
+            font-weight: normal;
+        }
+        #content3 #content3_1 > h3 span {
+            margin-left: 17px;
+        }
+        #content3 .content3content .content3content_1 {
+            width: 238px;
+            float: left;
+            margin-right: 20px;
+        }
+        #content3 .content3content .content3content_div {
+            width: 238px;
+            height: 168px;
+            overflow: hidden;
+        }
+        #content3 .content3content .fightstop_1 {
+            background: url("./img/bagimg_03_44.png") no-repeat;
+            background-size: cover;
+        }
+        #content3 .content3content .fightstop_2 {
+            background: url("./img/bagimg_04_44.jpg") no-repeat;
+            background-size: cover;
+        }
+        #content3 .content3content .fightstop_3 {
+            background: url("./img/bagimg_05_44.jpg") no-repeat;
+            background-size: cover;
+        }
+        #content3 .content3content .content3content_div .bigbox {
+            position: relative;
+            margin-top: 168px;
+        }
+        #content3 .content3content .content3content_div .inner_02 {
+            width: 197px;
+            overflow: hidden;
+            height: 121px;
+            position: absolute;
+            top: 13px;
+            left: 22px;
+            color: white;
+        }
+        #content3 .content3content .content3content_div .inner_02 h3 {
+            font-size: 12px;
+            height: 12px;
+            line-height: 12px;
+            font-weight: normal;
+        }
+        #content3 .content3content .content3content_div .inner_02 h3 > span {
+            margin-left: 10px;
+        }
+        #content3 .content3content .content3content_div .inner_02 .goodcomment {
+            margin: 10px 0 17px 20px;
+        }
+        #content3 .content3content .content3content_div .inner_02 > .selected {
+            width: 222px;
+        }
+        #content3 .content3content .content3content_div .inner_02 > .selected li {
+            float: left;
+            width: 83px;
+            margin-right: 28px;
+            font-size: 12px;
+        }
+        #content3 .content3content .content3content_div .inner_02 > .selected li > span {
+            margin-left: 8px;
+        }
+        #content3 .content3content .content3content_1 {
+            position: relative;
+        }
+        #content3 .content3content .content3content_1:hover .yy {
+            background-color: #2eb9d2;
+        }
+        #content3 .content3content .content3content_1 .content3content_1_02 {
+            background-color: #f5f5f5;
+            position: relative;
+        }
+        #content3 .content3content .content3content_1 .content3content_1_02 > .p1 {
+            width: 211px;
+            margin: 0 auto;
+            font-size: 13px;
+            text-align: left;
+            height: 34px;
+            line-height: 34px;
+            border-bottom: 1px solid #ccc;
+            color: #ffa000;
+        }
+        #content3 .content3content .content3content_1 .content3content_1_02 .content3content_1_02_01 {
+            width: 156px;
+            margin: 0 auto;
+        }
+        #content3 .content3content .content3content_1 .content3content_1_02_01 > .p2 {
+            height: 28px;
+            line-height: 28px;
+            float: left;
+            width: 50px;
+        }
+        #content3 .content3content .content3content_1 .content3content_1_02_01 > .p2 span {
+            display: inline-block;
+            font-size: 11px;
+            height: 11px;
+            width: 21px;
+            line-height: 11px;
+        }
+        #content3 .content3content .content3content_1 .content3content_1_02_01 > .p3 span {
+            display: inline-block;
+            height: 11px;
+            font-size: 11px;
+            width: 21px;
+            line-height: 11px;
+        }
+        #content3 .content3content .content3content_1 .content3content_1_02_01 > .p3 {
+            float: right;
+            height: 28px;
+            line-height: 28px;
+            width: 50px;
+        }
+        #content3 .content3content .content3content_1 .content3content_1_02_01 > .p2 img, #content3 .content3content .content3content_1 .content3content_1_02_01 > .p3 img {
+            margin-right: 8px;
+
+        }
+        #content3 .content3content .content3content_1 .yy {
+            width: 100%;
+            height: 37px;
+            position: absolute;
+            bottom: -3px;
+            right: -3px;
+            background-color: #ccc;
+            z-index: -1;
+        }
+        #content4 {
+            width: 100%;
+            padding-bottom: 15px;
+        }
+        #content4_1 {
+            width: 759px;
+            margin: 0 auto;
+            overflow: hidden;
+            padding-bottom: 23px;
+        }
+        #content4 #content4_1 .content4content {
+            width: 774px;
+        }
+        #content4 #content4_1 > h3 {
+            font-size: 17px;
+            height: 55px;
+            line-height: 55px;
+            font-weight: normal;
+            float: left;
+        }
+        #content4 #content4_1 > h3 span {
+            margin-left: 17px;
+        }
+        #content4 #content4_1 h4 {
+            float: right;
+            width: 135px;
+            height: 56px;
+            line-height: 56px;
+        }
+        #content4 #content4_1 h4 span {
+            height: 14px;
+            line-height: 14px;
+            display: inline-block;
+            font-size: 14px;
+            padding: 5px;
+            margin: 0 8px;
+
+        }
+        #content4 #content4_1 h4 span:nth-child(1):hover {
+            border-bottom: 2px solid #ffa000;
+            color: #ffa000;
+        }
+        #content4 #content4_1 h4 span:nth-child(2):hover {
+            border-left: 1px solid #ffa000;
+            color: #ffa000;
+        }
+        #content4 .content4content .content4content_1 {
+            width: 238px;
+            float: left;
+            margin-right: 20px;
+            position: relative;
+        }
+        #content4 .content4content .content4content_div {
+            width: 238px;
+            height: 168px;
+            overflow: hidden;
+        }
+        #content4 .content4content .fightstop_1 {
+            background: url("./img/specialty_01.jpg") no-repeat;
+            background-size: cover;
+        }
+        #content4 .content4content .fightstop_2 {
+            background: url("./img/specialty_02.jpg") no-repeat;
+            background-size: cover;
+        }
+        #content4 .content4content .fightstop_3 {
+            background: url("./img/specialty_03.jpg") no-repeat;
+            background-size: cover;
+        }
+        #content4 .content4content .content4content_1:hover .yy {
+            background-color: #ffa000;
+        }
+        #content4 .content4content .content4content_1 .content4content_1_02 {
+            background-color: #f5f5f5;
+            position: relative;
+        }
+        #content4 .content4content .content4content_1 .content4content_1_02 > .p0 {
+            width: 211px;
+            padding-left: 10px;
+            font-size: 13px;
+            text-align: left;
+            height: 34px;
+            line-height: 34px;
+            border-left: 3px solid #ffa000;
+            color: #ffa000;
+        }
+        #content4 .content4content .content4content_1 .content4content_1_02 > .p1 {
+            width: 212px;
+            margin: 0 auto;
+            font-size: 10px;
+            height: 38px;
+            line-height: 12px;
+            color: #ccc;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        #content4 .content4content .content4content_1 .content4content_1_02 .content4content_1_02_01 {
+
+            width: 156px;
+            margin: 0 auto;
+        }
+        #content4 .content4content .content4content_1 .content4content_1_02_01 > .p2 {
+            height: 28px;
+            line-height: 28px;
+            float: left;
+            width: 50px;
+        }
+        #content4 .content4content .content4content_1 .content4content_1_02_01 > .p2 span {
+            display: inline-block;
+            font-size: 11px;
+            height: 11px;
+            width: 21px;
+            line-height: 11px;
+        }
+        #content4 .content4content .content4content_1 .content4content_1_02_01 > .p3 span {
+            display: inline-block;
+            height: 11px;
+            font-size: 11px;
+            width: 21px;
+            line-height: 11px;
+        }
+        #content4 .content4content .content4content_1 .content4content_1_02_01 > .p3 {
+            float: right;
+            height: 28px;
+            line-height: 28px;
+            width: 50px;
+
+        }
+        #content4 .content4content .content4content_1 .content4content_1_02_01 > .p2 img, #content4 .content4content .content4content_1 .content4content_1_02_01 > .p3 img {
+            margin-right: 8px;
+
+        }
+        #content4 .content4content .content4content_1 .yy {
+            width: 100%;
+            height: 37px;
+            position: absolute;
+            bottom: -3px;
+            right: -3px;
+            background-color: #ccc;
+            z-index: -1;
+        }
+        #content5 {
+            width: 100%;
+            background-color: #f5f5f5;
+        }
+        #content5_1 {
+            width: 759px;
+            margin: 0 auto;
+            position: relative;
+        }
+        #content5_1 > h3 {
+            height: 44px;
+            line-height: 44px;
+            padding-top: 16px;
+        }
+        #content5_1 > h3 span {
+            margin-left: 16px;
+            font-size: 16px;
+            font-weight: normal;
+        }
+        #content5_1 #location {
+            position: relative;
+            width: 759px;
+            height: 268px;
+            overflow: hidden;
+        }
+        #content5_1 #content5_1_01 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2140px;
+            height: 268px;
+        }
+        #content5_1 .morestrategy {
+            float: left;
+        }
+        #content5_1 > .p1 {
+            width: 37px;
+            height: 235px;
+            line-height: 234px;
+            background-color: #eeeeee;
+            position: absolute;
+            left: 0;
+            top: 60px;
+            font-size: 34px;
+            color: #ccc;
+            text-align: center;
+        }
+        #content5_1 > .p1:hover {
+            background-color: #abdaa2;
+            color: #fff;
+        }
+        #content5_1 > .p2 {
+            width: 37px;
+            overflow: hidden;
+            height: 235px;
+            line-height: 234px;
+            background-color: #eeeeee;
+            position: absolute;
+            right: 0;
+            top: 60px;
+            font-size: 34px;
+            color: #ccc;
+            text-align: center;
+        }
+        #content5_1 > .p2:hover {
+            background-color: #abdaa2;
+            color: #fff;
+        }
+        #content5_1 .content5_1content_left {
+            width: 240px;
+            float: left;
+            overflow: hidden;
+            margin-left: 37px;
+        }
+        #content5_1 .content5_1content_leftcontent {
+            position: relative;
+
+            height: 167px;
+            margin-bottom: 14px;
+        }
+        #content5_1 .content5_1content_leftcontent img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            border: 1px solid #fff;
+        }
+        #content5_1 .content5_1content_leftcontent .active {
+            display: block;
+            border: 1px solid #56ab47;
+        }
+        #content5_1 .content5_1content_leftselected {
+            width: 255px;
+            overflow: hidden;
+        }
+        #content5_1 .content5_1content_leftselected img {
+            float: left;
+            margin-right: 5px;
+            border: 1px solid #fff;
+        }
+        #content5_1 .content5_1content_leftselected .selected {
+            border: 1px solid #56ab47;
+        }
+        #content5_1 .content5_1content_right {
+            float: left;
+            margin-left: 19px;
+            padding-bottom: 61px;
+        }
+        #content5_1 .content5_1content_right .content5contentRtop > img {
+            float: left;
+        }
+        #content5_1 .content5_1content_right .content5contentRtop .name_browse_like {
+            float: left;
+            margin-top: 36px;
+        }
+        #content5_1 .content5_1content_right .content5contentRtop .name_browse_like h4 {
+            margin-bottom: 13px;
+            font-size: 9px;
+        }
+        #content5_1 .content5_1content_right .content5contentRtop .name_browse_like > p {
+            height: 11px;
+            line-height: 11px;
+        }
+        #content5_1 .content5_1content_right .content5contentRtop .name_browse_like > p span {
+            height: 7px;
+            display: inline-block;
+            line-height: 7px;
+            font-size: 7px;
+            margin-right: 14px;
+        }
+        #content5_1 .content5_1content_right .content5contentRtop .name_browse_like p span > img {
+            margin-right: 8px;
+        }
+        #content5_1 .content5_1content_right .content5contentRbottom p .travelsight a {
+            color: #4e87c1;
+        }
+        #content5_1 .content5_1content_right .content5contentRbottom p .money a {
+            color: red;
+        }
+        #content5_1 .content5_1content_right .content5contentRbottom p .days {
+            color: #4e87c1;
+        }
+        #content5_1 .content5_1content_right .content5contentRbottom p span {
+            margin-right: 25px;
+        }
+        #content5_1 .content5_1content_right .content5contentRbottom .p1 {
+            font-size: 11px;
+            margin-top: 11px;
+            margin-bottom: 17px;
+            text-indent: 1em;
+        }
+        #content5_1 .content5_1content_right .content5contentRbottom .p2 {
+            font-size: 11px;
+            line-height: 18px;
+            width: 415px;
+            color: #ccc;
+        }
+        #content5_1 .content5_1content_right .content5contentRbottom h3 {
+            height: 14px;
+            margin-top: 18px;
+            line-height: 14px;
+            font-size: 14px;
+        }
+        #comments {
+            width: 759px;
+            margin: 24px auto 0 auto;
+        }
+        #comments #commentsleft {
+            float: left;
+            margin-right: 17px;
+            width: 535px;
+        }
+        #comments #commentsleft .p1 {
+            margin-bottom: 14px;
+            background-color: #51b23e;
+            padding-left: 14px;
+            width: 518px;
+        }
+        #comments #commentsleft .issueinput #log_in {
+            display: inline-block;
+            width: 450px;
+            height: 76px;
+            line-height: 76px;
+            font-size: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+            float: left;
+        }
+        #comments #commentsleft .issueinput #log_in a {
+            color: #ffa726;
+            border-bottom: 1px solid #ffa726;
+        }
+        #comments #commentsleft .issueinput .user {
+            margin: 0 14px;
+            display: inline-block;
+            float: left;
+        }
+        #comments #commentsleft .issueinput .user > p {
+            font-size: 11px;
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        #comments .sidepicture {
+            float: right;
+            width: 207px;
+        }
+        #comments .sidepicture img {
+
+            margin-bottom: 15px;
+        }
+        #commentsleft .limitnumber {
+            text-align: right;
+            font-size: 11px;
+            margin-top: 7px;
+            margin-bottom: 14px;
+            color: #ccc;
+        }
+        #commentsleft .clear {
+            clear: both;
+        }
+        #commentsleft .clickcomment {
+            text-align: center;
+            float: right;
+            font-size: 11px;
+            height: 19px;
+            line-height: 19px;
+            width: 61px;
+            background-color: #5ab4f5;
+            border-radius: 5px;
+        }
+        #commentsleft .commentpart .user {
+            margin: 0 14px;
+            display: inline-block;
+            float: left;
+        }
+        #commentsleft .commentpart .user p {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        #commentsleft .commentpart .speaker {
+            width: 450px;
+            line-height: 19px;
+            font-size: 12px;
+            float: left;
+        }
+        #commentsleft .commentabout {
+            width: 450px;
+            margin-left: 81px;
+            overflow: hidden;
+            border-top: 1px dashed #ccc;
+            border-bottom: 1px dashed #ccc;
+        }
+        #commentsleft .commentabout > p {
+            font-size: 10px;
+            float: left;
+            margin-left: 14px;
+        }
+        #commentsleft .commentabout .time {
+            margin-right: 205px;
+            margin-left: 0px;
+        }
+        #commentsleft .Againcommentpart {
+            width: 450px;
+            font-size: 12px;
+            margin-left: 86px;
+            margin-top: 15px;
+        }
+        #commentsleft .Againcommentpart .commentaboutmore {
+            margin-left: 53px;
+        }
+        #commentsleft .Againcommentpart .commentaboutmore p {
+            font-size: 10px;
+            float: left;
+            margin-right: 12px;
+        }
+        #commentsleft .Againcommentpart #otheruserpic {
+            vertical-align: top;
+            margin-right: 15px;
+            float: left;
+        }
+        #commentsleft .Againcommentpart .othername {
+            float: left;
+            font-weight: bold;
+        }
+        #commentsleft .Againcommentpart .speaker {
+            float: left;
+            width: 395px;
+            margin-top: 13px;
+            margin-bottom: 16px;
+        }
+        #commentsleft #pagelist {
+            width: 250px;
+            margin: 20px auto 17px auto;
+            height: 15px;
+            line-height: 15px;
+            font-size: 8px;
+        }
+        #commentsleft #pagelist li {
+            float: left;
+            width: 20px;
+            text-align: center;
+        }
+        #commentsleft #pagelist li:hover {
+            color: #fff;
+            background-color: #2eb9d2;
+        }
+        #commentsleft #pagelist .previous_page, #commentsleft #pagelist .next_page {
+            width: 32px;
+        }
+        #footer {
+            width: 100%;
+            background-color: #023c4d;
+            color: #fff;
+        }
+        #footer .footer_1 {
+            width: 528px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .footerlist {
+            width: 583px;
+        }
+        .footerlist li {
+            float: left;
+            margin-right: 55px;
+            font-size: 11px;
+        }
+        .footerlist li a {
+            display: block;
+        }
+        .footerlist li .tele {
+            font-size: 15px;
+        }
+        .footerlist li .one {
+            font-size: 14px;
+        }
+        .footerlist li .one {
+            font-size: 13px;
+        }
+        .footerlist li .server {
+            background-color: white;
+            height: 19px;
+            line-height: 19px;
+            text-align: center;
+            width: 83px;
+            border-radius: 5px;
+            color: #000;
+        }
+        #footer .yemei {
+            font-size: 11px;
+            width: 430px;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="../js/myjs.js"></script>
+    <script src="../js/jquery.js"></script>
+</head>
+<body>
+<div id="header">
+    <div id="headerup" class="clearfloat">
+        <ul>
+            <li class="one"><img src="./img/phone_03.png" alt="电话" style="float: left; margin-right: 10px"><span
+                    style="color:#ffa000;">400-800-8820</span></li>
+            <li class="two">登录</li>
+            <li class="three">注册</li>
+            <li class="four"><i>12</i><span>行李箱</span></li>
+            <li id="inp"><input type="text" style="border: 0"></li>
+            <li id="search"><img src="img/smallsearch.png" alt="搜索" style="height: 16px;" class="middlealign">
+            </li>
+        </ul>
+    </div>
+    <div id="headerdown" class="clearfloat">
+        <h2 id="logo"><img src="./img/logo_03.png" alt="logo"></h2>
+        <ul>
+            <li><img src="./img/nav_03.png" alt="导航" style="height: 100% ;"></li>
+            <li>第一次</li>
+            <li>目的地</li>
+            <li>自订行程</li>
+            <li>游记</li>
+            <li>特产</li>
+            <li>优惠</li>
+            <li>环岛巴士</li>
+        </ul>
+    </div>
+</div>
+<div id="partline"></div>
+<div id="content1">
+    <p class="content1title">首页 > 目的地 > 台北</p>
+    <div class="content1center clearfloat">
+        <img src="./img/content1bigimg1_03.png" alt="台北101大楼">
+        <div class="content1centerright ">
+            <div class="ccrtop">
+                <p class="p1">
+                <h3>台北特色</h3>
+                <img src="./img/like_solid_01.png" alt="solidheart">
+                <span>1168</span>
+                <img src="./img/comment_01.png" alt="评论">
+                <span>1168</span>
+                </p>
+                <p class="p2">台北101由台湾十二家银行及产业界共同出资兴建，造价共达五百八十亿元台币。大楼除底部裙楼作为购物商场外，将成为台北金融商业重镇，股市证交所亦将移至此。</p>
+            </div>
+            <div class="ccrbottom clearfloat">
+                <h3>台北推荐</h3>
+                <div class="select">
+                    <span>台北101大厦</span>
+                    <span>早餐</span>
+                    <span>士林夜市</span>
+                    <span>士林夜市</span>
+                    <span>国立故宫博物院</span>
+                    <span>西门町</span>
+                    <span>渔人码头</span>
+                    <span>西门町</span>
+                    <span>台北101大厦</span>
+                    <span>早餐</span>
+                    <span>士林夜市</span>
+                </div>
+                <p class="p2">
+                    <img src="./img/comment_01.png" alt="评论" class="middlealign">
+                    <span>评论</span>
+                </p>
+                <p class="p1">
+                    <img src="./img/like_01.png" alt="喜欢" class="middlealign">
+                    <span>喜欢</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="content2">
+    <div id="content2_1">
+        <p class="p1"><img src="./img/icon_01.png" alt="火苗" class="middlealign"><span>台北热门</span></p>
+        <div class="content2content clearfloat">
+            <div class="content2content_div">
+                <div class="top_01">
+                    <img src="./img/sights_01_img_78.png" alt="101大厦视图" class="bigimg_03_2">
+                    <p class="remindfont">台北101大厦</p>
+                    <img src="./img/reminde_02_img_86.png" class="remind2">
+                </div>
+                <div class="bottom_01">
+                    <p class="p1">白花盛宴，黄粉相间，早定享特价，白花盛宴，黄粉相间，早定享特价，百花盛宴黄粉相间，早定享特价，白花盛宴，黄粉相间</p>
+                    <p class="p2">建议游玩时间：4小时</p>
+                    <p class="p3">营业时间：08：00-20：00</p>
+                </div>
+                <div class="bag_01"></div>
+                <div class="dotravel">
+                    <h3>微行程</h3>
+                    <ul class="smalldotravel">
+                        <li>
+                            <h4>台北风景一日游</h4><span>￥<a>12488元</a>/人</span>
+                            <p>景点：台北101大厦+台北故宫+士林夜市</p>
+                        </li>
+                        <li>
+                            <h4>台北风景一日游</h4><span>￥<a>12488元</a>/人</span>
+                            <p>景点：台北101大厦+台北故宫+士林夜市</p>
+                        </li>
+                        <li>
+                            <h4>台北风景一日游</h4><span>￥<a>12488元</a>/人</span>
+                            <p>景点：台北101大厦+台北故宫+士林夜市</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content2content_div">
+                <div class=" top_01">
+                    <img src="./img/sights_01_img_78.png" alt="101大厦视图" class="bigimg_03_2">
+                    <p class="remindfont">台北101大厦商务风景区</p>
+                    <img src="./img/reminde_02_img_86.png" class="remind2">
+                </div>
+                <div class="bottom_01">
+                    <p class="p1">白花盛宴，黄粉相间，早定享特价，白花盛宴，黄粉相间，早定享特价，百花盛宴黄粉相间，早定享特价，白花盛宴，黄粉相间</p>
+                    <p class="p2">建议游玩时间：4小时</p>
+                    <p class="p3">营业时间：08：00-20：00</p>
+                </div>
+                <div class="bag_01"></div>
+                <div class="dotravel">
+                    <h3>微行程</h3>
+                    <ul class="smalldotravel">
+                        <li>
+                            <h4>台北风景一日游</h4><span>￥<a>12488元</a>/人</span>
+                            <p>景点：台北101大厦+台北故宫+士林夜市</p>
+                        </li>
+                        <li>
+                            <h4>台北风景一日游</h4><span>￥<a>12488元</a>/人</span>
+                            <p>景点：台北101大厦+台北故宫+士林夜市</p>
+                        </li>
+                        <li>
+                            <h4>台北风景一日游</h4><span>￥<a>12488元</a>/人</span>
+                            <p>景点：台北101大厦+台北故宫+士林夜市</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content2content_div">
+                <div class=" top_01">
+                    <img src="./img/sights_01_img_78.png" alt="101大厦视图" class="bigimg_03_2">
+                    <p class="remindfont">台北101大厦</p>
+                    <img src="./img/reminde_02_img_86.png" class="remind2">
+                </div>
+                <div class="bottom_01">
+                    <p class="p1">白花盛宴，黄粉相间，早定享特价，白花盛宴，黄粉相间，早定享特价，百花盛宴黄粉相间，早定享特价，白花盛宴，黄粉相间</p>
+                    <p class="p2">建议游玩时间：4小时</p>
+                    <p class="p3">营业时间：08：00-20：00</p>
+                </div>
+                <div class="bag_01"></div>
+                <div class="dotravel">
+                    <h3>微行程</h3>
+                    <ul class="smalldotravel">
+                        <li>
+                            <h4>台北风景一日游</h4><span>￥<a>12488元</a>/人</span>
+                            <p>景点：台北101大厦+台北故宫+士林夜市</p>
+                        </li>
+                        <li>
+                            <h4>台北风景一日游</h4><span>￥<a>12488元</a>/人</span>
+                            <p>景点：台北101大厦+台北故宫+士林夜市</p>
+                        </li>
+                        <li>
+                            <h4>台北风景一日游</h4><span>￥<a>12488元</a>/人</span>
+                            <p>景点：台北101大厦+台北故宫+士林夜市</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <p class="more">查看更多</p>
+    </div>
+</div>
+<div id="content3">
+    <div id="content3_1">
+        <h3><img src="img/hotelicon1.png" alt="酒店小图标" class="middlealign"><span>台北酒店</span></h3>
+
+        <div class="content3content clearfloat">
+            <div class="content3content_1">
+                <div class="fightstop_1  content3content_div">
+                    <div class="bigbox">
+                        <img src="./img/bigimg_02.png" alt="" class="bigimg_02">
+                        <div class="inner_02">
+                            <h3><img src="./img/smallicon_01_33.png" alt="位置"><span>大安区信义路三段11号(大安区)</span></h3>
+                            <img src="./img/smallicon_03_33.png" alt="好评" class="goodcomment">
+                            <ul class="selected clearfloat">
+                                <li><img src="./img/smallicon_04_33.png" alt=""><span>早餐</span></li>
+                                <li><img src="./img/smallicon_05_33.png" alt=""><span>信用卡服务</span></li>
+                                <li><img src="./img/smallicon_06_33.png" alt=""><span>无线</span></li>
+                                <li><img src="./img/smallicon_04_33.png" alt=""><span>早餐</span></li>
+                                <li><img src="./img/smallicon_05_33.png" alt=""><span>信用卡服务</span></li>
+                                <li><img src="./img/smallicon_06_33.png" alt=""><span>无线</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="content3content_1_02">
+                    <p class="p1">台北悠活度悠活村度假村</p>
+                    <div class="content3content_1_02_01 clearfloat">
+                        <p class="p2">
+                            <img src="./img/like_solid_01.png" alt="solidheart" class="solidheart_03">
+                            <span>1168</span>
+                        </p>
+                        <p class="p3">
+                            <img src="./img/comment_01.png" alt="评论" class="comment_03">
+                            <span>1168</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="yy"></div>
+
+            </div>
+            <div class="content3content_1">
+                <div class="fightstop_2  content3content_div">
+                    <div class="bigbox">
+                        <img src="./img/bigimg_02.png" alt="" class="bigimg_02">
+                        <div class="inner_02">
+                            <h3><img src="./img/smallicon_01_33.png" alt="位置"><span>大安区信义路三段11号(大安区)</span></h3>
+                            <img src="./img/smallicon_03_33.png" alt="好评" class="goodcomment">
+                            <ul class="selected clearfloat">
+                                <li><img src="./img/smallicon_04_33.png" alt=""><span>早餐</span></li>
+                                <li><img src="./img/smallicon_05_33.png" alt=""><span>信用卡服务</span></li>
+                                <li><img src="./img/smallicon_06_33.png" alt=""><span>无线</span></li>
+                                <li><img src="./img/smallicon_04_33.png" alt=""><span>早餐</span></li>
+                                <li><img src="./img/smallicon_05_33.png" alt=""><span>信用卡服务</span></li>
+                                <li><img src="./img/smallicon_06_33.png" alt=""><span>无线</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="content3content_1_02">
+                    <p class="p1">台北悠活度悠活村度假村</p>
+                    <div class="content3content_1_02_01 clearfloat">
+                        <p class="p2">
+                            <img src="./img/like_solid_01.png" alt="solidheart" class="solidheart_03">
+                            <span>1168</span>
+                        </p>
+                        <p class="p3">
+                            <img src="./img/comment_01.png" alt="评论" class="comment_03">
+                            <span>1168</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="yy"></div>
+            </div>
+            <div class="content3content_1">
+                <div class="fightstop_3  content3content_div">
+                    <div class="bigbox">
+                        <img src="./img/bigimg_02.png" alt="" class="bigimg_02">
+                        <div class="inner_02">
+                            <h3><img src="./img/smallicon_01_33.png" alt="位置"><span>大安区信义路三段11号(大安区)</span></h3>
+                            <img src="./img/smallicon_03_33.png" alt="好评" class="goodcomment">
+                            <ul class="selected clearfloat">
+                                <li><img src="./img/smallicon_04_33.png" alt=""><span>早餐</span></li>
+                                <li><img src="./img/smallicon_05_33.png" alt=""><span>信用卡服务</span></li>
+                                <li><img src="./img/smallicon_06_33.png" alt=""><span>无线</span></li>
+                                <li><img src="./img/smallicon_04_33.png" alt=""><span>早餐</span></li>
+                                <li><img src="./img/smallicon_05_33.png" alt=""><span>信用卡服务</span></li>
+                                <li><img src="./img/smallicon_06_33.png" alt=""><span>无线</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="content3content_1_02">
+                    <p class="p1">台北悠活度悠活村度假村</p>
+                    <div class="content3content_1_02_01 clearfloat">
+                        <p class="p2">
+                            <img src="./img/like_solid_01.png" alt="solidheart" class="solidheart_03">
+                            <span>1168</span>
+                        </p>
+                        <p class="p3">
+                            <img src="./img/comment_01.png" alt="评论" class="comment_03">
+                            <span>1168</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="yy"></div>
+            </div>
+        </div>
+        <p class="more">查看更多</p>
+    </div>
+
+</div>
+<div id="content4">
+    <div id="content4_1" class="clearfloat">
+        <h3><img src="img/gifticon.png" alt="礼物小图标" class="middlealign"><span>台北特产</span></h3>
+        <h4><span>伴手礼</span><span>美食</span></h4>
+        <div class="content4content clearfloat">
+            <div class="content4content_1">
+                <div class="fightstop_1  content4content_div">
+
+                </div>
+                <div class="content4content_1_02">
+                    <p class="p0">台湾碳烤盐酥鸡</p>
+                    <p class="p1">推荐：煎猪肝、猪油拌饭、招牌鸡腿、味噌松坂肉、卤肉饭、咸蛋花椰菜、冷笋沙拉、芋头排骨、蒜泥蚵、封肉</p>
+                    <div class="content4content_1_02_01 clearfloat">
+                        <p class="p2">
+                            <img src="./img/like_solid_01.png" alt="solidheart" class="solidheart_03">
+                            <span>1168</span>
+                        </p>
+                        <p class="p3">
+                            <img src="./img/comment_01.png" alt="评论" class="comment_03">
+                            <span>1168</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="yy"></div>
+
+            </div>
+            <div class="content4content_1">
+                <div class="fightstop_2  content4content_div">
+
+                </div>
+                <div class="content4content_1_02">
+                    <p class="p0">台湾碳烤盐酥鸡</p>
+                    <p class="p1">推荐：煎猪肝、猪油拌饭、招牌鸡腿、味噌松坂肉、卤肉饭、咸蛋花椰菜、冷笋沙拉、芋头排骨、蒜泥蚵、封肉</p>
+                    <div class="content4content_1_02_01 clearfloat">
+                        <p class="p2">
+                            <img src="./img/like_solid_01.png" alt="solidheart" class="solidheart_03">
+                            <span>1168</span>
+                        </p>
+                        <p class="p3">
+                            <img src="./img/comment_01.png" alt="评论" class="comment_03">
+                            <span>1168</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="yy"></div>
+            </div>
+            <div class="content4content_1">
+                <div class="fightstop_3  content4content_div">
+
+                </div>
+                <div class="content4content_1_02">
+                    <p class="p0">台湾碳烤盐酥鸡</p>
+                    <p class="p1">推荐：煎猪肝、猪油拌饭、招牌鸡腿、味噌松坂肉、卤肉饭、咸蛋花椰菜、冷笋沙拉、芋头排骨、蒜泥蚵、封肉</p>
+                    <div class="content4content_1_02_01 clearfloat">
+                        <p class="p2">
+                            <img src="./img/like_solid_01.png" alt="solidheart" class="solidheart_03">
+                            <span>1168</span>
+                        </p>
+                        <p class="p3">
+                            <img src="./img/comment_01.png" alt="评论" class="comment_03">
+                            <span>1168</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="yy"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="content5">
+    <div id="content5_1" class="clearfloat">
+        <h3><img src="./img/strategyicon_01.png" alt="酒店攻略" class="middlealign"><span>台北攻略</span></h3>
+        <div id="location">
+            <div class="clearfloat " id="content5_1_01">
+                <div class="morestrategy">
+                    <div class="content5_1content_left">
+                        <div class="content5_1content_leftcontent">
+                            <img src="./img/bigsight_01.jpg" alt="" class="active">
+                            <img src="./img/bigsight_03.jpg" alt="" width="238" height="167">
+                            <img src="./img/bigsight_02.jpg" alt="" width="238" height="167">
+                        </div>
+                        <div class="content5_1content_leftselected">
+                            <img src="./img/smallsight_03.jpg" alt="" class="selected">
+                            <img src="./img/smallsight_02.jpg" alt="">
+                            <img src="./img/smallsight_01.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="content5_1content_right">
+                        <div class="content5contentRtop clearfloat">
+                            <img src="./img/headerpictureMen.jpg" alt="头像" style="border-radius: 50%;" width="77"
+                                 height="79">
+                            <div class="name_browse_like">
+                                <h4>作者: 丁丁</h4>
+                                <p>
+                                    <span><img src="./img/browsesmallicon.png" alt="浏览小图标"
+                                               class="middlealign">1168</span>
+                                    <span><img src="./img/like_solid_01.png" alt="爱心" class="middlealign">1168</span>
+                                    <span><img src="./img/comment_01.png" alt="评论小图标" class="middlealign">1168</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="content5contentRbottom">
+                            <h3>「台美丽」我要晒黑成一根木炭照亮台湾的所有角落</h3>
+                            <p class="p1">
+                                <span class="travelsight"><a>北京</a>To<a>台湾</a></span>
+                                <span>2014年7月出发</span><span class="days">7天</span>
+                                <span class="money">人均: <a>8000-10000</a> </span>
+                            </p>
+                            <p class="p2">
+                                楼主的思维都在努力串联在台湾14天发生的事。楼主写了两天的行程，返过来补充一句，好多东西真的只可意会，没办法言传，台湾这14天给楼主的感动可能用文字写真的太苍白，所以很多细节还是决定不提了。楼主的图片重点和......</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="morestrategy">
+                    <div class="content5_1content_left">
+                        <div class="content5_1content_leftcontent">
+                            <img src="./img/bigsight_01.jpg" alt="" class="active">
+                            <img src="./img/bigsight_03.jpg" alt="" width="238" height="167">
+                            <img src="./img/bigsight_02.jpg" alt="" width="238" height="167">
+                        </div>
+                        <div class="content5_1content_leftselected">
+                            <img src="./img/smallsight_03.jpg" alt="" class="selected">
+                            <img src="./img/smallsight_02.jpg" alt="">
+                            <img src="./img/smallsight_01.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="content5_1content_right">
+                        <div class="content5contentRtop clearfloat">
+                            <img src="./img/headerpictureWomen.png" alt="头像">
+                            <div class="name_browse_like">
+                                <h4>作者: 童童</h4>
+                                <p>
+                                    <span><img src="./img/browsesmallicon.png" alt="浏览小图标"
+                                               class="middlealign">1168</span>
+                                    <span><img src="./img/like_solid_01.png" alt="爱心" class="middlealign">1168</span>
+                                    <span><img src="./img/comment_01.png" alt="评论小图标" class="middlealign">1168</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="content5contentRbottom">
+                            <h3>「台美丽」我要晒黑成一根木炭照亮台湾的所有角落</h3>
+                            <p class="p1">
+                                <span class="travelsight"><a>北京</a>To<a>台湾</a></span>
+                                <span>2014年7月出发</span><span class="days">7天</span>
+                                <span class="money">人均: <a>8000-10000</a> </span>
+                            </p>
+                            <p class="p2">
+                                楼主的思维都在努力串联在台湾14天发生的事。楼主写了两天的行程，返过来补充一句，好多东西真的只可意会，没办法言传，台湾这14天给楼主的感动可能用文字写真的太苍白，所以很多细节还是决定不提了。楼主的图片重点和......
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="morestrategy">
+                    <div class="content5_1content_left">
+                        <div class="content5_1content_leftcontent">
+                            <img src="./img/bigsight_01.jpg" alt="" class="active">
+                            <img src="./img/bigsight_03.jpg" alt="" width="238" height="167">
+                            <img src="./img/bigsight_02.jpg" alt="" width="238" height="167">
+                        </div>
+                        <div class="content5_1content_leftselected">
+                            <img src="./img/smallsight_03.jpg" alt="" class="selected">
+                            <img src="./img/smallsight_02.jpg" alt="">
+                            <img src="./img/smallsight_01.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="content5_1content_right">
+                        <div class="content5contentRtop clearfloat">
+                            <img src="./img/headerpictureMen.jpg" alt="头像" style="border-radius: 50%;" width="77"
+                                 height="79">
+                            <div class="name_browse_like">
+                                <h4>作者: 丁丁</h4>
+                                <p>
+                                    <span><img src="./img/browsesmallicon.png" alt="浏览小图标"
+                                               class="middlealign">1168</span>
+                                    <span><img src="./img/like_solid_01.png" alt="爱心" class="middlealign">1168</span>
+                                    <span><img src="./img/comment_01.png" alt="评论小图标" class="middlealign">1168</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="content5contentRbottom">
+                            <h3>「台美丽」我要晒黑成一根木炭照亮台湾的所有角落</h3>
+                            <p class="p1">
+                                <span class="travelsight"><a>北京</a>To<a>台湾</a></span>
+                                <span>2014年7月出发</span><span class="days">7天</span>
+                                <span class="money">人均: <a>8000-10000</a> </span>
+                            </p>
+                            <p class="p2">
+                                楼主的思维都在努力串联在台湾14天发生的事。楼主写了两天的行程，返过来补充一句，好多东西真的只可意会，没办法言传，台湾这14天给楼主的感动可能用文字写真的太苍白，所以很多细节还是决定不提了。楼主的图片重点和......
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="p1 leftmove">&lt;</p>
+        <p class="p2 rightmove">&gt;</p>
+    </div>
+</div>
+<div id="comments" class="clearfloat">
+    <div id="commentsleft">
+        <p class="p1">评论(66)</p>
+        <div class="issueinput clearfloat">
+            <div class="user">
+                <img src="./img/headimg.jpg" alt="" class="bottomalign">
+                <p class="name1">闪烁尾戒</p>
+            </div>
+            <div id="log_in">要评论请先 <a>注册</a>或 <a>登录</a> ，已有账号请直接登录</div>
+        </div>
+        <div class="clear"></div>
+        <p class="limitnumber">最多输入200字</p>
+        <p class="clickcomment">评论</p>
+        <br clear="all">
+        <div class="commentpart clearfloat">
+            <div class="user">
+                <img src="./img/headimg.jpg" alt="" class="bottomalign">
+                <p class="name1">闪烁尾戒</p>
+            </div>
+            <p class="speaker">在101大楼看夕阳超赞，在西门町享受夜市的热闹，时尚与怀旧，现代与传统，激情与慢热，在这座城市自由释放</p>
+        </div>
+        <div class="commentabout"><p class="time">2014-8-26 12:26 </p>
+            <p class="b"><img src="./img/comment_01.png" alt="" class="bottomalign">回复</p>
+            <p><img src="./img/give_a_like.png" alt="" class="bottomalign" height="12">1168</p>
+            <p>收起</p>
+        </div>
+        <div class="Againcommentpart clearfloat">
+            <img src="./img/otherheadpic.png" alt="" id="otheruserpic"><span class="othername">时尚旅游回复闪烁尾戒</span>
+            <p class="speaker">在101大楼看夕阳超赞，在西门町享受夜市的热闹，时尚与怀旧，现代与传统，激情与慢热，在这座城市自由释放</p>
+            <div class="commentaboutmore clearfloat"><p id="time1"></p>
+                <p class="b"><img src="./img/comment_01.png" alt="" class="middlealign">回复</p></div>
+        </div>
+        <div class="commentpart clearfloat">
+            <div class="user">
+                <img src="./img/headimg.jpg" alt="" class="bottomalign">
+                <p class="name1">闪烁尾戒</p>
+            </div>
+            <p class="speaker">在101大楼看夕阳超赞，在西门町享受夜市的热闹，时尚与怀旧，现代与传统，激情与慢热，在这座城市自由释放</p>
+        </div>
+        <div class="commentabout">
+            <p class="time">2014-8-26 12:26 </p>
+            <p class="b"><img src="./img/comment_01.png" alt="" class="bottomalign">回复</p>
+            <p><img src="./img/give_a_like.png" alt="" class="bottomalign" height="12">1168</p>
+            <p>收起</p>
+        </div>
+        <div id="pagelist">
+            <ul>
+                <li class="previous_one"><img src="./img/listsmallpre.png" alt=""></li>
+                <li class="previous_page">上一页</li>
+                <li>1</li>
+                <li>...</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>...</li>
+                <li>12</li>
+                <li class="next_page">下一页</li>
+                <li class="next_one"><img src="./img/listsmallnext.png" alt=""></li>
+            </ul>
+        </div>
+    </div>
+    <div class="sidepicture">
+        <img src="./img/advertisingimg1.jpg" alt="" class="bottomalign">
+        <img src="./img/advertisingimg2.jpg" alt="" class="bottomalign">
+    </div>
+
+</div>
+<div id="footer">
+    <div class="footer_1">
+        <ul class="footerlist clearfloat">
+            <li>
+                <a class="one">关于遛湾</a>
+                <a>公司简介</a>
+                <a>联系我们</a>
+                <a>诚聘英才</a>
+                <a>网站地图</a>
+            </li>
+            <li>
+                <a class="one">帮助中心</a>
+                <a>赴台手续</a>
+                <a>遛湾玩法</a>
+                <a>常见问题</a>
+            </li>
+            <li>
+                <a class="one">网站条款</a>
+                <a>服务条款</a>
+                <a>免责声明</a>
+            </li>
+            <li>
+                <a class="one">关于我们</a>
+                <a><img src="./img/microblogicon.png" alt=""/> <img src="./img/WeChaticon.png" alt=""></a>
+            </li>
+            <li>
+                <a class="tele">400 820 8820</a>
+                <a class="two">周一至周日</a>
+                <a class="two">9:00~20:00</a>
+                <a class="server">在线服务咨询>></a>
+            </li>
+        </ul>
+    </div>
+
+    <!--页眉区域-->
+    <div class="yemei">
+        <p>Copyright © 2013-2014 www.6waner.cn All Right Reserved. 京ICP备11</p>
+    </div>
+</div>
+<script type="text/javascript">
+    //小图片点击大图轮播效果id获取
+    var oCclc0 = document.getElementsByClassName("content5_1content_leftcontent")[0];
+    var oCcls0 = document.getElementsByClassName("content5_1content_leftselected")[0];
+    var oImgs0 = oCcls0.getElementsByTagName("img");
+    var oImgc0 = oCclc0.getElementsByTagName("img");
+    var oCclc1 = document.getElementsByClassName("content5_1content_leftcontent")[1];
+    var oCcls1 = document.getElementsByClassName("content5_1content_leftselected")[1];
+    var oImgs1 = oCcls1.getElementsByTagName("img");
+    var oImgc1 = oCclc1.getElementsByTagName("img");
+    var oCclc2 = document.getElementsByClassName("content5_1content_leftcontent")[2];
+    var oCcls2 = document.getElementsByClassName("content5_1content_leftselected")[2];
+    var oImgs2 = oCcls2.getElementsByTagName("img");
+    var oImgc2 = oCclc2.getElementsByTagName("img");
+    //截至
+    var oC3div = document.getElementsByClassName("content3content_div");
+    var oTime1 = document.getElementById("time1");
+    var oContent5_1 = document.getElementById("content5_1");
+    var oContent5_1_01 = document.getElementById("content5_1_01");
+    var oLeft = oContent5_1.getElementsByClassName("leftmove")[0];
+    var oRight = oContent5_1.getElementsByClassName("rightmove")[0];
+    var oMoreStrategy = document.getElementsByClassName("morestrategy");
+    var marginLeft = 0;
+    var marginRight = 0;
+    var v = 0;
+    var timer = null;
+    // 左右点击轮播js代码
+    oLeft.onclick = function () {
+        clearInterval(timer);
+        v--;
+        if (v < 0) {
+            v = oMoreStrategy.length - 2;
+            oContent5_1_01.style.left = (oMoreStrategy.length - 1) * oMoreStrategy[0].clientWidth + "px";
+            marginLeft = (oMoreStrategy.length - 1) * oMoreStrategy[0].clientWidth;
+        }
+        var start = marginLeft;
+        var end = v * oMoreStrategy[0].clientWidth;
+        var startstep = 0;
+        var endstep = 40;
+        var everystep = (end - start) / (endstep - startstep);
+        timer = setInterval(function () {
+            startstep++;
+            if (startstep >= endstep) {
+                clearInterval(timer);
+            }
+            start += everystep;
+
+            oContent5_1_01.style.left = -start + "px";
+            marginLeft = start;
+
+        }, 10)
+    }
+    oRight.onclick = function () {
+        clearInterval(timer);
+        v++;
+        if (v >= oMoreStrategy.length) {
+            //当v大于等于盒子的长度，让v等于1
+            v = 1;
+            oContent5_1_01.style.left = 0 + "px";
+            marginRight = 0;
+        }
+        var start = marginRight;
+        var end = v * oMoreStrategy[0].clientWidth;
+        var startstep = 0;
+        var endstep = 40;
+        var everystep = (end - start) / (endstep - startstep);
+        timer = setInterval(function () {
+            startstep++;
+            if (startstep >= endstep) {
+                clearInterval(timer);
+            }
+            start += everystep;
+
+            oContent5_1_01.style.left = -start + "px";
+            marginRight = start;
+
+        }, 10)
+
+    }
+    //截至
+    //时间获取
+    var timer1 = setInterval(function () {
+        var now = new Date();
+        oTime1.innerHTML = now.getFullYear() + "-" + (now.getMonth() + 1) + "-" + now.getDate() + "-" + now.getHours() + ":" + now.getMinutes();
+    }, 1000);
+    //小图片点击大图轮播效果js代码
+    function clickcarousel(SmallImg, BigImg) {
+        for (var i = 0; i < SmallImg.length; i++) {
+            SmallImg[i].index = i;
+            SmallImg[i].onclick = function () {
+                for (var i = 0; i < SmallImg.length; i++) {
+                    if (SmallImg[i] == this) {
+                        SmallImg[i].className = "selected";
+                        BigImg[this.index].className = "active";
+                    } else {
+                        SmallImg[i].className = "";
+                        BigImg[i].className = "";
+                    }
+                }
+            }
+        }
+    }
+    clickcarousel(oImgs0, oImgc0);
+    clickcarousel(oImgs1, oImgc1);
+    clickcarousel(oImgs2, oImgc2);
+    //移到盒子上，模板上移效果，js代码封装到了my.js
+    my.amttb(oC3div);
+</script>
+</body>
+</html>

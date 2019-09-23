@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    #myCanvas{
+        background: url(./img/banner2.jpg) no-repeat;
+        background-size: 100% 100%;
+
+    }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <script>
+    var oMyCanvas=document.querySelector("#myCanvas");
+    var ctx=oMyCanvas.getContext("2d");
+    // 旧图
+    ctx.beginPath();
+    ctx.fillStyle="#ccc";
+    ctx.fillRect(0,0,oMyCanvas.width,oMyCanvas.height);
+    ctx.closePath();
+
+
+ctx.globalCompositeOperation="destination-out";
+
+oMyCanvas.onmousedown=function(e){
+    //  var e=e||window.event;
+    // ctx.beginPath();
+    // 1)画线刮
+    // 2)画盒子刮
+    // ctx.moveTo(e.offsetX,e.offsetY);
+    // ctx.fillStyle="yellow";
+    // ctx.fillRect(e.offsetX-25,e.offsetY-25,50,50)
+    oMyCanvas.onmousemove=function(e){
+    var e=e||window.event;
+    ctx.beginPath();
+    ctx.fillStyle="yellow";
+    ctx.fillRect(e.offsetX-25,e.offsetY-25,50,50);
+    // 画线
+    // ctx.lineTo(e.offsetX,e.offsetY);
+    // ctx.strokeStyle="white";
+    // ctx.lineWidth=5;
+    // ctx.stroke();
+    // 不关闭路径
+    // ctx.closePath();
+    }
+    document.onmouseup=function(){
+        document.onmouseup=oMyCanvas.onmousemove=null;
+    }
+    
+}
+    
+    </script>
+</body>
+</html>

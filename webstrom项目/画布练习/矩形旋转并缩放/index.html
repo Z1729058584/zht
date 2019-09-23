@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+        text-align: center;
+    }
+    #sa{
+        background-color: red;
+        margin-top: 30px;
+    }
+    </style>
+</head>
+<body>
+    <canvas width="500" height="600" id="sa"></canvas>
+    <script>
+    var oSa=document.querySelector("#sa");
+    var cxt=oSa.getContext("2d");
+    cxt.beginPath();
+    var deg=0;
+    var value=0.01;
+    var scale=0;
+    var times=setInterval(function(){
+        cxt.save();
+        cxt.clearRect(0,0,500,600);
+        deg++;
+        scale+=value;
+        if(scale>=2){
+            value=-value;
+        }
+        else if(scale<=0){
+            value=-value;
+        }
+        cxt.translate(250,300);
+        cxt.rotate(deg*Math.PI/180);
+        cxt.scale(scale,scale);        
+        cxt.translate(-50,-50);
+        cxt.fillRect(0,0,100,100)
+        cxt.fillStyle="#000";
+        cxt.fill();
+        cxt.restore();
+    },10)
+    
+    </script>
+
+</body>
+</html>

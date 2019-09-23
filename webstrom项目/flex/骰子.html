@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            perspective: 800px;
+            background-color: #023c4d;
+        }
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: move 5s linear infinite;
+        }
+        @keyframes move {
+            from {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            to {
+                transform: rotateX(360deg) rotateY(360deg) translateX(100px) translateY(100px);
+            }
+        }
+        .box .face {
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            position: absolute;
+            border-radius: 5px;
+        }
+        .box .face p {
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            border-radius: 50%;
+        }
+        .box .right {
+            transform-origin: left center;
+            transform: rotateY(-90deg);
+            left: 200px;
+            top: 100px;
+            display: flex;
+        }
+        .box .right .top {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            flex: 1;
+        }
+        .box .right .center {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            flex: 1;
+        }
+        .box .right .bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            flex: 1;
+        }
+        .box .left {
+            transform-origin: right center;
+            transform: rotateY(90deg);
+            left: 0;
+            top: 100px;
+            display: flex;
+        }
+
+        .box .left .top {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            flex: 1;
+        }
+
+        .box .left .center {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex: 1;
+        }
+
+        .box .left .bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            flex: 1;
+        }
+
+        .box .behind {
+            transform-origin: center bottom;
+            transform: rotateX(-90deg);
+            top: 0;
+            left: 100px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .box .front {
+            transform-origin: center top;
+            transform: rotateX(90deg);
+            top: 200px;
+            left: 100px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .box .top {
+            transform: translateZ(100px);
+            left: 100px;
+            top: 100px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .box .top .three1{
+
+            margin-top: -40px;
+        }
+        .box .top .three3{
+            margin-top: 80px;
+        }
+        .box .bottom {
+            transform: rotateX(180deg);
+            top: 100px;
+            left: 100px;
+        }
+
+        .box .bottom .top {
+            width: 100px;
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .box .bottom .bottom {
+            width: 100px;
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="front face">
+        <p class="one"></p>
+    </div>
+    <div class="behind face">
+        <p class="two1"></p>
+        <p class="two2"></p>
+    </div>
+    <div class="top face">
+        <p class="three1"></p>
+        <p class="three2"></p>
+        <p class="three3"></p>
+    </div>
+<!--    <div class="bottom face">-->
+<!--        <div class="top">-->
+<!--            <p class="four1"></p>-->
+<!--            <p class="four2"></p>-->
+<!--        </div>-->
+<!--        <div class="bottom">-->
+<!--            <p class="four3"></p>-->
+<!--            <p class="four4"></p>-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="left face">
+        <div class="top">
+            <p class="five1"></p>
+            <p class="five2"></p>
+        </div>
+        <div class="center">
+            <p class="five3"></p>
+        </div>
+        <div class="bottom">
+            <p class="five4"></p>
+            <p class="five5"></p>
+        </div>
+    </div>
+    <div class="right face">
+        <div class="top">
+            <p class="six1"></p>
+            <p class="six2"></p>
+        </div>
+        <div class="center">
+            <p class="six3"></p>
+            <p class="six4"></p>
+        </div>
+        <div class="bottom">
+            <p class="six5"></p>
+            <p class="six6"></p>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>

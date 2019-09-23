@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div id="box" style="width: 100px; height: 100px; background-color: red;margin: 0 auto">猜猜你的幸运数字</div>
+<div style="margin: 0 auto; width: 100px;"><label for="answer" >输入你的答案</label><input type="text" id="answer"></div>
+<script>
+    var oAnswer=document.getElementById("answer");
+    var oBox=document.getElementById("box");
+
+    oAnswer.onchange=function () {
+        var num=parseInt(Math.random()*91+10);
+        if(oAnswer.value==num)
+        {
+            oBox.innerHTML="";
+            oBox.innerHTML="恭喜你，你的幸运数字为"+num;
+        }
+        else{
+            oBox.innerHTML="";
+            oBox.innerHTML="再来一次";
+
+        }
+        console.log(num);
+        console.log(oAnswer.value);
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="###">
+    用户名:<input type="text" name="user" id="user">
+    密码:<input type="text" name="pass" id="pass">
+    记住密码: <input type="checkbox" id="forget" name="forget">
+    <button>登录</button>
+</form>
+<script>
+    var oForm = document.querySelector("form");
+    var oUser = document.querySelector("#user");
+    var oPass = document.querySelector("#pass");
+    var oHq = document.querySelector("#hq");
+    var oForget = document.querySelector("#forget");
+    if (localStorage.getItem(oUser.name)) {
+        oUser.value = localStorage.getItem(oUser.name);
+        if (localStorage.getItem(oPass.name)) {
+            oPass.value = localStorage.getItem(oPass.name);
+            oForget.checked = true;
+        }
+    }
+    oForm.onsubmit = function () {
+        if (oForget.checked) {
+            localStorage.setItem(oUser.name, oUser.value);
+            localStorage.setItem(oPass.name, oPass.value);
+        } else {
+            localStorage.setItem(oUser.name, oUser.value);
+            localStorage.removeItem(oPass.name);
+        }
+        return false;
+    }
+
+</script>
+</body>
+</html>
