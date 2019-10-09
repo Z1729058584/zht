@@ -1,0 +1,13 @@
+#gitHub
+***
+**fork 克隆**  
+**issues 提交bug**  
+**pull requests 提问**    
+**branches 分支**  
+* git remote add origin 地址 //关联提交到版本区的本地仓库与gitHub仓库
+* git remote remove origin 删除关联的远程仓库  
+* git push -u origin master 将本地仓库master分支内容添加到gitHub上（提交到版本区的仓库）  
+**下次修改再提交不需要再次关联**  
+* git clone 仓库地址 //克隆github上的项目到本地，克隆下的是master主支  
+* git pull origin master 拉取远程仓库的master主支合并到本地master主支上 （当仓库更新后，需要把更新的github上的仓库部分代码合并到本第上）
+* 希望获取dev分支内容 git fetch origin dev1:dev2//拉取GitHub上的dev1到本地的dev2
