@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Minimalistic Winter Snowfall</title>
+    <style>
+      body {
+        background: #134;
+        margin: 0 auto;
+        box-shadow: none;
+      }
+
+      h2 {
+        color: black;
+        font-size: 24px;
+        margin-top: 720px;
+        margin-left: 20px;
+        font-family: "Josefin Sans", sans-serif;
+      }
+
+      h1 {
+        margin-top: 70px;
+        font-family: "Josefin Sans", sans-serif;
+        color: white;
+        font-size: 52px;
+        letter-spacing: 9px;
+      }
+
+      #wrapper {
+        width: 100%;
+        height: 20px;
+      }
+
+      #snow {
+        background: white;
+        width: 100%;
+        min-height: 450px;
+        margin-top: 450px;
+        display: inline-block;
+      }
+
+      .gran {
+        height: 400px;
+        width: 200px;
+        margin-top: -270px;
+      }
+
+      .leaves {
+        width: 0;
+        height: 0;
+        border-left: 85px solid transparent;
+        border-right: 85px solid transparent;
+        border-bottom: 300px solid #228b57;
+        z-index: 50;
+        position: relative;
+      }
+
+      .left {
+        width: 0;
+        height: 0;
+        border-left: 85px solid transparent;
+        border-bottom: 300px solid #1e7b4d;
+        display: inline-block;
+        margin-left: -85px;
+        z-index: -1231;
+        position: relative;
+      }
+      .top {
+        width: 0;
+        height: 0;
+        border-left: 28px solid transparent;
+        border-right: 28px solid transparent;
+        border-bottom: 100px solid white;
+        display: inline-block;
+        margin-left: -85px;
+        z-index: 100;
+        position: absolute;
+        margin-top: -0px;
+        margin-left: -28px;
+      }
+
+      .foot {
+        background: #38230e;
+        width: 30px;
+        height: 60px;
+        margin-top: -5px;
+        margin-right: 20px;
+        display: inline-block;
+        margin-left: -14px;
+      }
+
+      #subfoot {
+        background: green;
+        width: 30px;
+        height: 60px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <center><h1>Merry Christmas</h1></center>
+      <div id="snow">
+        <center>
+          <div class="gran">
+            <div class="leaves">
+              <div class="top"></div>
+              <div class="left"></div>
+
+              <div class="foot"></div>
+            </div>
+          </div>
+        </center>
+      </div>
+    </div>
+    <h2></h2>
+    <span
+      id="s0"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 28px;
+        color: rgb(221, 221, 255);
+        z-index: 1000;
+        left: 1124.01px;
+        top: 127.68px;
+      "
+      >*</span
+    ><span
+      id="s1"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 25px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 187.272px;
+        top: 456px;
+      "
+      >*</span
+    ><span
+      id="s2"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 29px;
+        color: rgb(243, 243, 243);
+        z-index: 1000;
+        left: 1371.44px;
+        top: 758.64px;
+      "
+      >*</span
+    ><span
+      id="s3"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 26px;
+        color: rgb(240, 255, 255);
+        z-index: 1000;
+        left: 1194.08px;
+        top: 783.12px;
+      "
+      >*</span
+    ><span
+      id="s4"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 14px;
+        color: rgb(240, 255, 255);
+        z-index: 1000;
+        left: 1315.46px;
+        top: 921.8px;
+      "
+      >*</span
+    ><span
+      id="s5"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 27px;
+        color: rgb(240, 255, 255);
+        z-index: 1000;
+        left: 1156.72px;
+        top: 476.28px;
+      "
+      >*</span
+    ><span
+      id="s6"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 15px;
+        color: rgb(221, 221, 255);
+        z-index: 1000;
+        left: 1215.41px;
+        top: 104.4px;
+      "
+      >*</span
+    ><span
+      id="s7"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 29px;
+        color: rgb(243, 243, 243);
+        z-index: 1000;
+        left: 818.44px;
+        top: 650.76px;
+      "
+      >*</span
+    ><span
+      id="s8"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 12px;
+        color: rgb(170, 170, 204);
+        z-index: 1000;
+        left: 768.15px;
+        top: 105.12px;
+      "
+      >*</span
+    ><span
+      id="s9"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 13px;
+        color: rgb(221, 221, 255);
+        z-index: 1000;
+        left: 78.8216px;
+        top: 48.36px;
+      "
+      >*</span
+    ><span
+      id="s10"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 18px;
+        color: rgb(243, 243, 243);
+        z-index: 1000;
+        left: 1555.61px;
+        top: 904.6px;
+      "
+      >*</span
+    ><span
+      id="s11"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 14px;
+        color: rgb(170, 170, 204);
+        z-index: 1000;
+        left: 495.963px;
+        top: 868.8px;
+      "
+      >*</span
+    ><span
+      id="s12"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 19px;
+        color: rgb(243, 243, 243);
+        z-index: 1000;
+        left: 767.591px;
+        top: 658.92px;
+      "
+      >*</span
+    ><span
+      id="s13"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 21px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 700.065px;
+        top: 385.56px;
+      "
+      >*</span
+    ><span
+      id="s14"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 25px;
+        color: rgb(221, 221, 255);
+        z-index: 1000;
+        left: 89.7143px;
+        top: 66px;
+      "
+      >*</span
+    ><span
+      id="s15"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 18px;
+        color: rgb(170, 170, 204);
+        z-index: 1000;
+        left: 424.157px;
+        top: 388.8px;
+      "
+      >*</span
+    ><span
+      id="s16"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 12px;
+        color: rgb(240, 255, 255);
+        z-index: 1000;
+        left: 513.475px;
+        top: 362.88px;
+      "
+      >*</span
+    ><span
+      id="s17"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 24px;
+        color: rgb(221, 221, 255);
+        z-index: 1000;
+        left: 796.611px;
+        top: 751.68px;
+      "
+      >*</span
+    ><span
+      id="s18"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 22px;
+        color: rgb(221, 221, 255);
+        z-index: 1000;
+        left: 1576.35px;
+        top: 195.36px;
+      "
+      >*</span
+    ><span
+      id="s19"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 20px;
+        color: rgb(170, 170, 204);
+        z-index: 1000;
+        left: 264.656px;
+        top: 501.6px;
+      "
+      >*</span
+    ><span
+      id="s20"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 20px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 717.645px;
+        top: 590.4px;
+      "
+      >*</span
+    ><span
+      id="s21"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 26px;
+        color: rgb(221, 221, 255);
+        z-index: 1000;
+        left: 1539.55px;
+        top: 34.32px;
+      "
+      >*</span
+    ><span
+      id="s22"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 25px;
+        color: rgb(170, 170, 204);
+        z-index: 1000;
+        left: 955.748px;
+        top: 627px;
+      "
+      >*</span
+    ><span
+      id="s23"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 19px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 391.104px;
+        top: 595.08px;
+      "
+      >*</span
+    ><span
+      id="s24"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 26px;
+        color: rgb(240, 255, 255);
+        z-index: 1000;
+        left: 1366.48px;
+        top: 817.44px;
+      "
+      >*</span
+    ><span
+      id="s25"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 15px;
+        color: rgb(243, 243, 243);
+        z-index: 1000;
+        left: 974.126px;
+        top: 325.8px;
+      "
+      >*</span
+    ><span
+      id="s26"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 24px;
+        color: rgb(170, 170, 204);
+        z-index: 1000;
+        left: 164.209px;
+        top: 181.44px;
+      "
+      >*</span
+    ><span
+      id="s27"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 23px;
+        color: rgb(243, 243, 243);
+        z-index: 1000;
+        left: 266.706px;
+        top: 262.2px;
+      "
+      >*</span
+    ><span
+      id="s28"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 13px;
+        color: rgb(240, 255, 255);
+        z-index: 1000;
+        left: 444.645px;
+        top: 728.6px;
+      "
+      >*</span
+    ><span
+      id="s29"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 28px;
+        color: rgb(243, 243, 243);
+        z-index: 1000;
+        left: 1552.64px;
+        top: 631.68px;
+      "
+      >*</span
+    ><span
+      id="s30"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 27px;
+        color: rgb(221, 221, 255);
+        z-index: 1000;
+        left: 155.014px;
+        top: 460.08px;
+      "
+      >*</span
+    ><span
+      id="s31"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 23px;
+        color: rgb(243, 243, 243);
+        z-index: 1000;
+        left: 624.684px;
+        top: 449.88px;
+      "
+      >*</span
+    ><span
+      id="s32"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 25px;
+        color: rgb(240, 255, 255);
+        z-index: 1000;
+        left: 279.637px;
+        top: 858px;
+      "
+      >*</span
+    ><span
+      id="s33"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 29px;
+        color: rgb(221, 221, 255);
+        z-index: 1000;
+        left: 1115.94px;
+        top: 184.44px;
+      "
+      >*</span
+    ><span
+      id="s34"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 29px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 732.174px;
+        top: 313.2px;
+      "
+      >*</span
+    ><span
+      id="s35"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 13px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 178.807px;
+        top: 474.24px;
+      "
+      >*</span
+    ><span
+      id="s36"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 23px;
+        color: rgb(240, 255, 255);
+        z-index: 1000;
+        left: 1595.4px;
+        top: 645.84px;
+      "
+      >*</span
+    ><span
+      id="s37"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 13px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 34.1965px;
+        top: 443.04px;
+      "
+      >*</span
+    ><span
+      id="s38"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 18px;
+        color: rgb(240, 255, 255);
+        z-index: 1000;
+        left: 157.048px;
+        top: 643.68px;
+      "
+      >*</span
+    ><span
+      id="s39"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 20px;
+        color: rgb(170, 170, 204);
+        z-index: 1000;
+        left: 907.196px;
+        top: 501.6px;
+      "
+      >*</span
+    ><span
+      id="s40"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 13px;
+        color: rgb(243, 243, 243);
+        z-index: 1000;
+        left: 1505.31px;
+        top: 521.04px;
+      "
+      >*</span
+    ><span
+      id="s41"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 12px;
+        color: rgb(221, 221, 255);
+        z-index: 1000;
+        left: 994.975px;
+        top: 688.4px;
+      "
+      >*</span
+    ><span
+      id="s42"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 16px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 1095.81px;
+        top: 145.92px;
+      "
+      >*</span
+    ><span
+      id="s43"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 21px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 1215.04px;
+        top: 388.08px;
+      "
+      >*</span
+    ><span
+      id="s44"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 23px;
+        color: rgb(170, 170, 204);
+        z-index: 1000;
+        left: 1127.56px;
+        top: 259.44px;
+      "
+      >*</span
+    ><span
+      id="s45"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 12px;
+        color: rgb(221, 221, 255);
+        z-index: 1000;
+        left: 1511.4px;
+        top: 269.28px;
+      "
+      >*</span
+    ><span
+      id="s46"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 26px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 1083.4px;
+        top: 514.8px;
+      "
+      >*</span
+    ><span
+      id="s47"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 15px;
+        color: rgb(221, 221, 255);
+        z-index: 1000;
+        left: 875.694px;
+        top: 926px;
+      "
+      >*</span
+    ><span
+      id="s48"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 23px;
+        color: rgb(243, 243, 243);
+        z-index: 1000;
+        left: 39.9193px;
+        top: 207px;
+      "
+      >*</span
+    ><span
+      id="s49"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 29px;
+        color: rgb(170, 170, 204);
+        z-index: 1000;
+        left: 251.65px;
+        top: 570.72px;
+      "
+      >*</span
+    ><span
+      id="s50"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 24px;
+        color: rgb(170, 170, 204);
+        z-index: 1000;
+        left: 424.297px;
+        top: 293.76px;
+      "
+      >*</span
+    ><span
+      id="s51"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 24px;
+        color: rgb(243, 243, 243);
+        z-index: 1000;
+        left: 512.692px;
+        top: 178.56px;
+      "
+      >*</span
+    ><span
+      id="s52"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 27px;
+        color: rgb(243, 243, 243);
+        z-index: 1000;
+        left: 733.927px;
+        top: 887.76px;
+      "
+      >*</span
+    ><span
+      id="s53"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 24px;
+        color: rgb(221, 221, 255);
+        z-index: 1000;
+        left: 956.91px;
+        top: 815.04px;
+      "
+      >*</span
+    ><span
+      id="s54"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 17px;
+        color: rgb(221, 221, 255);
+        z-index: 1000;
+        left: 1571.48px;
+        top: 436.56px;
+      "
+      >*</span
+    ><span
+      id="s55"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 22px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 1180.86px;
+        top: 60.72px;
+      "
+      >*</span
+    ><span
+      id="s56"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 14px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 1107.12px;
+        top: 640.08px;
+      "
+      >*</span
+    ><span
+      id="s57"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 24px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 300.009px;
+        top: 480.96px;
+      "
+      >*</span
+    ><span
+      id="s58"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 22px;
+        color: rgb(170, 170, 204);
+        z-index: 1000;
+        left: 63.1754px;
+        top: 942.48px;
+      "
+      >*</span
+    ><span
+      id="s59"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 14px;
+        color: rgb(240, 255, 255);
+        z-index: 1000;
+        left: 340.304px;
+        top: 420px;
+      "
+      >*</span
+    ><span
+      id="s60"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 12px;
+        color: rgb(243, 243, 243);
+        z-index: 1000;
+        left: 1147.03px;
+        top: 577.44px;
+      "
+      >*</span
+    ><span
+      id="s61"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 12px;
+        color: rgb(240, 255, 255);
+        z-index: 1000;
+        left: 1401.41px;
+        top: 430.56px;
+      "
+      >*</span
+    ><span
+      id="s62"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 18px;
+        color: rgb(243, 243, 243);
+        z-index: 1000;
+        left: 715.939px;
+        top: 259.2px;
+      "
+      >*</span
+    ><span
+      id="s63"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 19px;
+        color: rgb(243, 243, 243);
+        z-index: 1000;
+        left: 1602.9px;
+        top: 250.8px;
+      "
+      >*</span
+    ><span
+      id="s64"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 18px;
+        color: rgb(243, 243, 243);
+        z-index: 1000;
+        left: 771.873px;
+        top: 790.56px;
+      "
+      >*</span
+    ><span
+      id="s65"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 13px;
+        color: rgb(243, 243, 243);
+        z-index: 1000;
+        left: 410.193px;
+        top: 457.08px;
+      "
+      >*</span
+    ><span
+      id="s66"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 25px;
+        color: rgb(243, 243, 243);
+        z-index: 1000;
+        left: 573.379px;
+        top: 621px;
+      "
+      >*</span
+    ><span
+      id="s67"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 24px;
+        color: rgb(170, 170, 204);
+        z-index: 1000;
+        left: 234.191px;
+        top: 437.76px;
+      "
+      >*</span
+    ><span
+      id="s68"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 19px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 490.158px;
+        top: 526.68px;
+      "
+      >*</span
+    ><span
+      id="s69"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 16px;
+        color: rgb(170, 170, 204);
+        z-index: 1000;
+        left: 998.221px;
+        top: 817.2px;
+      "
+      >*</span
+    ><span
+      id="s70"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 14px;
+        color: rgb(221, 221, 255);
+        z-index: 1000;
+        left: 523.104px;
+        top: 697.8px;
+      "
+      >*</span
+    ><span
+      id="s71"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 13px;
+        color: rgb(243, 243, 243);
+        z-index: 1000;
+        left: 728.938px;
+        top: 521.04px;
+      "
+      >*</span
+    ><span
+      id="s72"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 26px;
+        color: rgb(221, 221, 255);
+        z-index: 1000;
+        left: 1454.58px;
+        top: 274.56px;
+      "
+      >*</span
+    ><span
+      id="s73"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 23px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 891.815px;
+        top: 248.4px;
+      "
+      >*</span
+    ><span
+      id="s74"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 18px;
+        color: rgb(221, 221, 255);
+        z-index: 1000;
+        left: 1609.11px;
+        top: 596.16px;
+      "
+      >*</span
+    ><span
+      id="s75"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 20px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 232.076px;
+        top: 108px;
+      "
+      >*</span
+    ><span
+      id="s76"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 25px;
+        color: rgb(221, 221, 255);
+        z-index: 1000;
+        left: 1539.61px;
+        top: 828px;
+      "
+      >*</span
+    ><span
+      id="s77"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 28px;
+        color: rgb(221, 221, 255);
+        z-index: 1000;
+        left: 1400.4px;
+        top: 843.36px;
+      "
+      >*</span
+    ><span
+      id="s78"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 19px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 186.046px;
+        top: 462.84px;
+      "
+      >*</span
+    ><span
+      id="s79"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 25px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 1364.82px;
+        top: 933px;
+      "
+      >*</span
+    ><span
+      id="s80"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 21px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 1591.44px;
+        top: 95.76px;
+      "
+      >*</span
+    ><span
+      id="s81"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 14px;
+        color: rgb(221, 221, 255);
+        z-index: 1000;
+        left: 1012.58px;
+        top: 694.8px;
+      "
+      >*</span
+    ><span
+      id="s82"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 18px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 266.078px;
+        top: 62.64px;
+      "
+      >*</span
+    ><span
+      id="s83"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 20px;
+        color: rgb(170, 170, 204);
+        z-index: 1000;
+        left: 139.875px;
+        top: 352.8px;
+      "
+      >*</span
+    ><span
+      id="s84"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 12px;
+        color: rgb(240, 255, 255);
+        z-index: 1000;
+        left: 1259.2px;
+        top: 588.96px;
+      "
+      >*</span
+    ><span
+      id="s85"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 27px;
+        color: rgb(243, 243, 243);
+        z-index: 1000;
+        left: 658.329px;
+        top: 891px;
+      "
+      >*</span
+    ><span
+      id="s86"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 21px;
+        color: rgb(240, 255, 255);
+        z-index: 1000;
+        left: 574.723px;
+        top: 42.84px;
+      "
+      >*</span
+    ><span
+      id="s87"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 23px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 622.491px;
+        top: 218.04px;
+      "
+      >*</span
+    ><span
+      id="s88"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 18px;
+        color: rgb(170, 170, 204);
+        z-index: 1000;
+        left: 546.77px;
+        top: 388.8px;
+      "
+      >*</span
+    ><span
+      id="s89"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 22px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 1143.21px;
+        top: 316.8px;
+      "
+      >*</span
+    ><span
+      id="s90"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 21px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 721.953px;
+        top: 211.68px;
+      "
+      >*</span
+    ><span
+      id="s91"
+      style="
+        position: absolute;
+        font-family: Arial;
+        font-size: 29px;
+        color: rgb(240, 255, 255);
+        z-index: 1000;
+        left: 231.36px;
+        top: 393.24px;
+      "
+      >*</span
+    ><span
+      id="s92"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 24px;
+        color: rgb(204, 204, 221);
+        z-index: 1000;
+        left: 1174.53px;
+        top: 737.28px;
+      "
+      >*</span
+    ><span
+      id="s93"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 15px;
+        color: rgb(240, 255, 255);
+        z-index: 1000;
+        left: 107.765px;
+        top: 14.4px;
+      "
+      >*</span
+    ><span
+      id="s94"
+      style="
+        position: absolute;
+        font-family: Verdana;
+        font-size: 28px;
+        color: rgb(221, 221, 255);
+        z-index: 1000;
+        left: 253.933px;
+        top: 561.12px;
+      "
+      >*</span
+    ><span
+      id="s95"
+      style="
+        position: absolute;
+        font-family: Times;
+        font-size: 21px;
+        color: rgb(170, 170, 204);
+        z-index: 1000;
+        left: 1144.41px;
+        top: 10.08px;
+      "
+      >*</span
+    >
+    <script>
+      // The variables below edits the snowfall , feel free to edit
+
+      var snowmax = 95;
+
+      var snowcolor = new Array(
+        "#aaaacc",
+        "#ddddff",
+        "#ccccdd",
+        "#f3f3f3",
+        "#f0ffff"
+      );
+
+      var snowtype = new Array("Times", "Arial", "Times", "Verdana");
+
+      //this one in special is funny
+      var snowletter = "*";
+
+      var sinkspeed = 0.6;
+
+      var snowmaxsize = 30;
+
+      var snowminsize = 12;
+
+      var snowingzone = 1;
+
+      //the real deal starts here
+
+      var snow = new Array();
+      var marginbottom;
+      var marginright;
+      var timer;
+      var i_snow = 0;
+      var x_mv = new Array();
+      var crds = new Array();
+      var lftrght = new Array();
+      var browserinfos = navigator.userAgent;
+      var ie5 =
+        document.all && document.getElementById && !browserinfos.match(/Opera/);
+      var ns6 = document.getElementById && !document.all;
+      var opera = browserinfos.match(/Opera/);
+      var browserok = ie5 || ns6 || opera;
+
+      function randommaker(range) {
+        rand = Math.floor(range * Math.random());
+        return rand;
+      }
+
+      function initsnow() {
+        if (ie5 || opera) {
+          marginbottom = document.body.scrollHeight;
+          marginright = document.body.clientWidth - 15;
+        } else if (ns6) {
+          marginbottom = document.body.scrollHeight;
+          marginright = window.innerWidth - 15;
+        }
+        var snowsizerange = snowmaxsize - snowminsize;
+        for (i = 0; i <= snowmax; i++) {
+          crds[i] = 0;
+          lftrght[i] = Math.random() * 15;
+          x_mv[i] = 0.03 + Math.random() / 10;
+          snow[i] = document.getElementById("s" + i);
+          snow[i].style.fontFamily = snowtype[randommaker(snowtype.length)];
+          snow[i].size = randommaker(snowsizerange) + snowminsize;
+          snow[i].style.fontSize = snow[i].size + "px";
+          snow[i].style.color = snowcolor[randommaker(snowcolor.length)];
+          snow[i].style.zIndex = 1000;
+          snow[i].sink = (sinkspeed * snow[i].size) / 5;
+          if (snowingzone == 1) {
+            snow[i].posx = randommaker(marginright - snow[i].size);
+          }
+          if (snowingzone == 2) {
+            snow[i].posx = randommaker(marginright / 2 - snow[i].size);
+          }
+          if (snowingzone == 3) {
+            snow[i].posx =
+              randommaker(marginright / 2 - snow[i].size) + marginright / 4;
+          }
+          if (snowingzone == 4) {
+            snow[i].posx =
+              randommaker(marginright / 2 - snow[i].size) + marginright / 2;
+          }
+          snow[i].posy = randommaker(
+            2 * marginbottom - marginbottom - 2 * snow[i].size
+          );
+          snow[i].style.left = snow[i].posx + "px";
+          snow[i].style.top = snow[i].posy + "px";
+        }
+        movesnow();
+      }
+
+      function movesnow() {
+        for (i = 0; i <= snowmax; i++) {
+          crds[i] += x_mv[i];
+          snow[i].posy += snow[i].sink;
+          snow[i].style.left =
+            snow[i].posx + lftrght[i] * Math.sin(crds[i]) + "px";
+          snow[i].style.top = snow[i].posy + "px";
+
+          if (
+            snow[i].posy >= marginbottom - 2 * snow[i].size ||
+            parseInt(snow[i].style.left) > marginright - 3 * lftrght[i]
+          ) {
+            if (snowingzone == 1) {
+              snow[i].posx = randommaker(marginright - snow[i].size);
+            }
+            if (snowingzone == 2) {
+              snow[i].posx = randommaker(marginright / 2 - snow[i].size);
+            }
+            if (snowingzone == 3) {
+              snow[i].posx =
+                randommaker(marginright / 2 - snow[i].size) + marginright / 4;
+            }
+            if (snowingzone == 4) {
+              snow[i].posx =
+                randommaker(marginright / 2 - snow[i].size) + marginright / 2;
+            }
+            snow[i].posy = 0;
+          }
+        }
+        var timer = setTimeout("movesnow()", 50);
+      }
+
+      for (i = 0; i <= snowmax; i++) {
+        document.write(
+          "<span id='s" +
+            i +
+            "' style='position:absolute;top:-" +
+            snowmaxsize +
+            "'>" +
+            snowletter +
+            "</span>"
+        );
+      }
+      if (browserok) {
+        window.onload = initsnow;
+      }
+    </script>
+  </body>
+</html>
